@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Verkaufsübersicht – Wohnungen</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYTHEWWL9Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SYTHEWWL9Z');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
@@ -13,9 +21,9 @@
     --ink:#16211e; --muted:#5e6c66; --faint:#8a958f;
     --line:#e3e7e3; --line-strong:#d2d8d3;
     --brand:#366092; --brand-ink:#284a70;
-    --available:#1c8a52; --available-bg:#e8f4ec;
+    --available:#b23a3a; --available-bg:#f7e9e9;
     --reserved:#b97612; --reserved-bg:#fbf1e2;
-    --sold:#b23a3a; --sold-bg:#f7e9e9;
+    --sold:#1c8a52; --sold-bg:#e8f4ec;
     --shadow:0 1px 2px rgba(20,33,29,.04),0 8px 24px rgba(20,33,29,.05);
     --radius:14px;
   }
@@ -125,7 +133,7 @@
   .st-unknown{background:#eef0ee;color:var(--muted)} .st-unknown::before{background:var(--faint)}
   /* sold highlight */
   tbody tr.is-sold.hl{background:var(--sold-bg)}
-  tbody tr.is-sold.hl:hover{background:#f2dede}
+  tbody tr.is-sold.hl:hover{background:#d8ecdf}
   tbody tr.is-sold.hl td:first-child{box-shadow:inset 3px 0 0 var(--sold)}
 
   .empty{padding:26px;text-align:center;color:var(--muted);font-size:14px}
