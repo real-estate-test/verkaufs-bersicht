@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verkaufsübersicht – Wohnungen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f4; --surface:#ffffff; --surface-2:#fafbfa;
+    --ink:#16211e; --muted:#5e6c66; --faint:#8a958f;
+    --line:#e3e7e3; --line-strong:#d2d8d3;
+    --brand:#366092; --brand-ink:#284a70;
+    --available:#1c8a52; --available-bg:#e8f4ec;
+    --reserved:#b97612; --reserved-bg:#fbf1e2;
+    --sold:#b23a3a; --sold-bg:#f7e9e9;
+    --shadow:0 1px 2px rgba(20,33,29,.04),0 8px 24px rgba(20,33,29,.05);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif; font-size:15px; line-height:1.5;
+    font-feature-settings:"tnum" 1,"cv05" 1;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+  h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.01em;margin:0}
+  a{color:var(--brand);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* Header */
+  header.top{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:22px}
+  .title-eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);font-weight:600}
+  header.top h1{font-size:30px;margin-top:4px}
+  .updated{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:10px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);display:inline-block}
+  .dot.live{background:var(--available)}
+  .dot.err{background:var(--sold)}
+
+  button{font-family:inherit;font-size:14px;cursor:pointer;border:none;background:none}
+  .btn{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:10px;
+    border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font-weight:500;transition:.15s}
+  .btn:hover{border-color:var(--brand);color:var(--brand-ink)}
+  .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+  .btn.primary:hover{background:var(--brand-ink)}
+  .btn[disabled]{opacity:.5;cursor:default}
+  .btn.small{padding:6px 10px;font-size:13px;border-radius:8px}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+  .stat .label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .stat .value{font-family:"Space Grotesk";font-size:30px;font-weight:600;margin-top:6px;line-height:1}
+  .stat .sub{font-size:12.5px;color:var(--faint);margin-top:6px}
+  .stat.available .value{color:var(--available)}
+  .stat.reserved .value{color:var(--reserved)}
+  .stat.sold .value{color:var(--sold)}
+
+  /* Controls */
+  .controls{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 16px;box-shadow:var(--shadow);margin-bottom:24px;display:flex;flex-direction:column;gap:14px}
+  .ctrl-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .ctrl-label{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-right:4px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{padding:7px 13px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface-2);
+    font-size:13.5px;font-weight:500;color:var(--muted);transition:.15s}
+  .chip:hover{border-color:var(--brand)}
+  .chip.active{background:var(--brand);border-color:var(--brand);color:#fff}
+  .chip.s-available.active{background:var(--available);border-color:var(--available)}
+  .chip.s-reserved.active{background:var(--reserved);border-color:var(--reserved)}
+  .chip.s-sold.active{background:var(--sold);border-color:var(--sold)}
+  .spacer{flex:1 1 auto}
+  .search{display:flex;align-items:center;gap:8px;border:1px solid var(--line-strong);border-radius:10px;
+    padding:7px 11px;background:var(--surface-2);min-width:180px}
+  .search input{border:none;background:none;outline:none;font-family:inherit;font-size:14px;width:100%;color:var(--ink)}
+  .toggle{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;color:var(--ink);cursor:pointer;user-select:none}
+  .switch{position:relative;width:38px;height:22px;border-radius:999px;background:var(--line-strong);transition:.18s;flex:none}
+  .switch::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:.18s;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+  .toggle input{display:none}
+  .toggle input:checked + .switch{background:var(--sold)}
+  .toggle input:checked + .switch::after{transform:translateX(16px)}
+
+  /* Project sections */
+  .project{margin-bottom:34px}
+  .project-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;
+    padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:6px}
+  .project-head h2{font-size:21px}
+  .project-head .meta{font-size:13px;color:var(--muted)}
+  .project-head .src{font-size:12.5px;color:var(--faint);margin-left:auto;display:flex;align-items:center;gap:8px}
+  .pill{font-size:11px;font-weight:600;letter-spacing:.04em;padding:2px 8px;border-radius:999px;text-transform:uppercase}
+  .pill.live{background:var(--available-bg);color:var(--available)}
+  .pill.cache{background:var(--reserved-bg);color:var(--reserved)}
+  .pill.seed{background:#eef0ee;color:var(--muted)}
+  .pill.err{background:var(--sold-bg);color:var(--sold)}
+
+  .house{margin-top:18px}
+  .house-head{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+  .house-head h3{font-size:15px;letter-spacing:.02em}
+  .house-head .hcount{font-size:12.5px;color:var(--faint)}
+  .house-bars{display:flex;gap:3px;margin-left:auto;align-items:center}
+  .bar-seg{height:7px;border-radius:2px}
+  .bar-seg.a{background:var(--available)} .bar-seg.r{background:var(--reserved)} .bar-seg.s{background:var(--sold)}
+
+  /* Table */
+  .table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+  thead th{text-align:left;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--surface-2)}
+  th.r,td.r{text-align:right}
+  tbody td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:var(--surface-2)}
+  td.unit{font-weight:600;font-family:"Space Grotesk"}
+  td.num{font-variant-numeric:tabular-nums}
+  .status-tag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
+    padding:3px 9px;border-radius:999px;white-space:nowrap}
+  .status-tag::before{content:"";width:7px;height:7px;border-radius:50%}
+  .st-available{background:var(--available-bg);color:var(--available)} .st-available::before{background:var(--available)}
+  .st-reserved{background:var(--reserved-bg);color:var(--reserved)} .st-reserved::before{background:var(--reserved)}
+  .st-sold{background:var(--sold-bg);color:var(--sold)} .st-sold::before{background:var(--sold)}
+  .st-unknown{background:#eef0ee;color:var(--muted)} .st-unknown::before{background:var(--faint)}
+  /* sold highlight */
+  tbody tr.is-sold.hl{background:var(--sold-bg)}
+  tbody tr.is-sold.hl:hover{background:#f2dede}
+  tbody tr.is-sold.hl td:first-child{box-shadow:inset 3px 0 0 var(--sold)}
+
+  .empty{padding:26px;text-align:center;color:var(--muted);font-size:14px}
+  .empty .btn{margin-top:12px}
+
+  /* Modal */
+  .modal-bg{position:fixed;inset:0;background:rgba(20,33,29,.42);display:none;align-items:flex-start;
+    justify-content:center;padding:60px 18px;z-index:50}
+  .modal-bg.open{display:flex}
+  .modal{background:var(--surface);border-radius:16px;width:100%;max-width:460px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+  .modal h3{font-size:19px;margin-bottom:4px}
+  .modal p.hint{font-size:13px;color:var(--muted);margin:0 0 18px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:5px}
+  .field input{width:100%;padding:10px 12px;border:1px solid var(--line-strong);border-radius:9px;
+    font-family:inherit;font-size:14px;color:var(--ink);outline:none}
+  .field input:focus{border-color:var(--brand)}
+  .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+  .err-msg{color:var(--sold);font-size:13px;margin-top:-6px;margin-bottom:10px;min-height:0}
+  .remove-link{color:var(--sold);font-size:12.5px;cursor:pointer;background:none;border:none;font-family:inherit}
+  .remove-link:hover{text-decoration:underline}
+
+  footer.note{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--faint)}
+  footer.note code{background:#eef0ee;padding:1px 5px;border-radius:4px;font-size:12px}
+
+  @media(max-width:720px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    header.top h1{font-size:24px}
+    .spacer{display:none}
+    .search{min-width:140px;flex:1 1 140px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <div class="title-eyebrow">Wohnungsverkauf · Übersicht</div>
+      <h1>Verkaufsübersicht</h1>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px">
+      <div class="updated"><span id="liveDot" class="dot"></span><span id="updatedText">wird geladen…</span></div>
+      <button class="btn primary" id="refreshAll">Alle aktualisieren</button>
+    </div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="controls">
+    <div class="ctrl-row">
+      <span class="ctrl-label">Projekt</span>
+      <div class="chips" id="projectChips"></div>
+      <button class="btn small" id="addProjectBtn" style="margin-left:6px">+ Projekt</button>
+    </div>
+    <div class="ctrl-row">
+      <span class="ctrl-label">Status</span>
+      <div class="chips" id="statusChips"></div>
+      <div class="spacer"></div>
+      <label class="toggle">
+        <input type="checkbox" id="highlightSold">
+        <span class="switch"></span>
+        Verkaufte hervorheben
+      </label>
+      <div class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a958f" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search" placeholder="Einheit suchen…">
+      </div>
+    </div>
+  </section>
+
+  <main id="content"></main>
+
+  <footer class="note">
+    Live-Abruf der Projektseiten erfolgt über einen öffentlichen CORS-Proxy; ist dieser nicht erreichbar,
+    werden zuletzt geladene bzw. eingebaute Daten angezeigt (Kennzeichnung pro Projekt: <span class="pill live">Live</span>
+    <span class="pill cache">Cache</span> <span class="pill seed">Basis</span> <span class="pill err">Fehler</span>).
+    Hinzugefügte Projekt-Links werden lokal im Browser gespeichert (<code>localStorage</code>).
+  </footer>
+</div>
+
+<!-- Add project modal -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <h3>Projekt hinzufügen</h3>
+    <p class="hint">Link zur „Angebot"-Seite des Projekts. Die Tabelle wird automatisch ausgelesen.</p>
+    <div class="field">
+      <label for="pName">Projektname</label>
+      <input type="text" id="pName" placeholder="z. B. Seeluft Boniswil">
+    </div>
+    <div class="field">
+      <label for="pUrl">URL der Angebotsseite</label>
+      <input type="text" id="pUrl" placeholder="https://…/angebot/">
+    </div>
+    <div class="err-msg" id="modalErr"></div>
+    <div class="modal-actions">
+      <button class="btn" id="modalCancel">Abbrechen</button>
+      <button class="btn primary" id="modalSave">Speichern &amp; laden</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ----------------------------------------------------------------------------
+   Konfiguration
+---------------------------------------------------------------------------- */
+const PROXIES = [
+  u => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  u => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,
+  u => `https://api.allorigins.win/get?url=${encodeURIComponent(u)}`  // liefert JSON {contents}
+];
+const LS_PROJECTS = "wohnungen.projects.v1";
+const LS_CACHE    = "wohnungen.cache.v1";
+
+/* Standardprojekte (immer vorhanden) */
+const DEFAULT_PROJECTS = [
+  { id:"sonnenberg", name:"Sonnenberg Reinach", url:"https://sonnenberg-reinach.ch/angebot/", builtin:true },
+  { id:"seeluft",    name:"Seeluft Boniswil",   url:"https://seeluft-boniswil.ch/angebot/",   builtin:true }
+];
+
+/* Eingebauter Startbestand (zuletzt ausgelesen) – sorgt für sofortige Anzeige.
+   Wird durch Live-Abruf überschrieben, sobald verfügbar. */
+const SEED = {
+  "https://sonnenberg-reinach.ch/angebot/":[
+    u("A1-1",5.5,148.7,"1’210’000.–","Frei"), u("A1-2",5.5,147.1,"1'000’000.–","Frei"),
+    u("A1-3",5.5,147.2,"–","Verkauft"),       u("A1-4",5.5,146.7,"1‘180’000.–","Frei"),
+    u("A2-1",5.5,147.0,"1’190’000.–","Frei"), u("A2-2",5.5,147.1,"1'000’000.–","Frei"),
+    u("A2-3",5.5,147.1,"–","Verkauft"),       u("A2-4",5.5,144.8,"1’230’000.–","Frei"),
+    u("B1-1",4.5,129.1,"980’000.–","Frei"),   u("B1-2",4.5,129.6,"940’000.–","Frei"),
+    u("B1-3",4.5,129.6,"940’000.–","Frei"),   u("B1-4",4.5,129.3,"1'000'000.-","Frei"),
+    u("B2-1",4.5,110.3,"–","Verkauft"),       u("B2-2",4.5,110.4,"–","Verkauft"),
+    u("B2-3",4.5,110.6,"–","Verkauft"),       u("B2-4",4.5,110.6,"–","Verkauft"),
+    u("B2-5",4.5,110.6,"–","Verkauft"),       u("B3-1",4.5,129.2,"1'000’000.–","Frei"),
+    u("B3-2",4.5,129.6,"950’000.–","Frei"),   u("B3-3",4.5,129.7,"950’000.–","Frei"),
+    u("B3-4",4.5,129.3,"1'000’000.–","Frei"), u("C2",5.5,160.4,"1’790’000.–","Frei"),
+    u("C2 Einliegerwhg.",2.5,51.6,"–","–")
+  ],
+  "https://seeluft-boniswil.ch/angebot/":[
+    u("A1",4.5,114.3,"–","Verkauft","EG"),    u("A2",3.5,84.3,"–","Reserviert","EG"),
+    u("A3",3.5,101.0,"905'000.-","Verfügbar","EG"), u("A4",4.5,116.1,"920'000.-","Verfügbar","1. OG"),
+    u("A5",3.5,90.4,"700'000-","Verfügbar","1. OG"), u("A6",4.5,115.1,"915'000.-","Verfügbar","1. OG"),
+    u("A7",4.5,116.1,"935'000.-","Verfügbar","2. OG"), u("A8",3.5,90.8,"–","Reserviert","2. OG"),
+    u("A9",4.5,115.1,"930'000.-","Verfügbar","2. OG"),
+    u("B1",3.5,112.9,"–","Verkauft","EG"),    u("B2",3.5,100.2,"–","Verkauft","1. OG"),
+    u("B3",4.5,112.3,"–","Verkauft","1. OG"),
+    u("C1",4.5,120.2,"900'000.-","Verfügbar","1. OG"), u("C2",3.5,101.7,"755'000.-","Verfügbar","1. OG"),
+    u("C3",4.5,119.8,"950'000.-","Verfügbar","1. OG"), u("C4",4.5,120.2,"–","Reserviert","2. OG"),
+    u("C5",3.5,101.7,"785'000.-","Verfügbar","2. OG"), u("C6",4.5,120.2,"–","Reserviert","2. OG"),
+    u("C7",4.5,120.2,"–","Verkauft","3. OG"), u("C8",3.5,101.7,"–","Reserviert","3. OG"),
+    u("C9",4.5,120.2,"–","Verkauft","3. OG")
+  ]
+};
+function u(id,rooms,area,priceText,statusText,floor){
+  return normalizeUnit({ id, rooms, areaText:area+" m²", priceText, statusText, floor:floor||null });
+}
+
+/* ----------------------------------------------------------------------------
+   Persistenz (defensiv – funktioniert auch ohne localStorage)
+---------------------------------------------------------------------------- */
+const store = {
+  get(k,f){ try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f} },
+  set(k,v){ try{localStorage.setItem(k,JSON.stringify(v))}catch(e){} }
+};
+
+/* ----------------------------------------------------------------------------
+   State
+---------------------------------------------------------------------------- */
+let projects = [];           // {id,name,url,builtin}
+let data = {};               // url -> { units:[], source:'live|cache|seed|error', fetchedAt:ts }
+let filters = { project:"all", status:"all", search:"", highlight:false };
+
+/* ----------------------------------------------------------------------------
+   Normalisierung
+---------------------------------------------------------------------------- */
+function statusKey(text){
+  const t=(text||"").toLowerCase();
+  if(t.includes("verkauft")) return "sold";
+  if(t.includes("reserv"))   return "reserved";
+  if(t.includes("frei")||t.includes("verfügbar")||t.includes("verfugbar")) return "available";
+  return "unknown";
+}
+function statusLabel(key){
+  return {available:"Verfügbar",reserved:"Reserviert",sold:"Verkauft",unknown:"–"}[key]||"–";
+}
+function toNumber(text){ const d=(text||"").replace(/[^\d]/g,""); return d?parseInt(d,10):null; }
+function toArea(text){ const m=(text||"").match(/(\d+[.,]?\d*)/); return m?parseFloat(m[1].replace(",",".")):null; }
+function houseOf(id){ const m=(id||"").trim().match(/^([A-Za-zÄÖÜ]+)/); return m?m[1].toUpperCase():"–"; }
+
+function normalizeUnit(raw){
+  const sk = statusKey(raw.statusText);
+  return {
+    id: (raw.id||"").trim(),
+    house: houseOf(raw.id),
+    rooms: typeof raw.rooms==="number" ? raw.rooms : toArea(raw.rooms),
+    area: toArea(raw.areaText),
+    areaText: (raw.areaText||"").trim(),
+    price: toNumber(raw.priceText),
+    priceText: (raw.priceText||"").trim().replace(/^[–-]$/,"–"),
+    status: sk,
+    statusLabel: statusLabel(sk),
+    floor: raw.floor||null,
+    pdf: raw.pdf||null
+  };
+}
+
+/* ----------------------------------------------------------------------------
+   HTML-Parser (versteht beide Tabellen-Layouts)
+---------------------------------------------------------------------------- */
+function parseHTML(html){
+  const doc = new DOMParser().parseFromString(html,"text/html");
+  const units = [];
+  doc.querySelectorAll("table").forEach(table=>{
+    const rows = Array.from(table.querySelectorAll("tr"));
+    if(!rows.length) return;
+    // Header-Zeile finden
+    let headerIdx = rows.findIndex(r=>/zimmer/i.test(r.textContent) && /(status|preis|chf)/i.test(r.textContent));
+    if(headerIdx<0) return;
+    const headers = Array.from(rows[headerIdx].querySelectorAll("th,td")).map(c=>c.textContent.trim().toLowerCase());
+    const col = pred => headers.findIndex(pred);
+    const ix = {
+      id:    col(h=>h.includes("objekt")) >=0 ? col(h=>h.includes("objekt")) : col(h=>h.includes("haus")),
+      rooms: col(h=>h.includes("zimmer")),
+      area:  col(h=>h.includes("wohnfläche")||h.includes("wohnflache")),
+      price: col(h=>h.includes("verkaufspreis")||h.includes("preis")||h==="chf"||h.includes("chf")),
+      status:col(h=>h.includes("status")),
+      floor: col(h=>h.includes("geschoss"))
+    };
+    if(ix.id<0 || ix.rooms<0) return;
+    for(let i=headerIdx+1;i<rows.length;i++){
+      const cells = Array.from(rows[i].querySelectorAll("td,th"));
+      if(!cells.length) continue;
+      const txt = j => j>=0 && cells[j] ? cells[j].textContent.trim() : "";
+      const id = txt(ix.id);
+      if(!id || /^haus$/i.test(id)) continue;                 // Leer-/Wiederholungszeilen überspringen
+      const pdfA = cells[ix.id]?.parentElement?.querySelector('a[href$=".pdf"]')
+                || rows[i].querySelector('a[href$=".pdf"]');
+      units.push(normalizeUnit({
+        id,
+        rooms: txt(ix.rooms),
+        areaText: txt(ix.area),
+        priceText: txt(ix.price) || "–",
+        statusText: txt(ix.status),
+        floor: ix.floor>=0 ? txt(ix.floor) : null,
+        pdf: pdfA ? pdfA.getAttribute("href") : null
+      }));
+    }
+  });
+  return units;
+}
+
+/* ----------------------------------------------------------------------------
+   Abruf
+---------------------------------------------------------------------------- */
+async function fetchText(url){
+  for(const make of PROXIES){
+    const proxied = make(url);
+    try{
+      const ctrl = new AbortController();
+      const t = setTimeout(()=>ctrl.abort(), 13000);
+      const res = await fetch(proxied,{signal:ctrl.signal});
+      clearTimeout(t);
+      if(!res.ok) continue;
+      let body = await res.text();
+      if(proxied.includes("/get?")){ try{ body = JSON.parse(body).contents; }catch(e){} }
+      if(body && /<table/i.test(body)) return body;
+    }catch(e){ /* nächster Proxy */ }
+  }
+  return null;
+}
+
+async function loadProject(proj){
+  const url = proj.url;
+  const html = await fetchText(url);
+  if(html){
+    const units = parseHTML(html);
+    if(units.length){
+      data[url] = { units, source:"live", fetchedAt:Date.now() };
+      const cache = store.get(LS_CACHE,{});
+      cache[url] = data[url];
+      store.set(LS_CACHE,cache);
+      return;
+    }
+  }
+  // Fallback: Cache -> Seed -> Fehler
+  const cache = store.get(LS_CACHE,{});
+  if(cache[url] && cache[url].units && cache[url].units.length){
+    data[url] = { ...cache[url], source:"cache" };
+  } else if(SEED[url]){
+    data[url] = { units:SEED[url], source:"seed", fetchedAt:null };
+  } else {
+    data[url] = { units:[], source:"error", fetchedAt:null };
+  }
+}
+
+async function refreshAll(){
+  const btn = document.getElementById("refreshAll");
+  btn.disabled = true; btn.textContent = "Aktualisiere…";
+  setUpdated("loading");
+  await Promise.all(projects.map(loadProject));
+  btn.disabled = false; btn.textContent = "Alle aktualisieren";
+  render();
+}
+
+/* ----------------------------------------------------------------------------
+   Hilfen für Aggregation
+---------------------------------------------------------------------------- */
+function visibleProjects(){
+  return filters.project==="all" ? projects : projects.filter(p=>p.id===filters.project);
+}
+function unitsOf(proj){ return (data[proj.url] && data[proj.url].units) || []; }
+function matchFilters(unit){
+  if(filters.status!=="all" && unit.status!==filters.status) return false;
+  if(filters.search){
+    const q = filters.search.toLowerCase();
+    if(!(unit.id.toLowerCase().includes(q) || unit.house.toLowerCase().includes(q))) return false;
+  }
+  return true;
+}
+function countByStatus(units){
+  const c={available:0,reserved:0,sold:0,unknown:0};
+  units.forEach(x=>c[x.status]++); return c;
+}
+function fmtCHF(n){ return n==null?"–":"CHF "+n.toLocaleString("de-CH"); }
+
+/* ----------------------------------------------------------------------------
+   Rendering
+---------------------------------------------------------------------------- */
+function render(){
+  renderProjectChips();
+  renderStatusChips();
+  renderStats();
+  renderContent();
+  renderUpdated();
+}
+
+function renderStats(){
+  // Stats beziehen sich auf aktuell sichtbare Projekte (Projektfilter), ohne Status-/Suchfilter
+  let all=[];
+  visibleProjects().forEach(p=> all = all.concat(unitsOf(p)));
+  const c = countByStatus(all);
+  const total = all.length;
+  const availVol = all.filter(x=>x.status==="available").reduce((s,x)=>s+(x.price||0),0);
+  const pctSold = total? Math.round(c.sold/total*100):0;
+  const el = document.getElementById("stats");
+  el.innerHTML = `
+    <div class="stat"><div class="label">Einheiten total</div><div class="value num">${total}</div>
+      <div class="sub">${visibleProjects().length} Projekt(e)</div></div>
+    <div class="stat available"><div class="label">Verfügbar</div><div class="value num">${c.available}</div>
+      <div class="sub">Volumen ${fmtCHF(availVol)}</div></div>
+    <div class="stat reserved"><div class="label">Reserviert</div><div class="value num">${c.reserved}</div>
+      <div class="sub">${total?Math.round(c.reserved/total*100):0}% des Bestands</div></div>
+    <div class="stat sold"><div class="label">Verkauft</div><div class="value num">${c.sold}</div>
+      <div class="sub">${pctSold}% des Bestands</div></div>`;
+}
+
+function renderProjectChips(){
+  const el = document.getElementById("projectChips");
+  const chip = (id,label,active)=>`<button class="chip${active?' active':''}" data-proj="${id}">${label}</button>`;
+  let html = chip("all","Gesamtübersicht",filters.project==="all");
+  projects.forEach(p=> html += chip(p.id, p.name, filters.project===p.id));
+  el.innerHTML = html;
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.project=b.dataset.proj; render(); });
+}
+
+function renderStatusChips(){
+  const el = document.getElementById("statusChips");
+  const opts=[["all","Alle",""],["available","Verfügbar","s-available"],
+              ["reserved","Reserviert","s-reserved"],["sold","Verkauft","s-sold"]];
+  el.innerHTML = opts.map(([v,l,c])=>
+    `<button class="chip ${c}${filters.status===v?' active':''}" data-status="${v}">${l}</button>`).join("");
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.status=b.dataset.status; render(); });
+}
+
+function renderContent(){
+  const root = document.getElementById("content");
+  root.innerHTML = "";
+  visibleProjects().forEach(p=> root.appendChild(renderProject(p)));
+}
+
+function renderProject(proj){
+  const wrap = document.createElement("section");
+  wrap.className = "project";
+  const d = data[proj.url] || {units:[],source:"error"};
+  const units = unitsOf(proj);
+  const c = countByStatus(units);
+  const srcPill = {live:["live","Live"],cache:["cache","Cache"],seed:["seed","Basis"],error:["err","nicht geladen"]}[d.source]||["seed","Basis"];
+
+  const head = document.createElement("div");
+  head.className = "project-head";
+  head.innerHTML = `
+    <h2>${escapeHtml(proj.name)}</h2>
+    <span class="meta num">${units.length} Einheiten · ${c.available} verfügbar · ${c.reserved} reserviert · ${c.sold} verkauft</span>
+    <span class="src">
+      <span class="pill ${srcPill[0]}">${srcPill[1]}</span>
+      <a href="${proj.url}" target="_blank" rel="noopener">Quelle ↗</a>
+      <button class="remove-link" data-remove="${proj.id}">${proj.builtin?"":"entfernen"}</button>
+    </span>`;
+  wrap.appendChild(head);
+
+  // nach Haus gruppieren
+  const houses = {};
+  units.forEach(x=>{ (houses[x.house]=houses[x.house]||[]).push(x); });
+  const houseKeys = Object.keys(houses).sort();
+
+  let anyVisible=false;
+  if(!units.length){
+    wrap.appendChild(emptyBlock(proj, d.source==="error"
+      ? "Konnte nicht geladen werden (CORS-Proxy nicht erreichbar oder Tabelle nicht erkannt)."
+      : "Keine Einheiten gefunden."));
+    return wrap;
+  }
+
+  houseKeys.forEach(hk=>{
+    const visibleUnits = houses[hk].filter(matchFilters);
+    if(!visibleUnits.length) return;
+    anyVisible=true;
+    wrap.appendChild(renderHouse(proj, hk, houses[hk], visibleUnits));
+  });
+  if(!anyVisible){
+    const e=document.createElement("div");
+    e.className="table-scroll"; e.innerHTML=`<div class="empty">Keine Einheiten entsprechen den aktuellen Filtern.</div>`;
+    wrap.appendChild(e);
+  }
+
+  head.querySelector("[data-remove]").onclick = ev=>{
+    const id=ev.target.dataset.remove; if(!id) return;
+    removeProject(id);
+  };
+  return wrap;
+}
+
+function renderHouse(proj, houseKey, allUnits, visibleUnits){
+  const sec = document.createElement("div");
+  sec.className = "house";
+  const c = countByStatus(allUnits);
+  const seg = (n,cls)=> n? `<span class="bar-seg ${cls}" style="width:${Math.max(6,n*9)}px" title="${n}"></span>`:"";
+  const hasFloor = allUnits.some(x=>x.floor);
+
+  sec.innerHTML = `
+    <div class="house-head">
+      <h3>Haus ${escapeHtml(houseKey)}</h3>
+      <span class="hcount num">${allUnits.length} Einheiten</span>
+      <span class="house-bars">${seg(c.available,"a")}${seg(c.reserved,"r")}${seg(c.sold,"s")}</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>
+          <th>Einheit</th>${hasFloor?"<th>Geschoss</th>":""}
+          <th class="r">Zimmer</th><th class="r">Wohnfläche</th>
+          <th class="r">Preis</th><th>Status</th><th>Plan</th>
+        </tr></thead>
+        <tbody>
+          ${visibleUnits.map(x=>rowHTML(x,hasFloor)).join("")}
+        </tbody>
+      </table>
+    </div>`;
+  return sec;
+}
+
+function rowHTML(x,hasFloor){
+  const soldCls = x.status==="sold" ? " is-sold"+(filters.highlight?" hl":"") : "";
+  return `<tr class="${soldCls.trim()}">
+    <td class="unit">${escapeHtml(x.id)}</td>
+    ${hasFloor?`<td>${escapeHtml(x.floor||"–")}</td>`:""}
+    <td class="r num">${x.rooms!=null?x.rooms.toFixed(1):"–"}</td>
+    <td class="r num">${x.areaText||"–"}</td>
+    <td class="r num">${escapeHtml(x.priceText||"–")}</td>
+    <td><span class="status-tag st-${x.status}">${x.statusLabel}</span></td>
+    <td>${x.pdf?`<a href="${x.pdf}" target="_blank" rel="noopener">PDF ↗</a>`:"–"}</td>
+  </tr>`;
+}
+
+function emptyBlock(proj,msg){
+  const e=document.createElement("div");
+  e.className="table-scroll";
+  e.innerHTML=`<div class="empty">${escapeHtml(msg)}<br>
+    <button class="btn small" data-retry="${proj.id}">Erneut laden</button></div>`;
+  e.querySelector("[data-retry]").onclick=async()=>{ await loadProject(proj); render(); };
+  return e;
+}
+
+function escapeHtml(s){ return (s==null?"":String(s)).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m])); }
+
+/* ----------------------------------------------------------------------------
+   "Zuletzt aktualisiert"
+---------------------------------------------------------------------------- */
+function setUpdated(state){
+  const dot=document.getElementById("liveDot"), txt=document.getElementById("updatedText");
+  if(state==="loading"){ dot.className="dot"; txt.textContent="lädt…"; }
+}
+function renderUpdated(){
+  const dot=document.getElementById("liveDot"), txt=document.getElementById("updatedText");
+  const sources = projects.map(p=>data[p.url]?.source);
+  const anyLive = sources.includes("live");
+  const anyErr  = sources.includes("error");
+  const times = projects.map(p=>data[p.url]?.fetchedAt).filter(Boolean);
+  const last = times.length? new Date(Math.max(...times)) : null;
+  dot.className = "dot"+(anyLive?" live":anyErr?" err":"");
+  txt.textContent = last
+    ? "Aktualisiert "+last.toLocaleString("de-CH",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})
+    : (anyErr?"Live-Abruf nicht möglich – Basisdaten":"Basisdaten");
+}
+
+/* ----------------------------------------------------------------------------
+   Projektverwaltung
+---------------------------------------------------------------------------- */
+function loadProjectList(){
+  const custom = store.get(LS_PROJECTS, []);
+  projects = DEFAULT_PROJECTS.concat(custom.filter(c=>!DEFAULT_PROJECTS.some(d=>d.url===c.url)));
+}
+function saveCustomProjects(){
+  store.set(LS_PROJECTS, projects.filter(p=>!p.builtin));
+}
+function removeProject(id){
+  const p = projects.find(x=>x.id===id);
+  if(!p || p.builtin) return;
+  projects = projects.filter(x=>x.id!==id);
+  delete data[p.url];
+  if(filters.project===id) filters.project="all";
+  saveCustomProjects();
+  render();
+}
+
+/* Modal */
+const modal = document.getElementById("modalBg");
+document.getElementById("addProjectBtn").onclick = ()=>{ openModal(); };
+document.getElementById("modalCancel").onclick = ()=> modal.classList.remove("open");
+modal.onclick = e=>{ if(e.target===modal) modal.classList.remove("open"); };
+function openModal(){
+  document.getElementById("pName").value="";
+  document.getElementById("pUrl").value="";
+  document.getElementById("modalErr").textContent="";
+  modal.classList.add("open");
+  document.getElementById("pName").focus();
+}
+document.getElementById("modalSave").onclick = async ()=>{
+  const name=document.getElementById("pName").value.trim();
+  let url=document.getElementById("pUrl").value.trim();
+  const err=document.getElementById("modalErr");
+  if(!name){ err.textContent="Bitte einen Projektnamen eingeben."; return; }
+  if(!/^https?:\/\//i.test(url)){ err.textContent="Bitte eine gültige URL mit https:// eingeben."; return; }
+  if(projects.some(p=>p.url===url)){ err.textContent="Dieses Projekt ist bereits vorhanden."; return; }
+  const id="p"+Date.now();
+  const proj={id,name,url,builtin:false};
+  projects.push(proj);
+  saveCustomProjects();
+  modal.classList.remove("open");
+  filters.project=id;
+  data[url]={units:[],source:"loading"};
+  render();
+  await loadProject(proj);
+  render();
+};
+
+/* ----------------------------------------------------------------------------
+   Übrige Controls
+---------------------------------------------------------------------------- */
+document.getElementById("highlightSold").onchange = e=>{ filters.highlight=e.target.checked; render(); };
+document.getElementById("search").oninput = e=>{ filters.search=e.target.value.trim(); renderContent(); };
+document.getElementById("refreshAll").onclick = refreshAll;
+
+/* ----------------------------------------------------------------------------
+   Start
+---------------------------------------------------------------------------- */
+(function init(){
+  loadProjectList();
+  // sofort mit Cache/Seed füllen
+  const cache = store.get(LS_CACHE,{});
+  projects.forEach(p=>{
+    if(cache[p.url] && cache[p.url].units?.length) data[p.url]={...cache[p.url],source:"cache"};
+    else if(SEED[p.url]) data[p.url]={units:SEED[p.url],source:"seed",fetchedAt:null};
+    else data[p.url]={units:[],source:"loading"};
+  });
+  render();
+  // dann live nachladen
+  refreshAll();
+})();
+</script>
+</body>
+</html>
