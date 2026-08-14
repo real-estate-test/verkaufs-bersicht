@@ -22,8 +22,18 @@ Projektseiten ──► scripts/scrape.mjs ──► data/*.json ──► index
 | Sonnenberg Reinach | `sonnenberg-reinach.ch/angebot/` | klassische `<table>` |
 | Seeluft Boniswil | `seeluft-boniswil.ch/angebot/` | klassische `<table>` |
 | Erlenstrasse Oetwil | `erlenstrasse-oetwil.ch` (Abschnitt „Angebot") | Div-Grid `.ang_list > .whg_row` |
+| Suhrano Suhr | `navigator5.beyonity.ch/?id=…` | eingebettetes JSON `BVR_NAV` |
 
-Der Scraper erkennt beide Layouts automatisch.
+Der Scraper erkennt alle drei Layouts automatisch.
+
+Suhrano ist ein Sonderfall: `suhrano.ch/angebot/` enthält keine Wohnungsdaten,
+sondern verlinkt nur auf das Vermarktungstool von Beyonity. Dieses liefert den
+vollständigen Bestand als JSON im Seitenquelltext mit – deshalb steht dort die
+Navigator-Adresse als `url` und die öffentliche Projektseite als `link`.
+Statusbezeichnungen und beschriftete Zusatzfelder liest der Parser aus dem JSON,
+statt sie zu verdrahten. Die `custom_N`-Felder für Preis und Geschoss variieren
+je Projekt und werden über ihren Inhalt bestimmt; bei Bedarf lässt sich das über
+`fields` in `projects.json` festlegen.
 
 ## Projekte ergänzen
 
@@ -51,7 +61,8 @@ Alternativ lässt sich `data/projects.json` direkt bearbeiten:
 | `link` | optional, falls die Übersicht auf einen Anker verlinken soll (`…/#angebot`) |
 | `type` | `"house"` oder `"apartment"` – steuert die Beschriftung („Häuser" / „Wohnungen") |
 | `groupLabel` | Präfix der Gruppenüberschrift, z. B. `"Haus"` → „Haus A" |
-| `layout` | optional `"table"` oder `"anglist"`; wird sonst automatisch erkannt |
+| `layout` | optional `"table"`, `"anglist"` oder `"beyonity"`; wird sonst automatisch erkannt |
+| `fields` | optional, nur Beyonity: feste Zuordnung von `price` / `floor` auf ein `custom_N`-Feld |
 | `grouped` | optional; wird sonst automatisch bestimmt (viele Kleinstgruppen → flache Liste) |
 
 ## Dateien
