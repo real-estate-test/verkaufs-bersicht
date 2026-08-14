@@ -422,6 +422,9 @@ function toNumber(text){
 }
 function groupOf(id,label){
   const raw=String(id||"").trim();
+  // Punktnotation (A1.0.1 = Haus A1, Geschoss 0, Wohnung 1)
+  const dotted=raw.match(/^([A-Za-z0-9ÄÖÜ]+)\./);
+  if(dotted) return `${label} ${dotted[1].toUpperCase()}`;
   const letters=raw.match(/^([A-Za-zÄÖÜ]+)/);
   if(letters) return `${label} ${letters[1].toUpperCase()}`;
   // Ziffernpräfix nur als Gebäude werten, wenn danach noch etwas folgt
@@ -591,7 +594,101 @@ function parseAngList(doc,label){
   return units;
 }
 
+/* Beyonity Navigator: kompletter Bestand liegt als JSON `BVR_NAV` im Quelltext.
+   Statusbezeichnungen und Zusatzfelder stehen dort ebenfalls und werden gelesen. */
+function extractBvrNav(html){
+  const m=/BVR_NAV\s*=\s*\{/.exec(html);
+  if(!m) return null;
+  const start=m.index+m[0].length-1;
+  let depth=0,inString=false,escaped=false;
+  for(let i=start;i<html.length;i++){
+    const c=html[i];
+    if(inString){
+      if(escaped) escaped=false;
+      else if(c==="\\") escaped=true;
+      else if(c==='"') inString=false;
+    }
+    else if(c==='"') inString=true;
+    else if(c==="{") depth++;
+    else if(c==="}" && --depth===0){
+      try{ return JSON.parse(html.slice(start,i+1)); }catch(e){ return null; }
+    }
+  }
+  return null;
+}
+
+const PARKING_CATEGORIES=/^(parking|garage|carport|stellplatz)/i;
+const FLOOR_TEXT=/^(EG|UG|DG|OG|Attika|Dachgeschoss|Untergeschoss|Erdgeschoss|\d+\.\s*(OG|UG))$/i;
+
+function parseBeyonity(html,label){
+  const data=extractBvrNav(html);
+  const proj=data&&data.project;
+  if(!proj||!proj.units) return [];
+
+  const table=(proj.settings&&proj.settings.statustable)||{};
+  const statusText=code=>(table[String(code)]||{}).dsc||"";
+
+  const extraLabels={};
+  Object.entries(proj.properties||{}).forEach(([key,def])=>{
+    if(/^custom_\d+$/.test(key)&&def&&def.dsc) extraLabels[key]={label:def.dsc.trim(),format:def.format||""};
+  });
+
+  const sellable=Object.values(proj.units).filter(u=>{
+    const cat=String(u.category||"");
+    if(PARKING_CATEGORIES.test(cat)) return true;
+    if(cat&&cat!=="living") return false;
+    return u.status!=null && statusText(u.status)!=="";
+  });
+
+  // custom_N-Felder tragen je Projekt andere Bedeutungen – hier bestimmt, nicht geraten
+  const keys=new Set();
+  sellable.forEach(u=>Object.keys(u).forEach(k=>{ if(/^custom_\d+$/.test(k)) keys.add(k); }));
+  const score=test=>{
+    let best=null,bestHits=0;
+    keys.forEach(k=>{
+      const hits=sellable.filter(u=>test(u[k])).length;
+      if(hits>bestHits){ best=k; bestHits=hits; }
+    });
+    return bestHits>=Math.max(3,sellable.length*0.3)?best:null;
+  };
+  const fPrice=score(v=>typeof v==="number"&&v>=50000);
+  const fFloor=score(v=>typeof v==="string"&&FLOOR_TEXT.test(v.trim()));
+
+  return sellable.map(u=>{
+    const isParking=PARKING_CATEGORIES.test(String(u.category||""));
+    const id=String(u.name||u.se_id||u.dsc||u.id||"").trim();
+    const area=typeof u.area==="number"?u.area:toNumber(u.area);
+    const priceRaw=(u.price!==""&&u.price!=null)?u.price:(fPrice?u[fPrice]:null);
+    const price=typeof priceRaw==="number"?priceRaw:toPrice(priceRaw);
+
+    const extra={};
+    Object.entries(extraLabels).forEach(([key,def])=>{
+      const v=u[key];
+      if(v===""||v==null) return;
+      extra[def.label]=/area/.test(def.format)?`${v} m²`
+        :/price/.test(def.format)?`CHF ${Number(v).toLocaleString("de-CH")}`:String(v);
+    });
+
+    return {
+      id,
+      group:isParking?"Parkierung":groupOf(id,label),
+      kind:isParking?"parking":"unit",
+      rooms:typeof u.rooms==="number"?u.rooms:toNumber(u.rooms),
+      area,
+      areaText:area!=null?`${area} m²`:"–",
+      floor:fFloor?(u[fFloor]||null):null,
+      price,
+      priceText:price!=null?`${price.toLocaleString("de-CH")}.–`:"–",
+      status:statusKey(statusText(u.status)),
+      extra,
+      pdf:u.document||null
+    };
+  }).filter(u=>u.id);
+}
+
 function parseHTML(html,label){
+  const fromJson=parseBeyonity(html,label);       // vor dem DOM-Weg: JSON ist genauer
+  if(fromJson.length) return fromJson;
   const doc=new DOMParser().parseFromString(html,"text/html");
   const fromList=parseAngList(doc,label);
   return fromList.length?fromList:parseTables(doc,label);

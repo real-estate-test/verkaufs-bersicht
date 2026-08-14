@@ -22,6 +22,14 @@
       "link": "https://www.erlenstrasse-oetwil.ch/#angebot",
       "type": "house",
       "groupLabel": "Erlenstrasse"
+    },
+    {
+      "id": "suhrano",
+      "name": "Suhrano Suhr",
+      "url": "https://navigator5.beyonity.ch/?id=70DC98FE",
+      "link": "https://www.suhrano.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus"
     }
   ]
 }

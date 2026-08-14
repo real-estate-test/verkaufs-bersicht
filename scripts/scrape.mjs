@@ -271,10 +271,122 @@ export function parseAngList(html, project) {
 }
 
 /* --------------------------------------------------------------------------
+   Parser 3 – Beyonity Navigator (eingebettetes JSON `BVR_NAV`)
+
+   Die Vermarktungstools von Beyonity liefern den vollständigen Bestand als
+   JSON im Seitenquelltext mit. Statusbezeichnungen und Zusatzfelder stehen
+   ebenfalls darin, werden also gelesen statt fest verdrahtet.
+-------------------------------------------------------------------------- */
+export function extractBvrNav(html) {
+  const m = /BVR_NAV\s*=\s*\{/.exec(html);
+  if (!m) return null;
+  const start = m.index + m[0].length - 1;
+  let depth = 0, inString = false, escaped = false;
+  for (let i = start; i < html.length; i++) {
+    const c = html[i];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (c === "\\") escaped = true;
+      else if (c === '"') inString = false;
+    } else if (c === '"') inString = true;
+    else if (c === "{") depth++;
+    else if (c === "}" && --depth === 0) {
+      try { return JSON.parse(html.slice(start, i + 1)); } catch { return null; }
+    }
+  }
+  return null;
+}
+
+const PARKING_CATEGORIES = /^(parking|garage|carport|stellplatz)/i;
+const FLOOR_TEXT = /^(EG|UG|DG|OG|Attika|Dachgeschoss|Untergeschoss|Erdgeschoss|\d+\.\s*(OG|UG))$/i;
+
+/** custom_N-Felder tragen je Projekt andere Bedeutungen – hier bestimmt, nicht geraten. */
+function detectCustomFields(units, override = {}) {
+  const keys = new Set();
+  units.forEach(u => Object.keys(u).forEach(k => { if (/^custom_\d+$/.test(k)) keys.add(k); }));
+  const score = test => {
+    let best = null, bestHits = 0;
+    for (const k of keys) {
+      const hits = units.filter(u => test(u[k])).length;
+      if (hits > bestHits) { best = k; bestHits = hits; }
+    }
+    return bestHits >= Math.max(3, units.length * 0.3) ? best : null;
+  };
+  return {
+    price: override.price || score(v => typeof v === "number" && v >= 50000),
+    floor: override.floor || score(v => typeof v === "string" && FLOOR_TEXT.test(v.trim()))
+  };
+}
+
+export function parseBeyonity(html, project) {
+  const data = extractBvrNav(html);
+  const proj = data && data.project;
+  if (!proj || !proj.units) return [];
+
+  const statusTable = (proj.settings && proj.settings.statustable) || {};
+  const statusText = code => (statusTable[String(code)] || {}).dsc || "";
+
+  // Beschriftete Zusatzfelder laut Projektdefinition (Aussenfläche, Keller, …)
+  const extraLabels = {};
+  for (const [key, def] of Object.entries(proj.properties || {})) {
+    if (/^custom_\d+$/.test(key) && def && def.dsc) {
+      extraLabels[key] = { label: def.dsc.trim(), format: def.format || "" };
+    }
+  }
+
+  const all = Object.values(proj.units);
+  const sellable = all.filter(u => {
+    const cat = String(u.category || "");
+    if (PARKING_CATEGORIES.test(cat)) return true;
+    if (cat && cat !== "living") return false;            // infospot & Co. raus
+    return u.status !== undefined && u.status !== null && statusText(u.status) !== "";
+  });
+
+  const fields = detectCustomFields(sellable, project.fields || {});
+
+  return sellable.map(u => {
+    const isParking = PARKING_CATEGORIES.test(String(u.category || ""));
+    const id = String(u.name || u.se_id || u.dsc || u.id || "").trim();
+    const area = typeof u.area === "number" ? u.area : toNumber(u.area);
+    const priceRaw = (u.price !== "" && u.price != null) ? u.price
+                   : (fields.price ? u[fields.price] : null);
+    const price = typeof priceRaw === "number" ? priceRaw : toPrice(priceRaw);
+    const status = statusKey(statusText(u.status));
+
+    const extra = {};
+    for (const [key, def] of Object.entries(extraLabels)) {
+      const v = u[key];
+      if (v === "" || v == null) continue;
+      extra[def.label] = /area/.test(def.format) ? `${v} m²`
+                       : /price/.test(def.format) ? `CHF ${Number(v).toLocaleString("de-CH")}`
+                       : String(v);
+    }
+
+    return {
+      id,
+      group: isParking ? "Parkierung" : groupOf(id, project),
+      kind: isParking ? "parking" : "unit",
+      rooms: typeof u.rooms === "number" ? u.rooms : toNumber(u.rooms),
+      area,
+      areaText: area != null ? `${area} m²` : "–",
+      floor: fields.floor ? (u[fields.floor] || null) : null,
+      price,
+      priceText: price != null ? `${price.toLocaleString("de-CH")}.–` : "–",
+      status,
+      extra,
+      pdf: u.document || null
+    };
+  }).filter(u => u.id);
+}
+
+/* --------------------------------------------------------------------------
    Gruppierung (Haus A / Erlenstrasse 12 …)
 -------------------------------------------------------------------------- */
 export function groupOf(id, project) {
   const raw = String(id || "").trim();
+  // Punktnotation (A1.0.1 = Haus A1, Geschoss 0, Wohnung 1)
+  const dotted = raw.match(/^([A-Za-z0-9ÄÖÜ]+)\./);
+  if (dotted) return `${project.groupLabel} ${dotted[1].toUpperCase()}`;
   const letters = raw.match(/^([A-Za-zÄÖÜ]+)/);
   if (letters) return `${project.groupLabel} ${letters[1].toUpperCase()}`;
   // Ziffernpräfix nur dann als Gebäude werten, wenn danach noch etwas folgt
@@ -303,6 +415,7 @@ async function loadHtml(project, offlineDir) {
 
 /** Erkennt das Tabellenlayout selbst, damit neue Projekte ohne Konfiguration laufen. */
 function detectLayout(html) {
+  if (/\bBVR_NAV\s*=/.test(html)) return "beyonity";
   return /class=["'][^"']*\bang_list\b/i.test(html) ? "anglist" : "table";
 }
 
@@ -321,7 +434,9 @@ function shouldGroup(units) {
 export async function scrapeProject(project, offlineDir) {
   const html = await loadHtml(project, offlineDir);
   const layout = project.layout || detectLayout(html);
-  const units = layout === "anglist" ? parseAngList(html, project) : parseTables(html, project);
+  const units = layout === "beyonity" ? parseBeyonity(html, project)
+              : layout === "anglist"  ? parseAngList(html, project)
+              :                         parseTables(html, project);
   if (!units.length) throw new Error("Keine Einheiten erkannt – Seitenstruktur hat sich vermutlich geändert");
   return { units, layout, grouped: project.grouped !== undefined ? project.grouped : shouldGroup(units) };
 }
