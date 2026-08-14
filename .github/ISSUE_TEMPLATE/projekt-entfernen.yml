@@ -1,0 +1,20 @@
+name: Projekt entfernen
+description: Ein Projekt aus der Übersicht nehmen
+title: "Projekt entfernen"
+labels: ["projekt-entfernen"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nach dem Absenden nimmt ein Workflow das Projekt aus der Liste und meldet
+        sich hier mit dem Ergebnis. Die aufgezeichnete Historie bleibt erhalten –
+        wird das Projekt später erneut aufgenommen, ist sie weiterhin da.
+
+  - type: input
+    id: projekt
+    attributes:
+      label: Projekt
+      description: Name oder Kennung des Projekts, wie es in der Übersicht steht.
+      placeholder: z. B. Urban Gardens Embrach
+    validations:
+      required: true

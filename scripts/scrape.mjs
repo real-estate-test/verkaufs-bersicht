@@ -108,7 +108,9 @@ const SKIP_COLUMNS = /grundriss|anfrage|dokument|download|^$/i;
 
 function columnRole(header) {
   const h = header.toLowerCase();
-  if (h.includes("objekt") || h === "haus" || h.includes("haus-nr") || h.includes("nr.")) return "id";
+  // Wohnfläche zuerst ausschliessen, damit sie nicht als "Wohnung" durchgeht
+  if (h.includes("wohnfläche") || h.includes("wohnflache")) return "area";
+  if (h.includes("objekt") || h.includes("wohnung") || h.includes("haus") || /(^|\W)nr\.?(\W|$)/.test(h)) return "id";
   if (h.includes("zimmer")) return "rooms";
   if (h.includes("wohnfläche") || h.includes("wohnflache")) return "area";
   if (h.includes("verkaufspreis") || h.includes("preis") || h.includes("chf")) return "price";
@@ -151,7 +153,9 @@ export function parseTables(html, project) {
       const at = i => (i !== undefined && cells[i] ? cells[i].text : "");
 
       const id = at(ix.id);
-      if (!id || columnRole(id) === "id" || /^(haus|objekt)/i.test(id) && cells.length < 3) continue;
+      // Wiederholte Kopfzeilen anhand des exakten Überschriftstextes erkennen –
+      // eine Einheit darf durchaus "Wohnung 3" heissen.
+      if (!id || headers.some(h => h.toLowerCase() === id.toLowerCase())) continue;
       if (!/\d/.test(id) && !/[a-z]/i.test(id)) continue;
 
       const status = statusKey(at(ix.status));
@@ -273,8 +277,11 @@ export function groupOf(id, project) {
   const raw = String(id || "").trim();
   const letters = raw.match(/^([A-Za-zÄÖÜ]+)/);
   if (letters) return `${project.groupLabel} ${letters[1].toUpperCase()}`;
-  const digits = raw.match(/^(\d+)/);
-  if (digits) return `${project.groupLabel} ${digits[1]}`;
+  // Ziffernpräfix nur dann als Gebäude werten, wenn danach noch etwas folgt
+  // (12a/12b = Haushälften). Reine Nummern sind fortlaufende Wohnungsnummern
+  // und bilden keinen Gebäudeblock.
+  const prefixed = raw.match(/^(\d+)\s*[.\-]?\s*[A-Za-zÄÖÜ]/);
+  if (prefixed) return `${project.groupLabel} ${prefixed[1]}`;
   return project.groupLabel;
 }
 

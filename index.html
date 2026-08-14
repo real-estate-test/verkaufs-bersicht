@@ -424,9 +424,20 @@ function groupOf(id,label){
   const raw=String(id||"").trim();
   const letters=raw.match(/^([A-Za-zÄÖÜ]+)/);
   if(letters) return `${label} ${letters[1].toUpperCase()}`;
-  const digits=raw.match(/^(\d+)/);
-  if(digits) return `${label} ${digits[1]}`;
+  // Ziffernpräfix nur als Gebäude werten, wenn danach noch etwas folgt
+  // (12a/12b = Haushälften). Reine Nummern sind Wohnungsnummern.
+  const prefixed=raw.match(/^(\d+)\s*[.\-]?\s*[A-Za-zÄÖÜ]/);
+  if(prefixed) return `${label} ${prefixed[1]}`;
   return label;
+}
+
+/** Gruppen lohnen sich nur als echte Gebäudeblöcke, nicht als Kleinstgruppen. */
+function shouldGroup(units){
+  const sizes={};
+  units.filter(u=>u.kind==="unit").forEach(u=>{ sizes[u.group]=(sizes[u.group]||0)+1; });
+  const groups=Object.values(sizes);
+  if(groups.length<2) return false;
+  return !(groups.length>3 && Math.max(...groups)<=2);
 }
 /** Vergleichsform einer URL – Protokoll, www und Schlussschrägstrich sind egal. */
 function normalizeUrl(u){
@@ -470,9 +481,10 @@ function summarize(units){
 const SKIP_COLUMNS = /grundriss|anfrage|dokument|download/i;
 function columnRole(header){
   const h=header.toLowerCase();
-  if(h.includes("objekt")||h==="haus"||h.includes("nr.")) return "id";
-  if(h.includes("zimmer")) return "rooms";
+  // Wohnfläche zuerst ausschliessen, damit sie nicht als "Wohnung" durchgeht
   if(h.includes("wohnfläche")||h.includes("wohnflache")) return "area";
+  if(h.includes("objekt")||h.includes("wohnung")||h.includes("haus")||/(^|\W)nr\.?(\W|$)/.test(h)) return "id";
+  if(h.includes("zimmer")) return "rooms";
   if(h.includes("verkaufspreis")||h.includes("preis")||h.includes("chf")) return "price";
   if(h.includes("status")) return "status";
   if(h.includes("geschoss")) return "floor";
@@ -505,7 +517,8 @@ function parseTables(doc,label){
       if(!cells.length) continue;
       const at=i=>(i!==undefined && cells[i]) ? cells[i].textContent.trim() : "";
       const id=at(ix.id);
-      if(!id||columnRole(id)==="id") continue;
+      // Wiederholte Kopfzeilen exakt erkennen – eine Einheit darf "Wohnung 3" heissen.
+      if(!id||headers.some(h=>h.toLowerCase()===id.toLowerCase())) continue;
 
       const extra={};
       extraCols.forEach(({label,i})=>{
@@ -656,6 +669,10 @@ async function loadCustom(proj){
   data[proj.id]={units:[],summary:summarize([]),source:"loading",fetchedAt:null,error:null};
   const html=await fetchText(proj.url);
   const units=html?parseHTML(html,proj.groupLabel||"Haus"):[];
+  if(units.length){
+    proj.grouped=shouldGroup(units);   // wie im Scraper: Gruppierung selbst bestimmen
+    saveCustomProjects();
+  }
   data[proj.id]=units.length
     ? {units,summary:summarize(units),source:"live",fetchedAt:Date.now(),error:null}
     : {units:[],summary:summarize([]),source:"error",fetchedAt:null,
@@ -781,9 +798,10 @@ function renderProject(proj){
     <span class="src">
       <span class="pill ${srcPill[0]}">${srcPill[1]}</span>
       <a href="${escapeHtml(proj.url)}" target="_blank" rel="noopener">Quelle ↗</a>
-      ${proj.managed?"":
-        `<a href="${escapeHtml(issueUrl(proj))}" target="_blank" rel="noopener">dauerhaft übernehmen ↗</a>
-         <button class="remove-link" data-remove="${escapeHtml(proj.id)}">entfernen</button>`}
+      ${proj.managed
+        ? `<a class="remove-link" href="${escapeHtml(removeIssueUrl(proj))}" target="_blank" rel="noopener">entfernen ↗</a>`
+        : `<a href="${escapeHtml(issueUrl(proj))}" target="_blank" rel="noopener">dauerhaft übernehmen ↗</a>
+           <button class="remove-link" data-remove="${escapeHtml(proj.id)}">entfernen</button>`}
     </span>`;
   wrap.appendChild(head);
 
@@ -1136,7 +1154,8 @@ function loadCustomList(){
   projects=projects.concat(custom.map(c=>({...c,managed:false,groupLabel:c.groupLabel||"Haus"})));
 }
 function saveCustomProjects(){
-  store.set(LS_PROJECTS,projects.filter(p=>!p.managed).map(({id,name,url,type,groupLabel})=>({id,name,url,type,groupLabel})));
+  store.set(LS_PROJECTS,projects.filter(p=>!p.managed)
+    .map(({id,name,url,type,groupLabel,grouped})=>({id,name,url,type,groupLabel,grouped})));
 }
 function removeProject(id){
   const p=projects.find(x=>x.id===id);
@@ -1171,6 +1190,16 @@ function issueUrl(proj){
     url:proj.url,
     art:proj.type==="house"?"Häuser":"Wohnungen",
     gruppe:proj.groupLabel||"Haus"
+  });
+  return `https://github.com/${REPO}/issues/new?${q}`;
+}
+
+/** Gegenstück: nimmt ein dauerhaft erfasstes Projekt wieder aus der Liste. */
+function removeIssueUrl(proj){
+  const q=new URLSearchParams({
+    template:"projekt-entfernen.yml",
+    title:`Projekt entfernen: ${proj.name}`,
+    projekt:proj.name
   });
   return `https://github.com/${REPO}/issues/new?${q}`;
 }
