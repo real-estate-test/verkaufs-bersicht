@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T09:11:16.573Z",
+  "generatedAt": "2026-08-14T09:20:12.739Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -10,7 +10,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-14T09:11:16.573Z",
+      "fetchedAt": "2026-08-14T09:20:12.739Z",
       "units": [
         {
           "id": "A1-1",
@@ -465,7 +465,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-14T09:11:16.573Z",
+      "fetchedAt": "2026-08-14T09:20:12.739Z",
       "units": [
         {
           "id": "A1",
@@ -843,7 +843,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-14T09:11:16.573Z",
+      "fetchedAt": "2026-08-14T09:20:12.739Z",
       "units": [
         {
           "id": "12a",
