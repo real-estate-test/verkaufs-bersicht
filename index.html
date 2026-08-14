@@ -805,6 +805,11 @@ function renderProject(proj){
     </span>`;
   wrap.appendChild(head);
 
+  // Direkt binden, nicht erst am Ende: sonst bleibt "entfernen" bei einem
+  // Projekt ohne Daten wirkungslos, weil unten vorher ausgestiegen wird.
+  const rm=head.querySelector("[data-remove]");
+  if(rm) rm.onclick=()=>removeProject(proj.id);
+
   if(!units.length){
     wrap.appendChild(emptyBlock(proj, d.error || "Keine Einheiten gefunden."));
     return wrap;
@@ -838,8 +843,6 @@ function renderProject(proj){
     wrap.appendChild(e);
   }
 
-  const rm=head.querySelector("[data-remove]");
-  if(rm) rm.onclick=()=>removeProject(proj.id);
   return wrap;
 }
 
