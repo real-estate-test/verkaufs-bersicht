@@ -1,0 +1,45 @@
+name: Projekt hinzufügen
+description: Ein weiteres Verkaufsprojekt dauerhaft in die Übersicht aufnehmen
+title: "Projekt hinzufügen"
+labels: ["projekt"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nach dem Absenden prüft ein Workflow die Seite, nimmt das Projekt in die
+        Übersicht auf und meldet sich hier mit dem Ergebnis. Dauert etwa eine Minute.
+
+  - type: input
+    id: name
+    attributes:
+      label: Projektname
+      description: So erscheint das Projekt in der Übersicht.
+      placeholder: z. B. Seeluft Boniswil
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Link zur Angebotsseite
+      description: Die Seite, auf der die Angebotstabelle steht.
+      placeholder: https://…/angebot/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: art
+    attributes:
+      label: Art der Objekte
+      options:
+        - Wohnungen
+        - Häuser
+    validations:
+      required: true
+
+  - type: input
+    id: gruppe
+    attributes:
+      label: Bezeichnung der Gruppen (optional)
+      description: Präfix der Zwischenüberschriften, z. B. „Haus" ergibt „Haus A". Leer lassen für „Haus".
+      placeholder: Haus

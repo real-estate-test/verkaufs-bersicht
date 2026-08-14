@@ -1,0 +1,34 @@
+{
+  "runs": [
+    {
+      "date": "2026-08-14",
+      "at": "2026-08-14T09:11:16.573Z",
+      "projects": {
+        "sonnenberg": {
+          "total": 23,
+          "available": 14,
+          "reserved": 1,
+          "sold": 7,
+          "unknown": 1,
+          "availableVolume": 15360000
+        },
+        "seeluft": {
+          "total": 21,
+          "available": 9,
+          "reserved": 6,
+          "sold": 6,
+          "unknown": 0,
+          "availableVolume": 7995000
+        },
+        "erlenstrasse": {
+          "total": 10,
+          "available": 7,
+          "reserved": 0,
+          "sold": 3,
+          "unknown": 0,
+          "availableVolume": 16200000
+        }
+      }
+    }
+  ]
+}

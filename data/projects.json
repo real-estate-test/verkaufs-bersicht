@@ -1,0 +1,27 @@
+{
+  "_hinweis": "Register aller automatisch erfassten Projekte. Ergänzungen kommen über den '+ Projekt'-Dialog der Seite (GitHub-Eintrag) oder durch direktes Bearbeiten dieser Datei. Felder: id, name, url, type (house|apartment), groupLabel, optional layout (table|anglist) und grouped – beides wird sonst automatisch erkannt.",
+  "projects": [
+    {
+      "id": "sonnenberg",
+      "name": "Sonnenberg Reinach",
+      "url": "https://sonnenberg-reinach.ch/angebot/",
+      "type": "house",
+      "groupLabel": "Haus"
+    },
+    {
+      "id": "seeluft",
+      "name": "Seeluft Boniswil",
+      "url": "https://seeluft-boniswil.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus"
+    },
+    {
+      "id": "erlenstrasse",
+      "name": "Erlenstrasse Oetwil",
+      "url": "https://www.erlenstrasse-oetwil.ch/",
+      "link": "https://www.erlenstrasse-oetwil.ch/#angebot",
+      "type": "house",
+      "groupLabel": "Erlenstrasse"
+    }
+  ]
+}

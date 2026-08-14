@@ -1,0 +1,68 @@
+name: Verkaufsdaten aktualisieren
+
+on:
+  schedule:
+    # 1. und 15. jeden Monats, 05:17 UTC = 07:17 (Sommer) / 06:17 (Winter) Schweizer Zeit
+    - cron: "17 5 1,15 * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/scrape.mjs
+      - data/projects.json
+      - .github/workflows/update-data.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verkaufsdaten
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Projektseiten auslesen
+        run: node scripts/scrape.mjs
+
+      - name: Zusammenfassung
+        if: always()
+        run: |
+          node -e '
+            const d = require("./data/latest.json");
+            const s = ["| Projekt | Total | Verfügbar | Reserviert | Verkauft | Stand |",
+                       "|---|---:|---:|---:|---:|---|"];
+            for (const p of d.projects) {
+              const c = p.summary;
+              s.push(`| ${p.name}${p.ok ? "" : " ⚠️"} | ${c.total} | ${c.available} | ${c.reserved} | ${c.sold} | ${p.ok ? "live" : "unverändert – " + p.error} |`);
+            }
+            const ch = require("./data/changes.json").entries.filter(e => e.date === new Date().toISOString().slice(0,10));
+            s.push("", `**${ch.length} Änderung(en) seit dem letzten Lauf**`);
+            for (const e of ch.slice(0, 40)) s.push(`- ${e.projectName} · ${e.unit} · ${e.type} ${e.from ?? e.priceFrom ?? ""} → ${e.to ?? e.priceTo ?? ""}`);
+            console.log(s.join("\n"));
+          ' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Änderungen committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Keine Datenänderung."
+            exit 0
+          fi
+          git commit -m "data: Verkaufsstand $(date -u +%Y-%m-%d)"
+          BRANCH="${GITHUB_REF_NAME}"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            echo "Push fehlgeschlagen, neuer Versuch in $((2**i))s"
+            sleep $((2**i))
+          done
+          exit 1
