@@ -37,6 +37,44 @@
           "availableVolume": 60710000
         }
       }
+    },
+    {
+      "date": "2026-08-15",
+      "at": "2026-08-15T05:42:04.882Z",
+      "projects": {
+        "sonnenberg": {
+          "total": 23,
+          "available": 14,
+          "reserved": 1,
+          "sold": 7,
+          "unknown": 1,
+          "availableVolume": 15360000
+        },
+        "seeluft": {
+          "total": 21,
+          "available": 9,
+          "reserved": 6,
+          "sold": 6,
+          "unknown": 0,
+          "availableVolume": 7995000
+        },
+        "erlenstrasse": {
+          "total": 10,
+          "available": 7,
+          "reserved": 0,
+          "sold": 3,
+          "unknown": 0,
+          "availableVolume": 16200000
+        },
+        "suhrano": {
+          "total": 90,
+          "available": 67,
+          "reserved": 5,
+          "sold": 18,
+          "unknown": 0,
+          "availableVolume": 60710000
+        }
+      }
     }
   ]
 }
