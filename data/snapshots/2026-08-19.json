@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T09:20:55.958Z",
+  "generatedAt": "2026-08-19T10:08:54.835Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -10,7 +10,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-19T09:20:55.958Z",
+      "fetchedAt": "2026-08-19T10:08:54.835Z",
       "units": [
         {
           "id": "A1-1",
@@ -491,7 +491,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-19T09:20:55.958Z",
+      "fetchedAt": "2026-08-19T10:08:54.835Z",
       "units": [
         {
           "id": "A1",
@@ -887,7 +887,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-19T09:20:55.958Z",
+      "fetchedAt": "2026-08-19T10:08:54.835Z",
       "units": [
         {
           "id": "12a",
@@ -1116,7 +1116,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-19T09:20:55.958Z",
+      "fetchedAt": "2026-08-19T10:08:54.835Z",
       "units": [
         {
           "id": "A1.0.1",
