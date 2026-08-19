@@ -10,7 +10,33 @@
           "reserved": 1,
           "sold": 7,
           "unknown": 1,
-          "availableVolume": 15360000
+          "availableVolume": 15360000,
+          "byRooms": {
+            "5.5": {
+              "total": 9,
+              "available": 6,
+              "reserved": 1,
+              "sold": 2,
+              "unknown": 0,
+              "availableVolume": 7600000
+            },
+            "4.5": {
+              "total": 13,
+              "available": 8,
+              "reserved": 0,
+              "sold": 5,
+              "unknown": 0,
+              "availableVolume": 7760000
+            },
+            "2.5": {
+              "total": 1,
+              "available": 0,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 1,
+              "availableVolume": 0
+            }
+          }
         },
         "seeluft": {
           "total": 21,
@@ -18,7 +44,25 @@
           "reserved": 6,
           "sold": 6,
           "unknown": 0,
-          "availableVolume": 7995000
+          "availableVolume": 7995000,
+          "byRooms": {
+            "4.5": {
+              "total": 12,
+              "available": 6,
+              "reserved": 2,
+              "sold": 4,
+              "unknown": 0,
+              "availableVolume": 5550000
+            },
+            "3.5": {
+              "total": 9,
+              "available": 3,
+              "reserved": 4,
+              "sold": 2,
+              "unknown": 0,
+              "availableVolume": 2445000
+            }
+          }
         },
         "erlenstrasse": {
           "total": 10,
@@ -26,7 +70,33 @@
           "reserved": 0,
           "sold": 3,
           "unknown": 0,
-          "availableVolume": 16200000
+          "availableVolume": 16200000,
+          "byRooms": {
+            "4.5": {
+              "total": 3,
+              "available": 3,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 0,
+              "availableVolume": 7150000
+            },
+            "5.5": {
+              "total": 4,
+              "available": 4,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 0,
+              "availableVolume": 9050000
+            },
+            "?": {
+              "total": 3,
+              "available": 0,
+              "reserved": 0,
+              "sold": 3,
+              "unknown": 0,
+              "availableVolume": 0
+            }
+          }
         },
         "suhrano": {
           "total": 90,
@@ -34,7 +104,41 @@
           "reserved": 5,
           "sold": 18,
           "unknown": 0,
-          "availableVolume": 60710000
+          "availableVolume": 60710000,
+          "byRooms": {
+            "4.5": {
+              "total": 61,
+              "available": 51,
+              "reserved": 2,
+              "sold": 8,
+              "unknown": 0,
+              "availableVolume": 46320000
+            },
+            "3.5": {
+              "total": 19,
+              "available": 9,
+              "reserved": 3,
+              "sold": 7,
+              "unknown": 0,
+              "availableVolume": 6910000
+            },
+            "2.5": {
+              "total": 3,
+              "available": 0,
+              "reserved": 0,
+              "sold": 3,
+              "unknown": 0,
+              "availableVolume": 0
+            },
+            "5.5": {
+              "total": 7,
+              "available": 7,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 0,
+              "availableVolume": 7480000
+            }
+          }
         }
       }
     },
@@ -48,7 +152,33 @@
           "reserved": 1,
           "sold": 7,
           "unknown": 1,
-          "availableVolume": 15360000
+          "availableVolume": 15360000,
+          "byRooms": {
+            "5.5": {
+              "total": 9,
+              "available": 6,
+              "reserved": 1,
+              "sold": 2,
+              "unknown": 0,
+              "availableVolume": 7600000
+            },
+            "4.5": {
+              "total": 13,
+              "available": 8,
+              "reserved": 0,
+              "sold": 5,
+              "unknown": 0,
+              "availableVolume": 7760000
+            },
+            "2.5": {
+              "total": 1,
+              "available": 0,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 1,
+              "availableVolume": 0
+            }
+          }
         },
         "seeluft": {
           "total": 21,
@@ -56,7 +186,25 @@
           "reserved": 6,
           "sold": 6,
           "unknown": 0,
-          "availableVolume": 7995000
+          "availableVolume": 7995000,
+          "byRooms": {
+            "4.5": {
+              "total": 12,
+              "available": 6,
+              "reserved": 2,
+              "sold": 4,
+              "unknown": 0,
+              "availableVolume": 5550000
+            },
+            "3.5": {
+              "total": 9,
+              "available": 3,
+              "reserved": 4,
+              "sold": 2,
+              "unknown": 0,
+              "availableVolume": 2445000
+            }
+          }
         },
         "erlenstrasse": {
           "total": 10,
@@ -64,7 +212,33 @@
           "reserved": 0,
           "sold": 3,
           "unknown": 0,
-          "availableVolume": 16200000
+          "availableVolume": 16200000,
+          "byRooms": {
+            "4.5": {
+              "total": 3,
+              "available": 3,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 0,
+              "availableVolume": 7150000
+            },
+            "5.5": {
+              "total": 4,
+              "available": 4,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 0,
+              "availableVolume": 9050000
+            },
+            "?": {
+              "total": 3,
+              "available": 0,
+              "reserved": 0,
+              "sold": 3,
+              "unknown": 0,
+              "availableVolume": 0
+            }
+          }
         },
         "suhrano": {
           "total": 90,
@@ -72,7 +246,41 @@
           "reserved": 5,
           "sold": 18,
           "unknown": 0,
-          "availableVolume": 60710000
+          "availableVolume": 60710000,
+          "byRooms": {
+            "4.5": {
+              "total": 61,
+              "available": 51,
+              "reserved": 2,
+              "sold": 8,
+              "unknown": 0,
+              "availableVolume": 46320000
+            },
+            "3.5": {
+              "total": 19,
+              "available": 9,
+              "reserved": 3,
+              "sold": 7,
+              "unknown": 0,
+              "availableVolume": 6910000
+            },
+            "2.5": {
+              "total": 3,
+              "available": 0,
+              "reserved": 0,
+              "sold": 3,
+              "unknown": 0,
+              "availableVolume": 0
+            },
+            "5.5": {
+              "total": 7,
+              "available": 7,
+              "reserved": 0,
+              "sold": 0,
+              "unknown": 0,
+              "availableVolume": 7480000
+            }
+          }
         }
       }
     },
