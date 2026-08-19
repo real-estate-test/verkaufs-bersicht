@@ -43,3 +43,12 @@ body:
       label: Bezeichnung der Gruppen (optional)
       description: Präfix der Zwischenüberschriften, z. B. „Haus" ergibt „Haus A". Leer lassen für „Haus".
       placeholder: Haus
+
+  - type: input
+    id: parkierung
+    attributes:
+      label: Gruppen, die Parkierung sind (optional)
+      description: >
+        Namen wie „Garage" oder „Einstellhalle" erkennt die Übersicht selbst. Nur eintragen,
+        wenn eine Gruppe anders heisst und trotzdem Abstellplätze enthält – mehrere mit Komma trennen.
+      placeholder: Haus D, Nebenbau

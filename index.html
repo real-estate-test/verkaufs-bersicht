@@ -107,9 +107,12 @@
   .pill.err{background:var(--available-bg);color:var(--available)}
 
   .house{margin-top:18px}
-  .house-head{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+  .house-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin-bottom:8px}
   .house-head h3{font-size:15px;letter-spacing:.02em}
   .house-head .hcount{font-size:12.5px;color:var(--faint)}
+  .kind-toggle{font-size:11.5px;color:var(--faint);border:1px solid var(--line);background:var(--surface);
+    padding:2px 8px;border-radius:999px;transition:.15s;white-space:nowrap}
+  .kind-toggle:hover{border-color:var(--brand);color:var(--brand-ink);background:var(--surface-2)}
   .house-bars{display:flex;gap:3px;margin-left:auto;align-items:center}
   .bar-seg{height:7px;border-radius:2px}
   .bar-seg.a{background:var(--available)} .bar-seg.r{background:var(--reserved)} .bar-seg.s{background:var(--sold)}
@@ -374,6 +377,7 @@ const PROXIES = [
 ];
 const LS_PROJECTS = "wohnungen.projects.v1";
 const LS_CACHE    = "wohnungen.cache.v2";
+const LS_KINDS    = "wohnungen.kinds.v1";   // manuelle Zuordnung Wohnung/Parkierung
 const REPO        = "real-estate-test/verkaufs-bersicht";
 
 const COLORS = { available:"#b23a3a", reserved:"#a8820c", sold:"#0d7d63" };
@@ -756,7 +760,9 @@ function applyLatest(latest,mode){
   projects=managed.concat(leftovers);
   (latest.projects||[]).forEach(p=>{
     data[p.id]={
-      units:p.units||[],
+      // Auch serverseitig gelieferte Daten einstufen: sie können aus einem
+      // Lauf stammen, der die Parkierungserkennung noch nicht kannte.
+      units:classifyUnits(p.units||[],p),
       summary:p.summary||summarize(p.units||[]),
       source: mode==="cache" ? "cache" : (p.ok ? "managed" : (p.stale?"cache":"error")),
       fetchedAt:p.fetchedAt||latest.generatedAt||null,
@@ -769,7 +775,8 @@ function applyLatest(latest,mode){
 async function loadCustom(proj){
   data[proj.id]={units:[],summary:summarize([]),source:"loading",fetchedAt:null,error:null};
   const html=await fetchText(proj.url);
-  const units=html?parseHTML(html,proj.groupLabel||"Haus"):[];
+  const parsed=html?parseHTML(html,proj.groupLabel||"Haus"):[];
+  const units=classifyUnits(parsed,proj);
   if(units.length){
     proj.grouped=shouldGroup(units);   // wie im Scraper: Gruppierung selbst bestimmen
     saveCustomProjects();
@@ -797,6 +804,44 @@ function visibleProjects(){
   return filters.project==="all" ? projects : projects.filter(p=>p.id===filters.project);
 }
 function unitsOf(proj){ return (data[proj.id] && data[proj.id].units) || []; }
+/* --------------------------------------------------------------------------
+   Wohnung oder Parkierung?
+   Heisst ein Gebäude "Garage", sind das Abstellplätze und keine Wohnungen –
+   sie dürfen die Wohnungskennzahlen nicht aufblähen. Die Erkennung greift
+   automatisch, lässt sich pro Gruppe aber von Hand überstimmen.
+-------------------------------------------------------------------------- */
+const PARKING_NAME =
+  /(^|[\s\-_.])(garage[nr]?|tiefgarage|einstellhalle|autoeinstellhalle|parkplatz|parkpl(ä|ae)tze|parking|parkierung|carport|abstellplatz|aussenparkplatz|besucherparkplatz|motorrad|velo)([\s\-_.\d]|$)/i;
+
+function classifyUnits(units,project){
+  const norm=s=>String(s||"").toLowerCase().trim();
+  const asParking=((project&&project.parkingGroups)||[]).map(norm);
+  const asLiving =((project&&project.livingGroups) ||[]).map(norm);
+  return units.map(u=>{
+    const g=norm(u.group);
+    if(asLiving.includes(g)) return u.kind==="unit"?u:{...u,kind:"unit"};
+    const parking = u.kind==="parking" || asParking.includes(g)
+      || PARKING_NAME.test(`${u.group||""} ${u.id||""}`);
+    return parking===(u.kind==="parking") ? u : {...u,kind:parking?"parking":"unit"};
+  });
+}
+
+let kindOverrides = {};   // "projektId|Gruppe" -> "parking" | "unit"
+function overrideKey(projectId,group){ return `${projectId}|${group||"–"}`; }
+
+/** Tatsächliche Einstufung: manuelle Zuordnung schlägt die automatische. */
+function kindOf(proj,unit){
+  return kindOverrides[overrideKey(proj.id,unit.group)] || unit.kind || "unit";
+}
+function isUnit(proj,u){ return kindOf(proj,u)==="unit"; }
+
+function setGroupKind(proj,group,kind){
+  const key=overrideKey(proj.id,group);
+  if(kind) kindOverrides[key]=kind; else delete kindOverrides[key];
+  store.set(LS_KINDS,kindOverrides);
+  render();
+}
+
 /** Zimmerzahl als stabiler Schlüssel: 4.5 -> "4.5", ohne Angabe -> "?" */
 function roomKey(rooms){
   return typeof rooms==="number" && isFinite(rooms) ? rooms.toFixed(1) : "?";
@@ -805,7 +850,7 @@ function roomKey(rooms){
 function availableRooms(){
   const set=new Set();
   visibleProjects().forEach(p=>unitsOf(p).forEach(u=>{
-    if(u.kind==="unit" && typeof u.rooms==="number") set.add(roomKey(u.rooms));
+    if(isUnit(p,u) && typeof u.rooms==="number") set.add(roomKey(u.rooms));
   }));
   return [...set].sort((a,b)=>parseFloat(a)-parseFloat(b));
 }
@@ -821,9 +866,10 @@ function matchFilters(unit){
   }
   return true;
 }
-function countByStatus(units){
+/** Mit `proj` wird nach effektiver Einstufung gefiltert; ohne gilt die Liste als bereits gefiltert. */
+function countByStatus(units,proj){
   const c={available:0,reserved:0,sold:0,unknown:0};
-  units.filter(u=>u.kind==="unit" && matchesRooms(u)).forEach(x=>c[x.status]++);
+  units.filter(u=>(proj?isUnit(proj,u):true) && matchesRooms(u)).forEach(x=>c[x.status]++);
   return c;
 }
 function fmtCHF(n){ return n==null?"–":"CHF "+n.toLocaleString("de-CH"); }
@@ -856,7 +902,7 @@ function render(){
 
 function renderStats(){
   let all=[];
-  visibleProjects().forEach(p=> all=all.concat(unitsOf(p).filter(u=>u.kind==="unit" && matchesRooms(u))));
+  visibleProjects().forEach(p=> all=all.concat(unitsOf(p).filter(u=>isUnit(p,u) && matchesRooms(u))));
   const c=countByStatus(all);
   const total=all.length;
   const availVol=all.filter(x=>x.status==="available").reduce((s,x)=>s+(x.price||0),0);
@@ -913,7 +959,7 @@ function renderProject(proj){
   // Zimmerfilter wirkt wie eine Bestandsauswahl, nicht wie ein Zeilenfilter:
   // Gruppen, Zählungen und Balken beziehen sich alle auf diese Auswahl.
   const units=unitsOf(proj).filter(matchesRooms);
-  const c=countByStatus(units);
+  const c=countByStatus(units,proj);
   const srcPill={
     managed:["live","Auto"], cache:["cache","Letzter Stand"], live:["seed","Nur dieses Gerät"],
     loading:["seed","lädt…"], error:["err","nicht geladen"]
@@ -955,15 +1001,18 @@ function renderProject(proj){
 
   // Gruppiert nur, wo die Gruppe ein echter Gebäudeblock ist (Haus A/B/C).
   // Sonst eine Tabelle je Projekt, Parkierung stets separat.
+  // Parkierung behält ihren eigenen Namen, damit sie umschaltbar bleibt;
+  // Wohnungen werden nur gruppiert, wo die Gruppe ein echter Gebäudeblock ist.
   const groups={};
   units.forEach(x=>{
-    const key = x.kind==="parking" ? "Parkierung"
+    const key = kindOf(proj,x)==="parking" ? (x.group||"Parkierung")
       : (proj.grouped===false ? typeWord(proj.type,true) : (x.group||"–"));
     (groups[key]=groups[key]||[]).push(x);
   });
+  const parkingFirstUnit=k=>kindOf(proj,groups[k][0])==="parking";
   const keys=Object.keys(groups).sort((a,b)=>{
-    if(a==="Parkierung") return 1;
-    if(b==="Parkierung") return -1;
+    const pa=parkingFirstUnit(a), pb=parkingFirstUnit(b);
+    if(pa!==pb) return pa?1:-1;                       // Parkierung ans Ende
     return a.localeCompare(b,"de",{numeric:true});
   });
 
@@ -987,10 +1036,11 @@ function renderProject(proj){
 function renderGroup(proj,groupKey,allUnits,visibleUnits){
   const sec=document.createElement("div");
   sec.className="house";
-  const c=countByStatus(allUnits);
+  const c=countByStatus(allUnits,proj);
   const seg=(n,cls)=> n?`<span class="bar-seg ${cls}" style="width:${Math.max(6,n*9)}px" title="${n}"></span>`:"";
-  const isParking=allUnits.every(u=>u.kind==="parking");
+  const isParking=allUnits.every(u=>kindOf(proj,u)==="parking");
   const hasFloor=allUnits.some(x=>x.floor);
+  const sourceGroup=allUnits[0].group;   // Schlüssel für die manuelle Zuordnung
 
   // Zusatzspalten nur auf Wunsch – hält die Tabelle im Normalfall schmal
   const extraKeys=[];
@@ -1003,6 +1053,12 @@ function renderGroup(proj,groupKey,allUnits,visibleUnits){
     <div class="house-head">
       <h3>${escapeHtml(groupKey)}</h3>
       <span class="hcount num">${allUnits.length} ${isParking?"Objekt(e)":escapeHtml(typeWord(proj.type,true))}</span>
+      <button class="kind-toggle" data-kind="${isParking?"unit":"parking"}"
+        title="${isParking
+          ? "Als Wohnungen zählen – zählt wieder in die Kennzahlen"
+          : "Als Parkierung kennzeichnen – zählt dann nicht mehr als Wohnung"}">
+        ${isParking?"↩ als "+escapeHtml(typeWord(proj.type,true)):"⇄ als Parkierung"}
+      </button>
       <span class="house-bars">${seg(c.available,"a")}${seg(c.reserved,"r")}${seg(c.sold,"s")}</span>
     </div>
     <div class="table-scroll">
@@ -1018,6 +1074,11 @@ function renderGroup(proj,groupKey,allUnits,visibleUnits){
         </tbody>
       </table>
     </div>`;
+
+  // Die getroffene Wahl wird immer festgehalten – sie soll die automatische
+  // Einstufung überstimmen, auch wenn beide gerade übereinstimmen.
+  sec.querySelector(".kind-toggle").onclick=ev=>
+    setGroupKind(proj,sourceGroup,ev.currentTarget.dataset.kind);
   return sec;
 }
 
@@ -1331,13 +1392,19 @@ function openModal(){
 
 /** Vorausgefüllter GitHub-Eintrag – der Workflow nimmt das Projekt daraus auf. */
 function issueUrl(proj){
+  // Von Hand als Parkierung gekennzeichnete Gruppen mitgeben, sonst gingen sie verloren
+  const prefix=proj.id+"|";
+  const parking=Object.entries(kindOverrides)
+    .filter(([k,v])=>v==="parking" && k.startsWith(prefix))
+    .map(([k])=>k.slice(prefix.length));
   const q=new URLSearchParams({
     template:"projekt.yml",
     title:`Projekt hinzufügen: ${proj.name}`,
     name:proj.name,
     url:proj.url,
     art:proj.type==="house"?"Häuser":"Wohnungen",
-    gruppe:proj.groupLabel||"Haus"
+    gruppe:proj.groupLabel||"Haus",
+    parkierung:parking.join(", ")
   });
   return `https://github.com/${REPO}/issues/new?${q}`;
 }
@@ -1409,6 +1476,7 @@ window.addEventListener("resize",()=>{
    Start
 ---------------------------------------------------------------------------- */
 (async function init(){
+  kindOverrides=store.get(LS_KINDS,{});
   loadCustomList();
   const cached=store.get(LS_CACHE,null);
   if(cached&&cached.projects) applyLatest(cached,"cache");

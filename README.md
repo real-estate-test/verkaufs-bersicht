@@ -64,6 +64,21 @@ Alternativ lässt sich `data/projects.json` direkt bearbeiten:
 | `layout` | optional `"table"`, `"anglist"` oder `"beyonity"`; wird sonst automatisch erkannt |
 | `fields` | optional, nur Beyonity: feste Zuordnung von `price` / `floor` auf ein `custom_N`-Feld |
 | `grouped` | optional; wird sonst automatisch bestimmt (viele Kleinstgruppen → flache Liste) |
+| `parkingGroups` | optional: Gruppennamen, die Abstellplätze sind, obwohl der Name das nicht verrät |
+| `livingGroups` | optional: Gruppennamen, die trotz Namen wie „Garagenhof" Wohnungen sind |
+
+## Wohnungen und Parkierung
+
+Heisst ein Gebäude „Garage", „Einstellhalle" oder „Parkplätze", sind das
+Abstellplätze und keine Wohnungen – sie werden automatisch als Parkierung
+eingestuft, separat ausgewiesen und aus den Wohnungskennzahlen genommen.
+
+Trifft die Erkennung daneben, lässt sich das an jeder Gruppenüberschrift der
+Übersicht mit einem Klick umschalten („⇄ als Parkierung" / „↩ als Wohnungen").
+Diese Wahl gilt im jeweiligen Browser und überstimmt die Automatik. Dauerhaft
+für alle Geräte wird sie über `parkingGroups` / `livingGroups` in
+`data/projects.json` – beim „dauerhaft übernehmen" eines Projekts wandern die
+lokal gesetzten Parkierungsgruppen automatisch in den GitHub-Eintrag mit.
 
 ## Dateien
 

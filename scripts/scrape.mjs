@@ -431,6 +431,29 @@ function shouldGroup(units) {
   return !(groups.length > 3 && Math.max(...groups) <= 2);
 }
 
+/**
+ * Parkierung erkennen. Heisst ein Gebäude "Garage", sind das Abstellplätze und
+ * keine Wohnungen – sie dürfen die Wohnungskennzahlen nicht aufblähen.
+ * Über `parkingGroups` / `livingGroups` in projects.json korrigierbar.
+ */
+export const PARKING_NAME =
+  /(^|[\s\-_.])(garage[nr]?|tiefgarage|einstellhalle|autoeinstellhalle|parkplatz|parkpl(ä|ae)tze|parking|parkierung|carport|abstellplatz|aussenparkplatz|besucherparkplatz|motorrad|velo)([\s\-_.\d]|$)/i;
+
+export function classifyUnits(units, project = {}) {
+  const norm = s => String(s || "").toLowerCase().trim();
+  const asParking = (project.parkingGroups || []).map(norm);
+  const asLiving  = (project.livingGroups  || []).map(norm);
+
+  return units.map(u => {
+    const group = norm(u.group);
+    if (asLiving.includes(group)) return u.kind === "unit" ? u : { ...u, kind: "unit" };
+    const parking = u.kind === "parking"
+      || asParking.includes(group)
+      || PARKING_NAME.test(`${u.group || ""} ${u.id || ""} ${u.typeText || ""}`);
+    return parking === (u.kind === "parking") ? u : { ...u, kind: parking ? "parking" : "unit" };
+  });
+}
+
 export async function scrapeProject(project, offlineDir) {
   const html = await loadHtml(project, offlineDir);
   const layout = project.layout || detectLayout(html);
@@ -438,7 +461,12 @@ export async function scrapeProject(project, offlineDir) {
               : layout === "anglist"  ? parseAngList(html, project)
               :                         parseTables(html, project);
   if (!units.length) throw new Error("Keine Einheiten erkannt – Seitenstruktur hat sich vermutlich geändert");
-  return { units, layout, grouped: project.grouped !== undefined ? project.grouped : shouldGroup(units) };
+  const classified = classifyUnits(units, project);
+  return {
+    units: classified,
+    layout,
+    grouped: project.grouped !== undefined ? project.grouped : shouldGroup(classified)
+  };
 }
 
 /* --------------------------------------------------------------------------

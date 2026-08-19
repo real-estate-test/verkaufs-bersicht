@@ -99,6 +99,9 @@ async function main() {
       type: /haus|häuser|haeuser/i.test(art) ? "house" : "apartment",
       groupLabel: gruppe || "Haus"
     };
+    const parking = pick(fields, "parkierung", "parking")
+      .split(",").map(s => s.trim()).filter(Boolean);
+    if (parking.length) entry.parkingGroups = parking;
 
     // Testlauf, bevor irgendetwas geschrieben wird
     const { units, layout, grouped } = await scrapeProject(entry);
