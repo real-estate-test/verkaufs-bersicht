@@ -1,3 +1,13 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-08-19",
+      "project": "seeluft",
+      "projectName": "Seeluft Boniswil",
+      "unit": "A8",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    }
+  ]
 }
