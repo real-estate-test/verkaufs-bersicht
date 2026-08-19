@@ -241,6 +241,10 @@
       <button class="btn small" id="addProjectBtn" style="margin-left:6px">+ Projekt</button>
     </div>
     <div class="ctrl-row">
+      <span class="ctrl-label">Zimmer</span>
+      <div class="chips" id="roomChips"></div>
+    </div>
+    <div class="ctrl-row">
       <span class="ctrl-label">Status</span>
       <div class="chips" id="statusChips"></div>
       <div class="spacer"></div>
@@ -394,7 +398,7 @@ let projects = [];    // {id,name,url,type,groupLabel,managed}
 let data = {};        // id -> {units,summary,source,fetchedAt,error}
 let history = { runs: [] };
 let changes = { entries: [] };
-let filters = { project:"all", status:"all", search:"", highlight:false, details:false };
+let filters = { project:"all", status:"all", rooms:"all", search:"", highlight:false, details:false };
 let chartAsTable = false;
 
 /* ----------------------------------------------------------------------------
@@ -793,7 +797,23 @@ function visibleProjects(){
   return filters.project==="all" ? projects : projects.filter(p=>p.id===filters.project);
 }
 function unitsOf(proj){ return (data[proj.id] && data[proj.id].units) || []; }
+/** Zimmerzahl als stabiler Schlüssel: 4.5 -> "4.5", ohne Angabe -> "?" */
+function roomKey(rooms){
+  return typeof rooms==="number" && isFinite(rooms) ? rooms.toFixed(1) : "?";
+}
+/** Welche Zimmerzahlen kommen in den gerade sichtbaren Projekten vor? */
+function availableRooms(){
+  const set=new Set();
+  visibleProjects().forEach(p=>unitsOf(p).forEach(u=>{
+    if(u.kind==="unit" && typeof u.rooms==="number") set.add(roomKey(u.rooms));
+  }));
+  return [...set].sort((a,b)=>parseFloat(a)-parseFloat(b));
+}
+function matchesRooms(unit){
+  return filters.rooms==="all" || roomKey(unit.rooms)===filters.rooms;
+}
 function matchFilters(unit){
+  if(!matchesRooms(unit)) return false;
   if(filters.status!=="all" && unit.status!==filters.status) return false;
   if(filters.search){
     const q=filters.search.toLowerCase();
@@ -803,7 +823,7 @@ function matchFilters(unit){
 }
 function countByStatus(units){
   const c={available:0,reserved:0,sold:0,unknown:0};
-  units.filter(u=>u.kind==="unit").forEach(x=>c[x.status]++);
+  units.filter(u=>u.kind==="unit" && matchesRooms(u)).forEach(x=>c[x.status]++);
   return c;
 }
 function fmtCHF(n){ return n==null?"–":"CHF "+n.toLocaleString("de-CH"); }
@@ -826,6 +846,7 @@ function typeWord(type,plural){
 ---------------------------------------------------------------------------- */
 function render(){
   renderProjectChips();
+  renderRoomChips();
   renderStatusChips();
   renderStats();
   renderContent();
@@ -835,7 +856,7 @@ function render(){
 
 function renderStats(){
   let all=[];
-  visibleProjects().forEach(p=> all=all.concat(unitsOf(p).filter(u=>u.kind==="unit")));
+  visibleProjects().forEach(p=> all=all.concat(unitsOf(p).filter(u=>u.kind==="unit" && matchesRooms(u))));
   const c=countByStatus(all);
   const total=all.length;
   const availVol=all.filter(x=>x.status==="available").reduce((s,x)=>s+(x.price||0),0);
@@ -860,6 +881,16 @@ function renderProjectChips(){
   el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.project=b.dataset.proj; render(); });
 }
 
+function renderRoomChips(){
+  const el=document.getElementById("roomChips");
+  const rooms=availableRooms();
+  // Ausgewählte Zimmerzahl kann nach Projektwechsel wegfallen – dann zurücksetzen
+  if(filters.rooms!=="all" && !rooms.includes(filters.rooms)) filters.rooms="all";
+  const chip=(v,l)=>`<button class="chip${filters.rooms===v?' active':''}" data-rooms="${escapeHtml(v)}">${escapeHtml(l)}</button>`;
+  el.innerHTML=chip("all","Alle")+rooms.map(r=>chip(r,`${r} Zi.`)).join("");
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.rooms=b.dataset.rooms; render(); });
+}
+
 function renderStatusChips(){
   const el=document.getElementById("statusChips");
   const opts=[["all","Alle",""],["available","Verfügbar","s-available"],
@@ -879,7 +910,9 @@ function renderProject(proj){
   const wrap=document.createElement("section");
   wrap.className="project";
   const d=data[proj.id]||{units:[],source:"error"};
-  const units=unitsOf(proj);
+  // Zimmerfilter wirkt wie eine Bestandsauswahl, nicht wie ein Zeilenfilter:
+  // Gruppen, Zählungen und Balken beziehen sich alle auf diese Auswahl.
+  const units=unitsOf(proj).filter(matchesRooms);
   const c=countByStatus(units);
   const srcPill={
     managed:["live","Auto"], cache:["cache","Letzter Stand"], live:["seed","Nur dieses Gerät"],
@@ -908,7 +941,15 @@ function renderProject(proj){
   if(rm) rm.onclick=()=>removeProject(proj.id);
 
   if(!units.length){
-    wrap.appendChild(emptyBlock(proj, d.error || "Keine Einheiten gefunden."));
+    // Leer wegen Zimmerfilter ist etwas anderes als "nichts geladen"
+    if(unitsOf(proj).length){
+      const e=document.createElement("div");
+      e.className="table-scroll";
+      e.innerHTML=`<div class="empty">Keine Einheiten mit ${escapeHtml(filters.rooms)} Zimmern in diesem Projekt.</div>`;
+      wrap.appendChild(e);
+    }else{
+      wrap.appendChild(emptyBlock(proj, d.error || "Keine Einheiten gefunden."));
+    }
     return wrap;
   }
 
@@ -1036,7 +1077,11 @@ function historySeries(){
   return (history.runs||[]).map(run=>{
     const point={date:run.date,available:0,reserved:0,sold:0,total:0,volume:0,has:false};
     ids.forEach(id=>{
-      const s=run.projects&&run.projects[id];
+      const p=run.projects&&run.projects[id];
+      if(!p) return;
+      // Bei aktivem Zimmerfilter die Aufschlüsselung der Erhebung nutzen.
+      // Ältere Erhebungen ohne Aufschlüsselung fallen aus der Grafik.
+      const s = filters.rooms==="all" ? p : (p.byRooms && p.byRooms[filters.rooms]);
       if(!s) return;
       point.has=true;
       point.available+=s.available||0;
@@ -1057,8 +1102,9 @@ function renderHistory(){
   document.getElementById("historyMeta").textContent =
     runs.length ? `${runs.length} Erhebung(en) · ${fmtDate(runs[0].date)} bis ${fmtDate(runs[runs.length-1].date)}`
                 : "noch keine Erhebungen";
+  const roomScope = filters.rooms==="all" ? "" : ` · nur ${filters.rooms} Zimmer`;
   document.getElementById("chartSub").textContent =
-    `Bestand je Erhebung · ${scope}` + (runs.length<2 ? " · füllt sich mit jedem Lauf (1. & 15.)" : "");
+    `Bestand je Erhebung · ${scope}${roomScope}` + (runs.length<2 ? " · füllt sich mit jedem Lauf (1. & 15.)" : "");
 
   document.getElementById("chartLegend").innerHTML = SERIES.map(s=>
     `<span class="legend-item"><span class="legend-key" style="background:${COLORS[s.key]}"></span>${s.label}</span>`
@@ -1077,7 +1123,9 @@ function drawChart(runs){
   if(!runs.length){
     const e=document.createElement("div");
     e.className="chart-empty empty";
-    e.textContent="Sobald der erste automatische Lauf durch ist, erscheint hier der Verlauf.";
+    e.textContent = filters.rooms==="all"
+      ? "Sobald der erste automatische Lauf durch ist, erscheint hier der Verlauf."
+      : `Für ${filters.rooms} Zimmer liegt noch keine Erhebung mit Zimmeraufschlüsselung vor – sie wird ab dem nächsten Lauf mitgeschrieben.`;
     host.appendChild(e);
     return;
   }

@@ -444,6 +444,11 @@ export async function scrapeProject(project, offlineDir) {
 /* --------------------------------------------------------------------------
    Auswertung
 -------------------------------------------------------------------------- */
+/** Zimmerzahl als stabiler Schlüssel: 4.5 -> "4.5", ohne Angabe -> "?" */
+export function roomKey(rooms) {
+  return typeof rooms === "number" && isFinite(rooms) ? rooms.toFixed(1) : "?";
+}
+
 export function summarize(units) {
   const live = units.filter(u => u.kind === "unit");
   const c = { total: live.length, available: 0, reserved: 0, sold: 0, unknown: 0 };
@@ -451,6 +456,17 @@ export function summarize(units) {
   c.availableVolume = live
     .filter(u => u.status === "available")
     .reduce((s, u) => s + (u.price || 0), 0);
+
+  // Aufschlüsselung nach Zimmerzahl – trägt den Zimmerfilter auch im Verlauf
+  c.byRooms = {};
+  for (const u of live) {
+    const key = roomKey(u.rooms);
+    const b = c.byRooms[key] ||
+      (c.byRooms[key] = { total: 0, available: 0, reserved: 0, sold: 0, unknown: 0, availableVolume: 0 });
+    b.total++;
+    b[u.status]++;
+    if (u.status === "available") b.availableVolume += u.price || 0;
+  }
   return c;
 }
 
