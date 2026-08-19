@@ -17,7 +17,8 @@ jobs:
     # Öffentliches Repo: nur Einträge von Berechtigten dürfen die Projektliste ändern.
     if: >
       (contains(github.event.issue.labels.*.name, 'projekt') ||
-       contains(github.event.issue.labels.*.name, 'projekt-entfernen')) &&
+       contains(github.event.issue.labels.*.name, 'projekt-entfernen') ||
+       contains(github.event.issue.labels.*.name, 'parkierung')) &&
       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-latest
     steps:
@@ -35,19 +36,22 @@ jobs:
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ENTFERNEN: ${{ contains(github.event.issue.labels.*.name, 'projekt-entfernen') }}
+          PARKIERUNG: ${{ contains(github.event.issue.labels.*.name, 'parkierung') }}
         run: |
-          if [ "$ENTFERNEN" = "true" ]; then
+          if [ "$PARKIERUNG" = "true" ]; then
+            node scripts/set-parking.mjs
+          elif [ "$ENTFERNEN" = "true" ]; then
             node scripts/remove-project.mjs
           else
             node scripts/add-project.mjs
           fi
 
       - name: Daten neu einlesen
-        if: steps.run.outputs.status == 'added' || steps.run.outputs.status == 'removed'
+        if: contains(fromJSON('["added","removed","updated"]'), steps.run.outputs.status)
         run: node scripts/scrape.mjs
 
       - name: Änderungen committen
-        if: steps.run.outputs.status == 'added' || steps.run.outputs.status == 'removed'
+        if: contains(fromJSON('["added","removed","updated"]'), steps.run.outputs.status)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -71,5 +75,5 @@ jobs:
             "${MESSAGE:-Der Eintrag konnte nicht verarbeitet werden.}" > comment.md
           gh issue comment "${{ github.event.issue.number }}" --body-file comment.md
           case "$STATUS" in
-            added|removed|duplicate) gh issue close "${{ github.event.issue.number }}" --reason completed ;;
+            added|removed|updated|duplicate|unchanged) gh issue close "${{ github.event.issue.number }}" --reason completed ;;
           esac

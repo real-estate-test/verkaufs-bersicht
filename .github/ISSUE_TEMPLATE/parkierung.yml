@@ -1,0 +1,36 @@
+name: Parkierung anpassen
+description: Festlegen, welche Gruppen eines Projekts Abstellplätze und welche Wohnungen sind
+title: "Parkierung anpassen"
+labels: ["parkierung"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Namen wie „Garage" oder „Einstellhalle" erkennt die Übersicht selbst. Dieses
+        Formular ist für die Fälle, die sie nicht trifft – und dafür, eine im Browser
+        gesetzte Zuordnung für alle Geräte zu übernehmen.
+
+  - type: input
+    id: projekt
+    attributes:
+      label: Projekt
+      description: Name oder Kennung des Projekts, wie es in der Übersicht steht.
+      placeholder: z. B. Suhrano Suhr
+    validations:
+      required: true
+
+  - type: input
+    id: parkierung
+    attributes:
+      label: Gruppen, die Parkierung sind
+      description: Gruppenüberschriften wie in der Übersicht, mehrere mit Komma trennen. Leer lassen ändert nichts.
+      placeholder: Haus D, Nebenbau
+
+  - type: input
+    id: wohnungen
+    attributes:
+      label: Gruppen, die Wohnungen sind
+      description: >
+        Für den umgekehrten Fall – eine Gruppe wurde fälschlich als Parkierung erkannt,
+        etwa weil sie „Garagenhof" heisst.
+      placeholder: Haus Garagenhof

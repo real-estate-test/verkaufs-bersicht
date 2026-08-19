@@ -75,10 +75,16 @@ eingestuft, separat ausgewiesen und aus den Wohnungskennzahlen genommen.
 
 Trifft die Erkennung daneben, lässt sich das an jeder Gruppenüberschrift der
 Übersicht mit einem Klick umschalten („⇄ als Parkierung" / „↩ als Wohnungen").
-Diese Wahl gilt im jeweiligen Browser und überstimmt die Automatik. Dauerhaft
-für alle Geräte wird sie über `parkingGroups` / `livingGroups` in
-`data/projects.json` – beim „dauerhaft übernehmen" eines Projekts wandern die
-lokal gesetzten Parkierungsgruppen automatisch in den GitHub-Eintrag mit.
+Diese Wahl gilt zunächst nur im jeweiligen Browser und überstimmt die Automatik.
+
+Um sie für alle Geräte zu übernehmen, erscheint im Projektkopf der Link
+„**Parkierung übernehmen**". Er öffnet einen vorausgefüllten GitHub-Eintrag;
+der Workflow schreibt die Gruppen in `parkingGroups` / `livingGroups` und meldet
+das Ergebnis zurück. Sobald das Register dieselbe Einstufung liefert, räumt die
+Übersicht die lokale Übersteuerung von selbst weg und der Link verschwindet.
+
+Bei einem noch nicht erfassten Projekt wandern die lokal gesetzten Gruppen
+stattdessen beim „dauerhaft übernehmen" direkt in den Eintrag mit.
 
 ## Dateien
 

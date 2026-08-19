@@ -769,6 +769,24 @@ function applyLatest(latest,mode){
       error:p.error||null
     };
   });
+
+  // Was das Register inzwischen selbst richtig einstuft, braucht keine lokale
+  // Übersteuerung mehr – sonst bliebe der Übernehmen-Link dauerhaft stehen.
+  let cleaned=false;
+  (latest.projects||[]).forEach(p=>{
+    const serverKind={};
+    (data[p.id].units||[]).forEach(u=>{ serverKind[u.group]=u.kind; });
+    Object.keys(kindOverrides).forEach(key=>{
+      const [pid,...rest]=key.split("|");
+      const group=rest.join("|");
+      if(pid!==p.id) return;
+      if(serverKind[group] && serverKind[group]===kindOverrides[key]){
+        delete kindOverrides[key];
+        cleaned=true;
+      }
+    });
+  });
+  if(cleaned) store.set(LS_KINDS,kindOverrides);
 }
 
 /** Selbst hinzugefügte Projekte weiterhin live im Browser laden. */
@@ -974,6 +992,10 @@ function renderProject(proj){
     <span class="src">
       <span class="pill ${srcPill[0]}">${srcPill[1]}</span>
       <a href="${escapeHtml(proj.url)}" target="_blank" rel="noopener">Quelle ↗</a>
+      ${proj.managed && (localKinds(proj).parking.length || localKinds(proj).unit.length)
+        ? `<a href="${escapeHtml(parkingIssueUrl(proj))}" target="_blank" rel="noopener"
+             title="Die hier gesetzte Parkierung gilt bisher nur in diesem Browser">Parkierung übernehmen ↗</a>`
+        : ""}
       ${proj.managed
         ? `<a class="remove-link" href="${escapeHtml(removeIssueUrl(proj))}" target="_blank" rel="noopener">entfernen ↗</a>`
         : `<a href="${escapeHtml(issueUrl(proj))}" target="_blank" rel="noopener">dauerhaft übernehmen ↗</a>
@@ -1405,6 +1427,29 @@ function issueUrl(proj){
     art:proj.type==="house"?"Häuser":"Wohnungen",
     gruppe:proj.groupLabel||"Haus",
     parkierung:parking.join(", ")
+  });
+  return `https://github.com/${REPO}/issues/new?${q}`;
+}
+
+/** Von Hand gesetzte Zuordnungen dieses Projekts, nach Richtung getrennt. */
+function localKinds(proj){
+  const prefix=proj.id+"|";
+  const out={parking:[],unit:[]};
+  Object.entries(kindOverrides).forEach(([k,v])=>{
+    if(k.startsWith(prefix) && out[v]) out[v].push(k.slice(prefix.length));
+  });
+  return out;
+}
+
+/** Zuordnung eines bereits erfassten Projekts dauerhaft ins Register übernehmen. */
+function parkingIssueUrl(proj){
+  const k=localKinds(proj);
+  const q=new URLSearchParams({
+    template:"parkierung.yml",
+    title:`Parkierung anpassen: ${proj.name}`,
+    projekt:proj.name,
+    parkierung:k.parking.join(", "),
+    wohnungen:k.unit.join(", ")
   });
   return `https://github.com/${REPO}/issues/new?${q}`;
 }
