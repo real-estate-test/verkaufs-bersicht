@@ -86,6 +86,27 @@ das Ergebnis zurück. Sobald das Register dieselbe Einstufung liefert, räumt di
 Bei einem noch nicht erfassten Projekt wandern die lokal gesetzten Gruppen
 stattdessen beim „dauerhaft übernehmen" direkt in den Eintrag mit.
 
+## Nutzungsmessung
+
+Die Seite meldet Nutzungsereignisse an Google Analytics (Kennung im Kopf der
+`index.html`). Die Auswertung ist **nicht** Teil der Seite und nur im
+Analytics-Konto sichtbar.
+
+| Ereignis | Wird ausgelöst | Angaben |
+|---|---|---|
+| `projekt_ansicht` | Klick auf einen Projekt-Chip | `projekt`, `projekt_name` |
+| `filter_zimmer` | Klick auf einen Zimmer-Chip | `zimmer`, `projekt` |
+| `filter_status` | Klick auf einen Status-Chip | `status`, `projekt` |
+| `grundriss_klick` | Klick auf ein Grundriss-PDF | `projekt`, `projekt_name`, `einheit`, `gruppe`, `status`, `zimmer` |
+
+Damit die Angaben in den Berichten erscheinen, müssen sie in GA4 einmalig unter
+*Verwaltung → Benutzerdefinierte Definitionen* als **ereignisbezogene**
+benutzerdefinierte Dimension angelegt werden – Parametername exakt wie oben.
+
+Übertragen werden ausschliesslich Werte aus den Projektdaten, nie eingetippter
+Text: der Suchbegriff wird bewusst nicht gemeldet. Ist die Messung blockiert,
+bleiben alle Aufrufe wirkungslos und die Bedienung unverändert.
+
 ## Dateien
 
 | Datei | Inhalt |

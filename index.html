@@ -388,6 +388,19 @@ const SERIES = [
 ];
 
 /* ----------------------------------------------------------------------------
+   Nutzungsmessung (Google Analytics)
+
+   Wird die Messung blockiert, bleibt jeder Aufruf wirkungslos – die Bedienung
+   darf davon nie abhängen. Es werden ausschliesslich Angaben aus den
+   Projektdaten übergeben, nie eingetippter Text.
+---------------------------------------------------------------------------- */
+function track(name,params){
+  try{
+    if(typeof gtag==="function") gtag("event",name,params||{});
+  }catch(e){ /* Messung darf nichts kaputt machen */ }
+}
+
+/* ----------------------------------------------------------------------------
    Persistenz (defensiv – funktioniert auch ohne localStorage)
 ---------------------------------------------------------------------------- */
 const store = {
@@ -942,7 +955,12 @@ function renderProjectChips(){
   let html=chip("all","Gesamtübersicht",filters.project==="all");
   projects.forEach(p=> html+=chip(p.id,p.name,filters.project===p.id));
   el.innerHTML=html;
-  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.project=b.dataset.proj; render(); });
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{
+    filters.project=b.dataset.proj;
+    const p=projects.find(x=>x.id===filters.project);
+    track("projekt_ansicht",{ projekt:filters.project, projekt_name:p?p.name:"Gesamtübersicht" });
+    render();
+  });
 }
 
 function renderRoomChips(){
@@ -952,7 +970,11 @@ function renderRoomChips(){
   if(filters.rooms!=="all" && !rooms.includes(filters.rooms)) filters.rooms="all";
   const chip=(v,l)=>`<button class="chip${filters.rooms===v?' active':''}" data-rooms="${escapeHtml(v)}">${escapeHtml(l)}</button>`;
   el.innerHTML=chip("all","Alle")+rooms.map(r=>chip(r,`${r} Zi.`)).join("");
-  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.rooms=b.dataset.rooms; render(); });
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{
+    filters.rooms=b.dataset.rooms;
+    track("filter_zimmer",{ zimmer:filters.rooms, projekt:filters.project });
+    render();
+  });
 }
 
 function renderStatusChips(){
@@ -961,7 +983,11 @@ function renderStatusChips(){
               ["reserved","Reserviert","s-reserved"],["sold","Verkauft","s-sold"]];
   el.innerHTML=opts.map(([v,l,c])=>
     `<button class="chip ${c}${filters.status===v?' active':''}" data-status="${v}">${l}</button>`).join("");
-  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ filters.status=b.dataset.status; render(); });
+  el.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{
+    filters.status=b.dataset.status;
+    track("filter_status",{ status:filters.status, projekt:filters.project });
+    render();
+  });
 }
 
 function renderContent(){
@@ -1092,7 +1118,7 @@ function renderGroup(proj,groupKey,allUnits,visibleUnits){
           <th class="r">Preis</th><th>Status</th><th>Plan</th>
         </tr></thead>
         <tbody>
-          ${visibleUnits.map(x=>rowHTML(x,hasFloor,extraKeys)).join("")}
+          ${visibleUnits.map(x=>rowHTML(x,hasFloor,extraKeys,proj)).join("")}
         </tbody>
       </table>
     </div>`;
@@ -1104,7 +1130,7 @@ function renderGroup(proj,groupKey,allUnits,visibleUnits){
   return sec;
 }
 
-function rowHTML(x,hasFloor,extraKeys){
+function rowHTML(x,hasFloor,extraKeys,proj){
   const soldCls=x.status==="sold" ? " is-sold"+(filters.highlight?" hl":"") : "";
   return `<tr class="${soldCls.trim()}">
     <td class="unit">${escapeHtml(x.id)}</td>
@@ -1114,7 +1140,12 @@ function rowHTML(x,hasFloor,extraKeys){
     ${extraKeys.map(k=>`<td class="r num">${escapeHtml((x.extra&&x.extra[k])||"–")}</td>`).join("")}
     <td class="r num">${escapeHtml(x.priceText||"–")}</td>
     <td><span class="status-tag st-${x.status}">${statusLabel(x.status)}</span></td>
-    <td>${x.pdf?`<a href="${escapeHtml(x.pdf)}" target="_blank" rel="noopener">PDF ↗</a>`:"–"}</td>
+    <td>${x.pdf?`<a href="${escapeHtml(x.pdf)}" target="_blank" rel="noopener"
+      data-plan data-projekt="${escapeHtml(proj?proj.id:"")}"
+      data-projekt-name="${escapeHtml(proj?proj.name:"")}"
+      data-einheit="${escapeHtml(x.id)}" data-gruppe="${escapeHtml(x.group||"")}"
+      data-status="${escapeHtml(x.status)}"
+      data-zimmer="${escapeHtml(roomKey(x.rooms))}">PDF ↗</a>`:"–"}</td>
   </tr>`;
 }
 
@@ -1520,6 +1551,18 @@ window.addEventListener("resize",()=>{
 /* ----------------------------------------------------------------------------
    Start
 ---------------------------------------------------------------------------- */
+// Grundriss-Klicks über einen einzigen Zuhörer: die Tabellen werden bei jedem
+// Filterwechsel neu aufgebaut, einzelne Handler gingen dabei verloren.
+document.getElementById("content").addEventListener("click",ev=>{
+  const a=ev.target.closest("a[data-plan]");
+  if(!a) return;
+  track("grundriss_klick",{
+    projekt:a.dataset.projekt, projekt_name:a.dataset.projektName,
+    einheit:a.dataset.einheit, gruppe:a.dataset.gruppe,
+    status:a.dataset.status, zimmer:a.dataset.zimmer
+  });
+});
+
 (async function init(){
   kindOverrides=store.get(LS_KINDS,{});
   loadCustomList();
