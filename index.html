@@ -15,6 +15,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<!-- Leaflet liegt im Repo: ein CDN-Ausfall soll die Seite nicht mitreissen -->
+<link rel="stylesheet" href="vendor/leaflet.css">
+<script src="vendor/leaflet.js"></script>
 <style>
   :root{
     --bg:#f4f6f4; --surface:#ffffff; --surface-2:#fafbfa;
@@ -142,6 +145,28 @@
   .empty{padding:26px;text-align:center;color:var(--muted);font-size:14px}
   .empty .btn{margin-top:12px}
 
+  /* Karte */
+  .map-card{margin-bottom:24px;padding-bottom:14px}
+  #map{height:380px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2);z-index:0}
+  @media(max-width:720px){ #map{height:300px} }
+  .leaflet-container{font-family:"Inter",system-ui,sans-serif;font-size:13px;background:var(--surface-2)}
+  .marker-dot{cursor:pointer;transition:fill-opacity .15s}
+  .leaflet-interactive:focus{outline:2px solid var(--brand);outline-offset:2px}
+
+  /* Karten-Infofenster */
+  .leaflet-tooltip.proj-tip{background:var(--ink);color:#fff;border:none;border-radius:10px;
+    padding:10px 12px;box-shadow:0 8px 24px rgba(0,0,0,.28);white-space:nowrap;font-size:13px}
+  .leaflet-tooltip.proj-tip::before{border-top-color:var(--ink)}
+  .proj-tip .t-name{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:14px}
+  .proj-tip .t-ort{color:#b9c4bf;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:5px}
+  .proj-tip .t-row{display:flex;align-items:center;gap:7px;margin-top:4px}
+  .proj-tip .t-key{width:9px;height:9px;border-radius:2px;flex:none}
+  .proj-tip .t-val{font-weight:600;font-variant-numeric:tabular-nums;min-width:2ch;text-align:right}
+  .proj-tip .t-lbl{color:#b9c4bf}
+  .proj-tip .t-bar{display:flex;gap:2px;margin-top:7px}
+  .proj-tip .t-bar span{height:5px;border-radius:2px}
+  .proj-tip .t-foot{color:#b9c4bf;font-size:11.5px;margin-top:8px}
+
   /* Verlauf */
   .history{margin-top:44px}
   .history-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;
@@ -266,6 +291,18 @@
         <input type="text" id="search" placeholder="Einheit suchen…">
       </div>
     </div>
+  </section>
+
+  <section class="card map-card" id="mapCard" style="display:none">
+    <div class="card-head">
+      <div>
+        <h3>Standorte</h3>
+        <div class="card-sub" id="mapSub"></div>
+      </div>
+      <div class="spacer"></div>
+      <button class="btn small" id="mapFit">Alle zeigen</button>
+    </div>
+    <div id="map"></div>
   </section>
 
   <main id="content"></main>
@@ -762,7 +799,9 @@ async function loadManaged(){
 function applyLatest(latest,mode){
   const managed=(latest.projects||[]).map(p=>({
     id:p.id, name:p.name, url:p.url, type:p.type||"apartment",
-    groupLabel:p.groupLabel||"Haus", grouped:p.grouped!==false, managed:true
+    groupLabel:p.groupLabel||"Haus", grouped:p.grouped!==false, managed:true,
+    adresse:p.adresse||null, ort:p.ort||null, land:p.land||null,
+    koordinaten:Array.isArray(p.koordinaten)?p.koordinaten:null
   }));
   // Lokal ergänzte Projekte aufräumen, sobald sie offiziell erfasst sind
   const known=new Set(managed.map(p=>normalizeUrl(p.url)));
@@ -940,6 +979,7 @@ function render(){
   renderRoomChips();
   renderStatusChips();
   renderStats();
+  renderMap();
   renderContent();
   renderHistory();
   renderUpdated();
@@ -1194,6 +1234,125 @@ function renderUpdated(){
   txt.textContent=last
     ? "Stand "+last.toLocaleString("de-CH",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"})
     : (anyErr?"Daten nicht verfügbar":"—");
+}
+
+/* ----------------------------------------------------------------------------
+   Karte
+
+   Kacheln von OpenStreetMap, Leaflet aus dem Repo. Marker sitzen auf den
+   Koordinaten aus dem Register; die Grösse folgt der Anzahl Einheiten.
+   Fehlen Koordinaten, bleibt die Karte einfach aus.
+---------------------------------------------------------------------------- */
+let map=null, markerLayer=null;
+
+function mapProjects(){
+  return projects.filter(p=>{
+    const c=p.koordinaten;
+    return Array.isArray(c) && c.length===2 && isFinite(c[0]) && isFinite(c[1]);
+  });
+}
+
+/** Infofenster: Kernfakten des Projekts, aufgebaut ohne HTML aus Fremddaten. */
+function markerTooltip(proj){
+  const units=unitsOf(proj).filter(u=>isUnit(proj,u));
+  const c=countByStatus(units);
+  const total=c.available+c.reserved+c.sold+c.unknown;
+  const preise=units.filter(u=>u.status==="available" && u.price).map(u=>u.price);
+
+  const el=document.createElement("div");
+  const ort=document.createElement("div");
+  ort.className="t-ort";
+  ort.textContent=proj.ort || (proj.adresse||"").split(",")[0] || "";
+  const name=document.createElement("div");
+  name.className="t-name";
+  name.textContent=proj.name;
+  el.append(ort,name);
+
+  const zeile=(farbe,wert,text)=>{
+    const r=document.createElement("div"); r.className="t-row";
+    const k=document.createElement("span"); k.className="t-key"; k.style.background=farbe;
+    const v=document.createElement("span"); v.className="t-val"; v.textContent=String(wert);
+    const l=document.createElement("span"); l.className="t-lbl"; l.textContent=text;
+    r.append(k,v,l); return r;
+  };
+  el.appendChild(zeile(COLORS.available,c.available,"verfügbar"));
+  if(c.reserved) el.appendChild(zeile(COLORS.reserved,c.reserved,"reserviert"));
+  el.appendChild(zeile(COLORS.sold,c.sold,"verkauft"));
+
+  if(total){
+    const bar=document.createElement("div"); bar.className="t-bar";
+    [["available",c.available],["reserved",c.reserved],["sold",c.sold]].forEach(([k,n])=>{
+      if(!n) return;
+      const s=document.createElement("span");
+      s.style.background=COLORS[k];
+      s.style.width=Math.max(4,Math.round(n/total*150))+"px";
+      bar.appendChild(s);
+    });
+    el.appendChild(bar);
+  }
+
+  const foot=document.createElement("div");
+  foot.className="t-foot";
+  foot.textContent=`${total} ${typeWord(proj.type,true)}`
+    + (preise.length ? ` · ab ${fmtCHF(Math.min(...preise))}` : "");
+  el.appendChild(foot);
+  return el;
+}
+
+function renderMap(){
+  const card=document.getElementById("mapCard");
+  const list=mapProjects();
+  if(typeof L==="undefined" || !list.length){ card.style.display="none"; return; }
+  card.style.display="";
+
+  if(!map){
+    map=L.map("map",{ scrollWheelZoom:false, attributionControl:true });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      maxZoom:18,
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    markerLayer=L.layerGroup().addTo(map);
+    // Zoomen erst nach Klick in die Karte – sonst springt sie beim Scrollen
+    map.on("click",()=>map.scrollWheelZoom.enable());
+    map.on("mouseout",()=>map.scrollWheelZoom.disable());
+  }
+  markerLayer.clearLayers();
+
+  const bounds=[];
+  list.forEach(proj=>{
+    const units=unitsOf(proj).filter(u=>isUnit(proj,u));
+    const aktiv = filters.project===proj.id;
+    const r = Math.max(7, Math.min(18, 6 + Math.sqrt(units.length)*1.6));
+
+    const marker=L.circleMarker(proj.koordinaten,{
+      radius:r, className:"marker-dot",
+      color:"#ffffff", weight:2,
+      fillColor: aktiv ? "#284a70" : "#366092",
+      fillOpacity: aktiv ? 1 : .82
+    });
+    marker.bindTooltip(markerTooltip(proj),{
+      direction:"top", offset:[0,-r-2], className:"proj-tip", opacity:1, sticky:false
+    });
+    marker.on("click",()=>{
+      // Zweiter Klick auf dasselbe Projekt hebt den Filter wieder auf
+      filters.project = filters.project===proj.id ? "all" : proj.id;
+      track("projekt_ansicht",{ projekt:filters.project, projekt_name:proj.name, quelle:"karte" });
+      render();
+      document.getElementById("content").scrollIntoView({behavior:"smooth",block:"start"});
+    });
+    marker.addTo(markerLayer);
+    bounds.push(proj.koordinaten);
+  });
+
+  document.getElementById("mapSub").textContent =
+    `${list.length} von ${projects.length} Projekten verortet` +
+    (list.length<projects.length ? " · übrigen fehlt die Adresse" : "");
+
+  if(!map._eingepasst && bounds.length){
+    map.fitBounds(bounds,{padding:[40,40],maxZoom:12});
+    map._eingepasst=true;
+  }
+  setTimeout(()=>map.invalidateSize(),0);
 }
 
 /* ----------------------------------------------------------------------------
@@ -1554,6 +1713,11 @@ document.getElementById("toggleChartTable").onclick=e=>{
   document.getElementById("chart").style.display=chartAsTable?"none":"";
   document.getElementById("chartTable").style.display=chartAsTable?"":"none";
   e.target.textContent=chartAsTable?"Grafik":"Tabelle";
+};
+
+document.getElementById("mapFit").onclick=()=>{
+  const b=mapProjects().map(p=>p.koordinaten);
+  if(map && b.length) map.fitBounds(b,{padding:[40,40],maxZoom:12});
 };
 
 let resizeTimer=null;

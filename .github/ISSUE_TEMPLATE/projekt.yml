@@ -27,6 +27,17 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: adresse
+    attributes:
+      label: Adresse des Projekts
+      description: >
+        Für die Karte. Möglichst genau, z. B. „Neumattweg 5, 5034 Suhr, Schweiz".
+        Ein Ort allein genügt auch, setzt den Marker dann aber nur ungefähr.
+      placeholder: Musterstrasse 1, 5000 Aarau, Schweiz
+    validations:
+      required: true
+
   - type: dropdown
     id: art
     attributes:

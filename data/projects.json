@@ -6,14 +6,16 @@
       "name": "Sonnenberg Reinach",
       "url": "https://sonnenberg-reinach.ch/angebot/",
       "type": "house",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "adresse": "Reinach AG, Schweiz"
     },
     {
       "id": "seeluft",
       "name": "Seeluft Boniswil",
       "url": "https://seeluft-boniswil.ch/angebot/",
       "type": "apartment",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "adresse": "Boniswil, Schweiz"
     },
     {
       "id": "erlenstrasse",
@@ -21,7 +23,8 @@
       "url": "https://www.erlenstrasse-oetwil.ch/",
       "link": "https://www.erlenstrasse-oetwil.ch/#angebot",
       "type": "house",
-      "groupLabel": "Erlenstrasse"
+      "groupLabel": "Erlenstrasse",
+      "adresse": "Erlenstrasse, 8955 Oetwil an der Limmat, Schweiz"
     },
     {
       "id": "suhrano",
@@ -29,21 +32,24 @@
       "url": "https://navigator5.beyonity.ch/?id=70DC98FE",
       "link": "https://www.suhrano.ch/angebot/",
       "type": "apartment",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "adresse": "Neumattweg 5, 5034 Suhr, Schweiz"
     },
     {
       "id": "station-urban-garden",
       "name": "Station - Urban Garden",
       "url": "https://urbangardens-embrach.ch/angebot/",
       "type": "apartment",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "adresse": "Embrach, Schweiz"
     },
     {
       "id": "escalara-seengen",
       "name": "Escalara - Seengen",
       "url": "https://escalera-seengen.ch/angebot/",
       "type": "apartment",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "adresse": "Seengen, Schweiz"
     },
     {
       "id": "dorf-dulliken",
@@ -51,6 +57,7 @@
       "url": "https://patio-dulliken.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Dulliken, Schweiz",
       "parkingGroups": [
         "Haus DISPO"
       ]
@@ -60,7 +67,8 @@
       "name": "Horizont - Küttigen",
       "url": "https://horizont-kuettigen.ch/angebot/",
       "type": "apartment",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "adresse": "Küttigen, Schweiz"
     }
   ]
 }

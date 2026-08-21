@@ -64,6 +64,8 @@ Alternativ lässt sich `data/projects.json` direkt bearbeiten:
 | `layout` | optional `"table"`, `"anglist"` oder `"beyonity"`; wird sonst automatisch erkannt |
 | `fields` | optional, nur Beyonity: feste Zuordnung von `price` / `floor` auf ein `custom_N`-Feld |
 | `grouped` | optional; wird sonst automatisch bestimmt (viele Kleinstgruppen → flache Liste) |
+| `adresse` | Für die Karte; wird einmalig in `koordinaten` aufgelöst |
+| `koordinaten` | `[Breitengrad, Längengrad]` – vom Geocoder gesetzt, kann von Hand korrigiert werden |
 | `parkingGroups` | optional: Gruppennamen, die Abstellplätze sind, obwohl der Name das nicht verrät |
 | `livingGroups` | optional: Gruppennamen, die trotz Namen wie „Garagenhof" Wohnungen sind |
 
@@ -85,6 +87,26 @@ das Ergebnis zurück. Sobald das Register dieselbe Einstufung liefert, räumt di
 
 Bei einem noch nicht erfassten Projekt wandern die lokal gesetzten Gruppen
 stattdessen beim „dauerhaft übernehmen" direkt in den Eintrag mit.
+
+## Karte
+
+Der Kartenbereich zeigt alle verorteten Projekte. Ein Hover (auf dem Handy ein
+Antippen) blendet die Kernfakten ein, ein Klick filtert die Übersicht auf das
+Projekt – ein zweiter Klick hebt den Filter wieder auf.
+
+Kacheln kommen von OpenStreetMap, Leaflet liegt unter `vendor/` im Repository,
+damit ein CDN-Ausfall die Seite nicht mitreisst. Ohne Koordinaten bleibt der
+Kartenbereich einfach ausgeblendet.
+
+`scripts/geocode.mjs` löst fehlende Koordinaten einmalig über Nominatim auf und
+schreibt sie ins Register. Nominatim deckt Schweiz und Deutschland gleichermassen
+ab; jede Adresse wird genau einmal abgefragt und das Ergebnis dauerhaft
+gespeichert. Beim Aufnehmen eines Projekts wird die Adresse im Formular
+abgefragt – je genauer, desto exakter der Marker.
+
+Sitzt ein Marker falsch, genügt eine genauere `adresse` in `data/projects.json`
+und das Löschen des zugehörigen `koordinaten`-Eintrags; der nächste Lauf
+schlägt neu nach.
 
 ## Nutzungsmessung
 

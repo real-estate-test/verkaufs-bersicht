@@ -553,7 +553,11 @@ async function main() {
       name: project.name,
       url: project.link || project.url,
       type: project.type,
-      groupLabel: project.groupLabel
+      groupLabel: project.groupLabel,
+      adresse: project.adresse || null,
+      ort: project.ort || null,
+      land: project.land || null,
+      koordinaten: Array.isArray(project.koordinaten) ? project.koordinaten : null
     };
     try {
       const { units, grouped } = await scrapeProject(project, offlineDir);

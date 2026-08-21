@@ -73,6 +73,10 @@ jobs:
             hinzufuegen) node scripts/add-project.mjs ;;
           esac
 
+      - name: Fehlende Koordinaten ergänzen
+        if: contains(fromJSON('["added","removed","updated"]'), steps.run.outputs.status)
+        run: node scripts/geocode.mjs
+
       - name: Daten neu einlesen
         if: contains(fromJSON('["added","removed","updated"]'), steps.run.outputs.status)
         run: node scripts/scrape.mjs

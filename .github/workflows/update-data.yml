@@ -29,6 +29,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Fehlende Koordinaten ergänzen
+        run: node scripts/geocode.mjs
+
       - name: Projektseiten auslesen
         run: node scripts/scrape.mjs
 

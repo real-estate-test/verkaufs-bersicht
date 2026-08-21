@@ -77,6 +77,7 @@ async function main() {
   const name = pick(fields, "projektname", "name");
   const urlRaw = pick(fields, "link", "url", "angebotsseite");
   const art = pick(fields, "art");
+  const adresse = pick(fields, "adresse", "standort");
   const gruppe = pick(fields, "gruppe", "bezeichnung");
 
   const registry = JSON.parse(await readFile(REGISTRY, "utf8"));
@@ -99,6 +100,7 @@ async function main() {
       type: /haus|häuser|haeuser/i.test(art) ? "house" : "apartment",
       groupLabel: gruppe || "Haus"
     };
+    if (adresse) entry.adresse = adresse;
     const parking = pick(fields, "parkierung", "parking")
       .split(",").map(s => s.trim()).filter(Boolean);
     if (parking.length) entry.parkingGroups = parking;
@@ -120,6 +122,7 @@ async function main() {
       `| Tabellenlayout | \`${layout}\` |`,
       `| Gruppierung nach Gebäude | ${grouped ? "ja" : "nein – flache Liste"} |`,
       `| Quelle | ${url} |`,
+      `| Adresse | ${adresse || "– keine angegeben, erscheint nicht auf der Karte"} |`,
       "",
       "Ab jetzt wird das Projekt bei jedem automatischen Lauf (1. und 15. des Monats) mitgelesen."
     ].join("\n"));
