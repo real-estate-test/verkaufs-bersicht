@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T05:55:09.554Z",
+  "generatedAt": "2026-08-21T05:55:56.106Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -10,7 +10,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
       "units": [
         {
           "id": "A1-1",
@@ -491,7 +491,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
       "units": [
         {
           "id": "A1",
@@ -887,7 +887,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
       "units": [
         {
           "id": "12a",
@@ -1116,7 +1116,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2698,7 +2698,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
       "units": [
         {
           "id": "9901",
@@ -3081,7 +3081,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
       "units": [
         {
           "id": "A.1",
@@ -3311,6 +3311,897 @@
             "available": 0,
             "reserved": 0,
             "sold": 1,
+            "unknown": 0,
+            "availableVolume": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "dorf-dulliken",
+      "name": "Dorf - Dulliken",
+      "url": "https://patio-dulliken.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "units": [
+        {
+          "id": "22 1",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 122.3,
+          "areaText": "122.3 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-1-web-corpora.pdf"
+        },
+        {
+          "id": "22 2",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 122.3,
+          "areaText": "122.3 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-2-web-corpora.pdf"
+        },
+        {
+          "id": "22 3",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 94.6,
+          "areaText": "94.6 m²",
+          "floor": "AT",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,4 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-3-web-corpora.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP breit",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "UG",
+          "price": 35000,
+          "priceText": "35'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP quer",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 2,
+          "areaText": "2GP",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 1",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.7,
+          "areaText": "131,7 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-1-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 2",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.3,
+          "areaText": "108,3 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-2-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 3",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119,8 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-3-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 4",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.7,
+          "areaText": "131,7 m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-4-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 5",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.3,
+          "areaText": "108,3 m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-5-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 6",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119,8 m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-6-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 7",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.7,
+          "areaText": "131,7 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-7-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 8",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.3,
+          "areaText": "108,3 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-8-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 9",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119,8 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-9-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 10",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 124.6,
+          "areaText": "124,6 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "93,8 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-10-web-corpora.pdf"
+        },
+        {
+          "id": "22 A 11",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 113.5,
+          "areaText": "113,5 m²",
+          "floor": "Attika",
+          "price": 940000,
+          "priceText": "940'000.-",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "97,2 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-11-web-corpora.pdf"
+        },
+        {
+          "id": "Dispo 1",
+          "group": "Haus DISPO",
+          "kind": "unit",
+          "rooms": null,
+          "area": 24.4,
+          "areaText": "24,4 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora.pdf"
+        },
+        {
+          "id": "Dispo 2",
+          "group": "Haus DISPO",
+          "kind": "unit",
+          "rooms": null,
+          "area": 23.7,
+          "areaText": "23,7 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP breit",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "UG",
+          "price": 35000,
+          "priceText": "35'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 1",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136.4,
+          "areaText": "136,4 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-1-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 2",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 87.5,
+          "areaText": "87,5 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21,6 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-2-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 3",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 121.1,
+          "areaText": "121,1 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,2 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-3-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 4",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136.4,
+          "areaText": "136,4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-4-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 5",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 87.5,
+          "areaText": "87,5 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21,6 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-5-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 6",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 121.1,
+          "areaText": "121,1 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,2 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-6-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 7",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136.4,
+          "areaText": "136,4 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-7-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 8",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 87.5,
+          "areaText": "87,5 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21,6 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-8-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 9",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 121.1,
+          "areaText": "121,1 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,2 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-9-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 10",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.6,
+          "areaText": "108,6 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "82,5 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-10-web-corpora.pdf"
+        },
+        {
+          "id": "22 B 11",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 110.6,
+          "areaText": "110,6 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "86,9 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-11-web-corpora.pdf"
+        },
+        {
+          "id": "Dispo 1",
+          "group": "Haus DISPO",
+          "kind": "unit",
+          "rooms": null,
+          "area": 23.6,
+          "areaText": "23,6 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22b-web-corpora.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP breit",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "UG",
+          "price": 35000,
+          "priceText": "35'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP quer",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 2,
+          "areaText": "2 GP",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 1",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.9,
+          "areaText": "131,9 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-1-web-corpora-03.pdf"
+        },
+        {
+          "id": "22 C 2",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 110.4,
+          "areaText": "110,4 m²",
+          "floor": "EG",
+          "price": 700000,
+          "priceText": "700'000.-",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-2-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 3",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 126.4,
+          "areaText": "126,4 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-3-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 4",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.9,
+          "areaText": "131,9 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-4-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 5",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.4,
+          "areaText": "108,4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-5-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 6",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 126.4,
+          "areaText": "126,4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-6-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 7",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.9,
+          "areaText": "131,9 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-7-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 8",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.4,
+          "areaText": "108,4 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-8-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 9",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 126.4,
+          "areaText": "126,4 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-9-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 10",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 124.5,
+          "areaText": "124,5 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "93,8 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-10-web-corpora.pdf"
+        },
+        {
+          "id": "22 C 11",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 111.8,
+          "areaText": "111,8 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "96,0 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-11-web-corpora.pdf"
+        },
+        {
+          "id": "Dispo 1",
+          "group": "Haus DISPO",
+          "kind": "unit",
+          "rooms": null,
+          "area": 34.3,
+          "areaText": "34,3 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora.pdf"
+        },
+        {
+          "id": "Dispo 2",
+          "group": "Haus DISPO",
+          "kind": "unit",
+          "rooms": null,
+          "area": 36.7,
+          "areaText": "36,7 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP breit",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "UG",
+          "price": 35000,
+          "priceText": "35'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        },
+        {
+          "id": "Garage PP quer",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 2,
+          "areaText": "2 GP",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+        }
+      ],
+      "summary": {
+        "total": 41,
+        "available": 2,
+        "reserved": 3,
+        "sold": 36,
+        "unknown": 0,
+        "availableVolume": 1640000,
+        "byRooms": {
+          "4.5": {
+            "total": 22,
+            "available": 0,
+            "reserved": 2,
+            "sold": 20,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "3.5": {
+            "total": 11,
+            "available": 2,
+            "reserved": 1,
+            "sold": 8,
+            "unknown": 0,
+            "availableVolume": 1640000
+          },
+          "?": {
+            "total": 5,
+            "available": 0,
+            "reserved": 0,
+            "sold": 5,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "2.5": {
+            "total": 3,
+            "available": 0,
+            "reserved": 0,
+            "sold": 3,
             "unknown": 0,
             "availableVolume": 0
           }
