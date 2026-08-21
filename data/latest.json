@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T05:59:21.911Z",
+  "generatedAt": "2026-08-21T13:45:35.064Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -7,10 +7,17 @@
       "url": "https://sonnenberg-reinach.ch/angebot/",
       "type": "house",
       "groupLabel": "Haus",
+      "adresse": "Reinach AG, Schweiz",
+      "ort": "Reinach",
+      "land": "CH",
+      "koordinaten": [
+        47.253968,
+        8.182824
+      ],
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "A1-1",
@@ -488,10 +495,17 @@
       "url": "https://seeluft-boniswil.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Boniswil, Schweiz",
+      "ort": "Boniswil",
+      "land": "CH",
+      "koordinaten": [
+        47.316157,
+        8.185251
+      ],
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "A1",
@@ -884,11 +898,17 @@
       "url": "https://www.erlenstrasse-oetwil.ch/#angebot",
       "type": "house",
       "groupLabel": "Erlenstrasse",
+      "adresse": "Erlenstrasse, 8955 Oetwil an der Limmat, Schweiz",
+      "ort": "Oetwil an der Limmat",
+      "land": "CH",
+      "koordinaten": [
+        47.432107,
+        8.395127
+      ],
       "grouped": false,
-      "ok": false,
-      "error": "HTTP 415",
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
-      "stale": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "12a",
@@ -1114,10 +1134,17 @@
       "url": "https://www.suhrano.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Neumattweg 5, 5034 Suhr, Schweiz",
+      "ort": "Suhr",
+      "land": "CH",
+      "koordinaten": [
+        47.36879,
+        8.075477
+      ],
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2696,10 +2723,17 @@
       "url": "https://urbangardens-embrach.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Embrach, Schweiz",
+      "ort": "Embrach",
+      "land": "CH",
+      "koordinaten": [
+        47.505638,
+        8.594109
+      ],
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "9901",
@@ -3079,10 +3113,17 @@
       "url": "https://escalera-seengen.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Seengen, Schweiz",
+      "ort": "Seengen",
+      "land": "CH",
+      "koordinaten": [
+        47.325291,
+        8.207918
+      ],
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "A.1",
@@ -3324,10 +3365,17 @@
       "url": "https://patio-dulliken.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Dulliken, Schweiz",
+      "ort": "Dulliken",
+      "land": "CH",
+      "koordinaten": [
+        47.353718,
+        7.942468
+      ],
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "22 1",
@@ -4207,10 +4255,17 @@
       "url": "https://horizont-kuettigen.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
+      "adresse": "Küttigen, Schweiz",
+      "ort": "Küttigen",
+      "land": "CH",
+      "koordinaten": [
+        47.419454,
+        8.043257
+      ],
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:59:21.911Z",
+      "fetchedAt": "2026-08-21T13:45:35.064Z",
       "units": [
         {
           "id": "A1",

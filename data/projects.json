@@ -7,7 +7,13 @@
       "url": "https://sonnenberg-reinach.ch/angebot/",
       "type": "house",
       "groupLabel": "Haus",
-      "adresse": "Reinach AG, Schweiz"
+      "adresse": "Reinach AG, Schweiz",
+      "koordinaten": [
+        47.253968,
+        8.182824
+      ],
+      "ort": "Reinach",
+      "land": "CH"
     },
     {
       "id": "seeluft",
@@ -15,7 +21,13 @@
       "url": "https://seeluft-boniswil.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
-      "adresse": "Boniswil, Schweiz"
+      "adresse": "Boniswil, Schweiz",
+      "koordinaten": [
+        47.316157,
+        8.185251
+      ],
+      "ort": "Boniswil",
+      "land": "CH"
     },
     {
       "id": "erlenstrasse",
@@ -24,7 +36,13 @@
       "link": "https://www.erlenstrasse-oetwil.ch/#angebot",
       "type": "house",
       "groupLabel": "Erlenstrasse",
-      "adresse": "Erlenstrasse, 8955 Oetwil an der Limmat, Schweiz"
+      "adresse": "Erlenstrasse, 8955 Oetwil an der Limmat, Schweiz",
+      "koordinaten": [
+        47.432107,
+        8.395127
+      ],
+      "ort": "Oetwil an der Limmat",
+      "land": "CH"
     },
     {
       "id": "suhrano",
@@ -33,7 +51,13 @@
       "link": "https://www.suhrano.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
-      "adresse": "Neumattweg 5, 5034 Suhr, Schweiz"
+      "adresse": "Neumattweg 5, 5034 Suhr, Schweiz",
+      "koordinaten": [
+        47.36879,
+        8.075477
+      ],
+      "ort": "Suhr",
+      "land": "CH"
     },
     {
       "id": "station-urban-garden",
@@ -41,7 +65,13 @@
       "url": "https://urbangardens-embrach.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
-      "adresse": "Embrach, Schweiz"
+      "adresse": "Embrach, Schweiz",
+      "koordinaten": [
+        47.505638,
+        8.594109
+      ],
+      "ort": "Embrach",
+      "land": "CH"
     },
     {
       "id": "escalara-seengen",
@@ -49,7 +79,13 @@
       "url": "https://escalera-seengen.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
-      "adresse": "Seengen, Schweiz"
+      "adresse": "Seengen, Schweiz",
+      "koordinaten": [
+        47.325291,
+        8.207918
+      ],
+      "ort": "Seengen",
+      "land": "CH"
     },
     {
       "id": "dorf-dulliken",
@@ -60,7 +96,13 @@
       "adresse": "Dulliken, Schweiz",
       "parkingGroups": [
         "Haus DISPO"
-      ]
+      ],
+      "koordinaten": [
+        47.353718,
+        7.942468
+      ],
+      "ort": "Dulliken",
+      "land": "CH"
     },
     {
       "id": "horizont-kuettigen",
@@ -68,7 +110,13 @@
       "url": "https://horizont-kuettigen.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus",
-      "adresse": "Küttigen, Schweiz"
+      "adresse": "Küttigen, Schweiz",
+      "koordinaten": [
+        47.419454,
+        8.043257
+      ],
+      "ort": "Küttigen",
+      "land": "CH"
     }
   ]
 }
