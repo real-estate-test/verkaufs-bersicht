@@ -51,6 +51,13 @@
       "url": "https://patio-dulliken.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus"
+    },
+    {
+      "id": "horizont-kuettigen",
+      "name": "Horizont - Küttigen",
+      "url": "https://horizont-kuettigen.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus"
     }
   ]
 }

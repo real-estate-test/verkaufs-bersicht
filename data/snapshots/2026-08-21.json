@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T05:55:56.106Z",
+  "generatedAt": "2026-08-21T05:56:38.628Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -10,7 +10,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "A1-1",
@@ -491,7 +491,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "A1",
@@ -887,7 +887,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "12a",
@@ -1116,7 +1116,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2698,7 +2698,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "9901",
@@ -3081,7 +3081,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "A.1",
@@ -3326,7 +3326,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:55:56.106Z",
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
       "units": [
         {
           "id": "22 1",
@@ -4204,6 +4204,418 @@
             "sold": 3,
             "unknown": 0,
             "availableVolume": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "horizont-kuettigen",
+      "name": "Horizont - Küttigen",
+      "url": "https://horizont-kuettigen.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "units": [
+        {
+          "id": "A1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 79.2,
+          "areaText": "79.2 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "7.7 m²",
+            "Keller": "8.0 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a1.pdf"
+        },
+        {
+          "id": "A2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 84.2,
+          "areaText": "84.2 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "7.2 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a2-1.pdf"
+        },
+        {
+          "id": "A3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112,
+          "areaText": "112.0 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "11.8 m²",
+            "Keller": "10.2 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a3-2.pdf"
+        },
+        {
+          "id": "A4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 105,
+          "areaText": "105.0 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "15.3 m²",
+            "Keller": "8.9 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a4-2.pdf"
+        },
+        {
+          "id": "A5",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 107.5,
+          "areaText": "107.5 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "16.6 m²",
+            "Keller": "8.9 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a5-2.pdf"
+        },
+        {
+          "id": "A6",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 79.1,
+          "areaText": "79.1 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.2 m²",
+            "Keller": "8.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a6.pdf"
+        },
+        {
+          "id": "A7",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 101,
+          "areaText": "101.0 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.0 m²",
+            "Keller": "8.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a7.pdf"
+        },
+        {
+          "id": "A8",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 79.2,
+          "areaText": "79.2 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.2 m²",
+            "Keller": "7.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a8.pdf"
+        },
+        {
+          "id": "A9",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 101,
+          "areaText": "101.0 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.3 m²",
+            "Keller": "7.1 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a9.pdf"
+        },
+        {
+          "id": "A10",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 105,
+          "areaText": "105.0 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Balkon": "100.4 m²",
+            "Keller": "8.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a10.pdf"
+        },
+        {
+          "id": "B1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 117,
+          "areaText": "117.0 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "18.8 m² | 36.1 m²",
+            "Keller": "7.1 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b1.pdf"
+        },
+        {
+          "id": "B2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 75.7,
+          "areaText": "75.7 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "8.0 m² | 74.7 m²",
+            "Keller": "5.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b2.pdf"
+        },
+        {
+          "id": "B3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 51.6,
+          "areaText": "51.6 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "7.6 m²",
+            "Keller": "5.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b3.pdf"
+        },
+        {
+          "id": "B4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 90.3,
+          "areaText": "90.3 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "11.6 m²",
+            "Keller": "7.7 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b4.pdf"
+        },
+        {
+          "id": "B5",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 53.2,
+          "areaText": "53.2 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "10.9 m²",
+            "Keller": "5.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b5.pdf"
+        },
+        {
+          "id": "B6",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.7,
+          "areaText": "110.7 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "11.0 m²",
+            "Keller": "6.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b6.pdf"
+        },
+        {
+          "id": "B7",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 55.6,
+          "areaText": "55.6 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "8.9 m²",
+            "Keller": "6.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b7.pdf"
+        },
+        {
+          "id": "B8",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 90.3,
+          "areaText": "90.3 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "11.6 m²",
+            "Keller": "6.0 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b8.pdf"
+        },
+        {
+          "id": "B9",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 53.2,
+          "areaText": "53.2 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "10.9 m²",
+            "Keller": "7.6 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b9.pdf"
+        },
+        {
+          "id": "B10",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.7,
+          "areaText": "110.7 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "12.6 m²",
+            "Keller": "7.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b10.pdf"
+        },
+        {
+          "id": "B11",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 182.6,
+          "areaText": "182.6 m²",
+          "floor": "Attika",
+          "price": 1960000,
+          "priceText": "1'960'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "200.4 m²",
+            "Keller": "6.9 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b11-v3.pdf"
+        }
+      ],
+      "summary": {
+        "total": 21,
+        "available": 1,
+        "reserved": 1,
+        "sold": 19,
+        "unknown": 0,
+        "availableVolume": 1960000,
+        "byRooms": {
+          "3.5": {
+            "total": 10,
+            "available": 0,
+            "reserved": 1,
+            "sold": 9,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "4.5": {
+            "total": 6,
+            "available": 0,
+            "reserved": 0,
+            "sold": 6,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "2.5": {
+            "total": 4,
+            "available": 0,
+            "reserved": 0,
+            "sold": 4,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "5.5": {
+            "total": 1,
+            "available": 1,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 1960000
           }
         }
       }
