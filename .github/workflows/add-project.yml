@@ -2,7 +2,7 @@ name: Projektliste pflegen
 
 on:
   issues:
-    types: [opened, edited, reopened]
+    types: [opened, edited, reopened, labeled]
 
 permissions:
   contents: write
@@ -15,11 +15,7 @@ concurrency:
 jobs:
   pflegen:
     # Öffentliches Repo: nur Einträge von Berechtigten dürfen die Projektliste ändern.
-    if: >
-      (contains(github.event.issue.labels.*.name, 'projekt') ||
-       contains(github.event.issue.labels.*.name, 'projekt-entfernen') ||
-       contains(github.event.issue.labels.*.name, 'parkierung')) &&
-      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
+    if: contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,21 +26,52 @@ jobs:
         with:
           node-version: "20"
 
+      # GitHub-Formulare vergeben nur Labels, die es im Repo schon gibt – fehlen sie,
+      # bleibt der Eintrag unbeschriftet. Deshalb hier anlegen, falls nicht vorhanden.
+      - name: Labels sicherstellen
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create projekt           --color 0E8A16 --description "Projekt aufnehmen"      2>/dev/null || true
+          gh label create projekt-entfernen --color B60205 --description "Projekt entfernen"      2>/dev/null || true
+          gh label create parkierung        --color FBCA04 --description "Parkierung zuordnen"    2>/dev/null || true
+
+      # Art des Eintrags aus dem Label ableiten – und ersatzweise aus dem Titel,
+      # damit ein fehlendes Label den Eintrag nicht lautlos verschluckt.
+      - name: Art des Eintrags bestimmen
+        id: kind
+        env:
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          kind=""
+          case ",$LABELS," in
+            *,parkierung,*)        kind="parkierung" ;;
+            *,projekt-entfernen,*) kind="entfernen" ;;
+            *,projekt,*)           kind="hinzufuegen" ;;
+          esac
+          if [ -z "$kind" ]; then
+            case "$TITLE" in
+              *"Parkierung anpassen"*) kind="parkierung" ;;
+              *"Projekt entfernen"*)   kind="entfernen" ;;
+              *"Projekt hinzuf"*)      kind="hinzufuegen" ;;
+            esac
+          fi
+          echo "Art: ${kind:-(kein Eintrag zur Projektliste – wird übersprungen)}"
+          echo "kind=$kind" >> "$GITHUB_OUTPUT"
+
       - name: Eintrag verarbeiten
         id: run
+        if: steps.kind.outputs.kind != ''
         continue-on-error: true
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-          ENTFERNEN: ${{ contains(github.event.issue.labels.*.name, 'projekt-entfernen') }}
-          PARKIERUNG: ${{ contains(github.event.issue.labels.*.name, 'parkierung') }}
         run: |
-          if [ "$PARKIERUNG" = "true" ]; then
-            node scripts/set-parking.mjs
-          elif [ "$ENTFERNEN" = "true" ]; then
-            node scripts/remove-project.mjs
-          else
-            node scripts/add-project.mjs
-          fi
+          case "${{ steps.kind.outputs.kind }}" in
+            parkierung)  node scripts/set-parking.mjs ;;
+            entfernen)   node scripts/remove-project.mjs ;;
+            hinzufuegen) node scripts/add-project.mjs ;;
+          esac
 
       - name: Daten neu einlesen
         if: contains(fromJSON('["added","removed","updated"]'), steps.run.outputs.status)
@@ -66,6 +93,7 @@ jobs:
           exit 1
 
       - name: Rückmeldung schreiben
+        if: steps.kind.outputs.kind != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: ${{ steps.run.outputs.message }}

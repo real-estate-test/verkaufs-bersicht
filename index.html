@@ -378,6 +378,7 @@ const PROXIES = [
 const LS_PROJECTS = "wohnungen.projects.v1";
 const LS_CACHE    = "wohnungen.cache.v2";
 const LS_KINDS    = "wohnungen.kinds.v1";   // manuelle Zuordnung Wohnung/Parkierung
+const LS_OWNCACHE = "wohnungen.owncache.v1";// letzter Stand selbst ergänzter Projekte
 const REPO        = "real-estate-test/verkaufs-bersicht";
 
 const COLORS = { available:"#b23a3a", reserved:"#a8820c", sold:"#0d7d63" };
@@ -804,16 +805,29 @@ function applyLatest(latest,mode){
 
 /** Selbst hinzugefügte Projekte weiterhin live im Browser laden. */
 async function loadCustom(proj){
-  data[proj.id]={units:[],summary:summarize([]),source:"loading",fetchedAt:null,error:null};
+  const cached=(store.get(LS_OWNCACHE,{}) || {})[proj.id];
+  // Beim Neuladen sofort den letzten Stand zeigen, statt bis zum Abruf leer zu bleiben
+  data[proj.id]= cached && cached.units && cached.units.length
+    ? {...cached, source:"cache", error:null}
+    : {units:[],summary:summarize([]),source:"loading",fetchedAt:null,error:null};
+
   const html=await fetchText(proj.url);
   const parsed=html?parseHTML(html,proj.groupLabel||"Haus"):[];
   const units=classifyUnits(parsed,proj);
+
   if(units.length){
     proj.grouped=shouldGroup(units);   // wie im Scraper: Gruppierung selbst bestimmen
     saveCustomProjects();
+    const entry={units,summary:summarize(units),fetchedAt:Date.now()};
+    data[proj.id]={...entry,source:"live",error:null};
+    const c=store.get(LS_OWNCACHE,{}) || {};
+    c[proj.id]=entry;
+    store.set(LS_OWNCACHE,c);
+    return;
   }
-  data[proj.id]=units.length
-    ? {units,summary:summarize(units),source:"live",fetchedAt:Date.now(),error:null}
+  // Abruf fehlgeschlagen: letzten Stand behalten statt den Bestand zu leeren
+  data[proj.id]= cached && cached.units && cached.units.length
+    ? {...cached, source:"cache", error:null}
     : {units:[],summary:summarize([]),source:"error",fetchedAt:null,
        error:"Seite nicht erreichbar oder Tabelle nicht erkannt"};
 }
@@ -1568,6 +1582,12 @@ document.getElementById("content").addEventListener("click",ev=>{
   loadCustomList();
   const cached=store.get(LS_CACHE,null);
   if(cached&&cached.projects) applyLatest(cached,"cache");
+  // Auch selbst ergänzte Projekte sofort aus dem letzten Stand füllen
+  const own=store.get(LS_OWNCACHE,{}) || {};
+  projects.filter(p=>!p.managed).forEach(p=>{
+    if(own[p.id] && own[p.id].units && own[p.id].units.length)
+      data[p.id]={...own[p.id],source:"cache",error:null};
+  });
   render();
   await refreshAll();
 })();
