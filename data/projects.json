@@ -37,6 +37,13 @@
       "url": "https://urbangardens-embrach.ch/angebot/",
       "type": "apartment",
       "groupLabel": "Haus"
+    },
+    {
+      "id": "escalara-seengen",
+      "name": "Escalara - Seengen",
+      "url": "https://escalera-seengen.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus"
     }
   ]
 }

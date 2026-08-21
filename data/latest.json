@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T05:54:23.451Z",
+  "generatedAt": "2026-08-21T05:55:09.554Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -10,7 +10,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:54:23.451Z",
+      "fetchedAt": "2026-08-21T05:55:09.554Z",
       "units": [
         {
           "id": "A1-1",
@@ -491,7 +491,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:54:23.451Z",
+      "fetchedAt": "2026-08-21T05:55:09.554Z",
       "units": [
         {
           "id": "A1",
@@ -887,7 +887,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:54:23.451Z",
+      "fetchedAt": "2026-08-21T05:55:09.554Z",
       "units": [
         {
           "id": "12a",
@@ -1116,7 +1116,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:54:23.451Z",
+      "fetchedAt": "2026-08-21T05:55:09.554Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2698,7 +2698,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:54:23.451Z",
+      "fetchedAt": "2026-08-21T05:55:09.554Z",
       "units": [
         {
           "id": "9901",
@@ -3068,6 +3068,251 @@
             "sold": 0,
             "unknown": 0,
             "availableVolume": 2485000
+          }
+        }
+      }
+    },
+    {
+      "id": "escalara-seengen",
+      "name": "Escalara - Seengen",
+      "url": "https://escalera-seengen.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-08-21T05:55:09.554Z",
+      "units": [
+        {
+          "id": "A.1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 118.2,
+          "areaText": "118.2m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "50.1",
+            "Keller": "11.2"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a1.pdf"
+        },
+        {
+          "id": "A.2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 149,
+          "areaText": "149.0m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "116.4",
+            "Keller": "13.1"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a2.pdf"
+        },
+        {
+          "id": "A.3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 141.3,
+          "areaText": "141.3m²",
+          "floor": "2.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "105.5",
+            "Keller": "11.3"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-grundrisse-m1-150-a4-quer-240509-01-a3.pdf"
+        },
+        {
+          "id": "A.4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136,
+          "areaText": "136.0m²",
+          "floor": "3.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "105.5",
+            "Keller": "11.3"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a4.pdf"
+        },
+        {
+          "id": "A.5",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 124.7,
+          "areaText": "124.7m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "94.4",
+            "Keller": "12.6"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a5.pdf"
+        },
+        {
+          "id": "B.1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 144.6,
+          "areaText": "144.6m²",
+          "floor": "EG",
+          "price": 1340000,
+          "priceText": "1'340'000",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "62.5",
+            "Keller": "13.8"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b1.pdf"
+        },
+        {
+          "id": "B.2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 148.8,
+          "areaText": "148.8m²",
+          "floor": "1.OG",
+          "price": 1385000,
+          "priceText": "1'385'000",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "102.5",
+            "Keller": "12.0"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b2.pdf"
+        },
+        {
+          "id": "B.3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 148.3,
+          "areaText": "148.3m²",
+          "floor": "2.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "103.1",
+            "Keller": "13.8"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b3.pdf"
+        },
+        {
+          "id": "B.4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 181,
+          "areaText": "181.0m²",
+          "floor": "3.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "103.1",
+            "Keller": "15.2"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b4-02.pdf"
+        },
+        {
+          "id": "B.5",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 130.7,
+          "areaText": "130.7m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "86.6",
+            "Keller": "12.0"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b5.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 7,
+          "areaText": "7 GP",
+          "floor": "EG",
+          "price": 40000,
+          "priceText": "40'000",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-tiefgarage-230517.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-tiefgarage-230517.pdf"
+        }
+      ],
+      "summary": {
+        "total": 10,
+        "available": 2,
+        "reserved": 0,
+        "sold": 8,
+        "unknown": 0,
+        "availableVolume": 2725000,
+        "byRooms": {
+          "3.5": {
+            "total": 5,
+            "available": 2,
+            "reserved": 0,
+            "sold": 3,
+            "unknown": 0,
+            "availableVolume": 2725000
+          },
+          "4.5": {
+            "total": 4,
+            "available": 0,
+            "reserved": 0,
+            "sold": 4,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "5.5": {
+            "total": 1,
+            "available": 0,
+            "reserved": 0,
+            "sold": 1,
+            "unknown": 0,
+            "availableVolume": 0
           }
         }
       }

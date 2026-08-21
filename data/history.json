@@ -428,7 +428,7 @@
     },
     {
       "date": "2026-08-21",
-      "at": "2026-08-21T05:54:23.451Z",
+      "at": "2026-08-21T05:55:09.554Z",
       "projects": {
         "sonnenberg": {
           "total": 23,
@@ -597,6 +597,40 @@
               "sold": 0,
               "unknown": 0,
               "availableVolume": 2485000
+            }
+          }
+        },
+        "escalara-seengen": {
+          "total": 10,
+          "available": 2,
+          "reserved": 0,
+          "sold": 8,
+          "unknown": 0,
+          "availableVolume": 2725000,
+          "byRooms": {
+            "3.5": {
+              "total": 5,
+              "available": 2,
+              "reserved": 0,
+              "sold": 3,
+              "unknown": 0,
+              "availableVolume": 2725000
+            },
+            "4.5": {
+              "total": 4,
+              "available": 0,
+              "reserved": 0,
+              "sold": 4,
+              "unknown": 0,
+              "availableVolume": 0
+            },
+            "5.5": {
+              "total": 1,
+              "available": 0,
+              "reserved": 0,
+              "sold": 1,
+              "unknown": 0,
+              "availableVolume": 0
             }
           }
         }
