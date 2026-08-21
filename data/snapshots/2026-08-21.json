@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T05:56:38.628Z",
+  "generatedAt": "2026-08-21T05:59:21.911Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -10,7 +10,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "A1-1",
@@ -491,7 +491,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "A1",
@@ -885,9 +885,10 @@
       "type": "house",
       "groupLabel": "Erlenstrasse",
       "grouped": false,
-      "ok": true,
-      "error": null,
+      "ok": false,
+      "error": "HTTP 415",
       "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "stale": true,
       "units": [
         {
           "id": "12a",
@@ -1116,7 +1117,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2698,7 +2699,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "9901",
@@ -3081,7 +3082,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "A.1",
@@ -3326,7 +3327,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "22 1",
@@ -3611,7 +3612,7 @@
         {
           "id": "Dispo 1",
           "group": "Haus DISPO",
-          "kind": "unit",
+          "kind": "parking",
           "rooms": null,
           "area": 24.4,
           "areaText": "24,4 m²",
@@ -3625,7 +3626,7 @@
         {
           "id": "Dispo 2",
           "group": "Haus DISPO",
-          "kind": "unit",
+          "kind": "parking",
           "rooms": null,
           "area": 23.7,
           "areaText": "23,7 m²",
@@ -3854,7 +3855,7 @@
         {
           "id": "Dispo 1",
           "group": "Haus DISPO",
-          "kind": "unit",
+          "kind": "parking",
           "rooms": null,
           "area": 23.6,
           "areaText": "23,6 m²",
@@ -4097,7 +4098,7 @@
         {
           "id": "Dispo 1",
           "group": "Haus DISPO",
-          "kind": "unit",
+          "kind": "parking",
           "rooms": null,
           "area": 34.3,
           "areaText": "34,3 m²",
@@ -4111,7 +4112,7 @@
         {
           "id": "Dispo 2",
           "group": "Haus DISPO",
-          "kind": "unit",
+          "kind": "parking",
           "rooms": null,
           "area": 36.7,
           "areaText": "36,7 m²",
@@ -4166,10 +4167,10 @@
         }
       ],
       "summary": {
-        "total": 41,
+        "total": 36,
         "available": 2,
         "reserved": 3,
-        "sold": 36,
+        "sold": 31,
         "unknown": 0,
         "availableVolume": 1640000,
         "byRooms": {
@@ -4188,14 +4189,6 @@
             "sold": 8,
             "unknown": 0,
             "availableVolume": 1640000
-          },
-          "?": {
-            "total": 5,
-            "available": 0,
-            "reserved": 0,
-            "sold": 5,
-            "unknown": 0,
-            "availableVolume": 0
           },
           "2.5": {
             "total": 3,
@@ -4217,7 +4210,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-21T05:56:38.628Z",
+      "fetchedAt": "2026-08-21T05:59:21.911Z",
       "units": [
         {
           "id": "A1",

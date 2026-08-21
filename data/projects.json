@@ -50,7 +50,10 @@
       "name": "Dorf - Dulliken",
       "url": "https://patio-dulliken.ch/angebot/",
       "type": "apartment",
-      "groupLabel": "Haus"
+      "groupLabel": "Haus",
+      "parkingGroups": [
+        "Haus DISPO"
+      ]
     },
     {
       "id": "horizont-kuettigen",

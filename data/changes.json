@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "date": "2026-08-21",
+      "project": "dorf-dulliken",
+      "projectName": "Dorf - Dulliken",
+      "unit": "Dispo 1",
+      "type": "removed",
+      "from": "sold"
+    },
+    {
+      "date": "2026-08-21",
+      "project": "dorf-dulliken",
+      "projectName": "Dorf - Dulliken",
+      "unit": "Dispo 2",
+      "type": "removed",
+      "from": "sold"
+    },
+    {
       "date": "2026-08-19",
       "project": "seeluft",
       "projectName": "Seeluft Boniswil",
