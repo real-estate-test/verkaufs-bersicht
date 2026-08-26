@@ -1,6 +1,15 @@
 {
   "entries": [
     {
+      "date": "2026-08-26",
+      "project": "seeluft",
+      "projectName": "Seeluft Boniswil",
+      "unit": "C6",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
       "date": "2026-08-21",
       "project": "dorf-dulliken",
       "projectName": "Dorf - Dulliken",
