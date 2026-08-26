@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T07:38:25.636Z",
+  "generatedAt": "2026-08-26T09:00:59.638Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -17,7 +17,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "A1-1",
@@ -505,7 +505,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "A1",
@@ -908,7 +908,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "12a",
@@ -1144,7 +1144,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2733,7 +2733,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "9901",
@@ -3123,7 +3123,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "A.1",
@@ -3375,7 +3375,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "22 1",
@@ -4265,7 +4265,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-08-26T07:38:25.636Z",
+      "fetchedAt": "2026-08-26T09:00:59.638Z",
       "units": [
         {
           "id": "A1",
