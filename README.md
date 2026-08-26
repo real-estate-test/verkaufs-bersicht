@@ -143,6 +143,18 @@ Schlägt der Abruf einer Seite fehl, bleibt der zuletzt bekannte Stand dieses
 Projekts erhalten (Kennzeichnung „Letzter Stand"). So löscht eine kurzzeitige
 Störung weder den Bestand noch erzeugt sie falsche Änderungsmeldungen.
 
+## Aktualisieren
+
+Die Kopfzeile trennt zwei Dinge, die leicht verwechselt werden:
+
+| | Wirkung |
+|---|---|
+| **Neu laden** | Holt den zuletzt eingelesenen Stand erneut aus `data/*.json`. Ruft die Projektseiten **nicht** ab – der Zeitstempel ändert sich dadurch nicht. |
+| **Projektseiten einlesen ↗** | Öffnet den Workflow auf GitHub; ein Klick auf *Run workflow* liest alle Projektseiten neu ein und schreibt den Stand ins Repository. |
+
+Die Statuszeile nennt deshalb den Zeitpunkt des letzten serverseitigen Laufs
+(„Eingelesen am …") und nicht den des Seitenaufrufs.
+
 ## Zeitplan
 
 Der Workflow `.github/workflows/update-data.yml` läuft am **1. und 15. jedes Monats**

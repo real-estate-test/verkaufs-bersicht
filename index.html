@@ -256,7 +256,12 @@
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px">
       <div class="updated"><span id="liveDot" class="dot"></span><span id="updatedText">wird geladen…</span></div>
-      <button class="btn primary" id="refreshAll">Aktualisieren</button>
+      <div style="display:flex;gap:8px;align-items:center">
+        <a class="btn" id="rescanLink" target="_blank" rel="noopener"
+           title="Startet das Einlesen der Projektseiten auf GitHub – dauert etwa eine Minute">Projektseiten einlesen ↗</a>
+        <button class="btn primary" id="refreshAll"
+           title="Holt den zuletzt eingelesenen Stand erneut – ruft die Projektseiten nicht ab">Neu laden</button>
+      </div>
     </div>
   </header>
 
@@ -871,14 +876,25 @@ async function loadCustom(proj){
        error:"Seite nicht erreichbar oder Tabelle nicht erkannt"};
 }
 
+/**
+ * Holt den abgelegten Stand erneut – nicht die Projektseiten selbst. Die
+ * werden serverseitig eingelesen (1. und 15.); dafür gibt es den Link daneben.
+ */
 async function refreshAll(){
   const btn=document.getElementById("refreshAll");
-  btn.disabled=true; btn.textContent="Aktualisiere…";
+  btn.disabled=true; btn.textContent="Lädt…";
   document.getElementById("liveDot").className="dot";
   document.getElementById("updatedText").textContent="lädt…";
-  await Promise.all([ loadManaged(), ...projects.filter(p=>!p.managed).map(loadCustom) ]);
-  btn.disabled=false; btn.textContent="Aktualisieren";
-  render();
+  try{
+    // allSettled statt all: ein einzelner Fehlschlag darf den Knopf nicht sperren
+    await Promise.allSettled([ loadManaged(), ...projects.filter(p=>!p.managed).map(loadCustom) ]);
+  } finally {
+    btn.disabled=false;
+    render();
+    // Kurze Rückmeldung, sonst wirkt der Knopf wirkungslos, wenn sich nichts geändert hat
+    btn.textContent="Geladen ✓";
+    setTimeout(()=>{ btn.textContent="Neu laden"; },1600);
+  }
 }
 
 /* ----------------------------------------------------------------------------
@@ -1231,9 +1247,13 @@ function renderUpdated(){
   }).filter(Boolean);
   const last=times.length?new Date(Math.max(...times)):null;
   dot.className="dot"+(anyOk?" live":anyErr?" err":"");
+  // Deutlich machen, dass der Stand vom serverseitigen Lauf kommt und nicht
+  // vom Seitenaufruf – sonst wirkt "Neu laden" wirkungslos.
   txt.textContent=last
-    ? "Stand "+last.toLocaleString("de-CH",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"})
+    ? "Eingelesen am "+last.toLocaleString("de-CH",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"})
     : (anyErr?"Daten nicht verfügbar":"—");
+  txt.title="Die Projektseiten werden am 1. und 15. jedes Monats serverseitig eingelesen. "
+    +"„Neu laden\" holt diesen Stand erneut; „Projektseiten einlesen\" stösst einen neuen Lauf an.";
 }
 
 /* ----------------------------------------------------------------------------
@@ -1708,6 +1728,9 @@ document.getElementById("highlightSold").onchange=e=>{ filters.highlight=e.targe
 document.getElementById("showDetails").onchange=e=>{ filters.details=e.target.checked; renderContent(); };
 document.getElementById("search").oninput=e=>{ filters.search=e.target.value.trim(); renderContent(); };
 document.getElementById("refreshAll").onclick=refreshAll;
+// Führt zum Workflow, der die Projektseiten einliest – dort genügt "Run workflow"
+document.getElementById("rescanLink").href =
+  `https://github.com/${REPO}/actions/workflows/update-data.yml`;
 document.getElementById("toggleChartTable").onclick=e=>{
   chartAsTable=!chartAsTable;
   document.getElementById("chart").style.display=chartAsTable?"none":"";
