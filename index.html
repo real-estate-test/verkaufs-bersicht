@@ -347,7 +347,7 @@
   </section>
 
   <footer class="note">
-    Die Daten der hinterlegten Projekte werden automatisch am 1. und 15. jedes Monats serverseitig
+    Die Daten der hinterlegten Projekte werden automatisch jeden Freitag serverseitig
     von den Projektseiten gelesen und im Repository abgelegt (<code>data/latest.json</code>) – daraus
     speisen sich Übersicht, Verlauf und Änderungsprotokoll.
     Selbst hinzugefügte Projekt-Links werden live im Browser über einen öffentlichen CORS-Proxy geladen
@@ -878,7 +878,7 @@ async function loadCustom(proj){
 
 /**
  * Holt den abgelegten Stand erneut – nicht die Projektseiten selbst. Die
- * werden serverseitig eingelesen (1. und 15.); dafür gibt es den Link daneben.
+ * werden serverseitig eingelesen (freitags); dafür gibt es den Link daneben.
  */
 async function refreshAll(){
   const btn=document.getElementById("refreshAll");
@@ -1252,7 +1252,7 @@ function renderUpdated(){
   txt.textContent=last
     ? "Eingelesen am "+last.toLocaleString("de-CH",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"})
     : (anyErr?"Daten nicht verfügbar":"—");
-  txt.title="Die Projektseiten werden am 1. und 15. jedes Monats serverseitig eingelesen. "
+  txt.title="Die Projektseiten werden jeden Freitag serverseitig eingelesen. "
     +"„Neu laden\" holt diesen Stand erneut; „Projektseiten einlesen\" stösst einen neuen Lauf an.";
 }
 
@@ -1411,7 +1411,7 @@ function renderHistory(){
                 : "noch keine Erhebungen";
   const roomScope = filters.rooms==="all" ? "" : ` · nur ${filters.rooms} Zimmer`;
   document.getElementById("chartSub").textContent =
-    `Bestand je Erhebung · ${scope}${roomScope}` + (runs.length<2 ? " · füllt sich mit jedem Lauf (1. & 15.)" : "");
+    `Bestand je Erhebung · ${scope}${roomScope}` + (runs.length<2 ? " · füllt sich mit jedem Lauf (freitags)" : "");
 
   document.getElementById("chartLegend").innerHTML = SERIES.map(s=>
     `<span class="legend-item"><span class="legend-key" style="background:${COLORS[s.key]}"></span>${s.label}</span>`

@@ -2,8 +2,8 @@ name: Verkaufsdaten aktualisieren
 
 on:
   schedule:
-    # 1. und 15. jeden Monats, 05:17 UTC = 07:17 (Sommer) / 06:17 (Winter) Schweizer Zeit
-    - cron: "17 5 1,15 * *"
+    # Freitags, 05:17 UTC = 07:17 (Sommer) / 06:17 (Winter) Schweizer Zeit
+    - cron: "17 5 * * 5"
   workflow_dispatch:
   push:
     branches: [main]

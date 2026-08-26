@@ -124,7 +124,7 @@ async function main() {
       `| Quelle | ${url} |`,
       `| Adresse | ${adresse || "– keine angegeben, erscheint nicht auf der Karte"} |`,
       "",
-      "Ab jetzt wird das Projekt bei jedem automatischen Lauf (1. und 15. des Monats) mitgelesen."
+      "Ab jetzt wird das Projekt bei jedem automatischen Lauf (freitags) mitgelesen."
     ].join("\n"));
   } catch (err) {
     await output("failed", [

@@ -12,7 +12,7 @@ und liefert nebenbei die Datengrundlage für den Verlauf.
 
 ```
 Projektseiten ──► scripts/scrape.mjs ──► data/*.json ──► index.html
-   (Actions, 1. & 15. des Monats)                        (GitHub Pages)
+   (Actions, freitags)                                   (GitHub Pages)
 ```
 
 ### Erfasste Projekte
@@ -38,7 +38,7 @@ je Projekt und werden über ihren Inhalt bestimmt; bei Bedarf lässt sich das ü
 ## Projekte ergänzen
 
 Erfasste Projekte stehen in `data/projects.json` – **nicht** im Browser. Damit sind
-sie auf jedem Gerät sichtbar und werden vom Zwei-Wochen-Lauf mitgelesen.
+sie auf jedem Gerät sichtbar und werden vom wöchentlichen Lauf mitgelesen.
 
 Der bequeme Weg führt über die Seite: „**+ Projekt**" trägt das Projekt zunächst
 nur lokal ein (Kennzeichnung „Nur dieses Gerät") und bietet danach den Knopf
@@ -157,7 +157,7 @@ Die Statuszeile nennt deshalb den Zeitpunkt des letzten serverseitigen Laufs
 
 ## Zeitplan
 
-Der Workflow `.github/workflows/update-data.yml` läuft am **1. und 15. jedes Monats**
+Der Workflow `.github/workflows/update-data.yml` läuft **jeden Freitag**
 (05:17 UTC ≈ 07:17 Schweizer Zeit) und lässt sich unter *Actions → Verkaufsdaten
 aktualisieren → Run workflow* jederzeit von Hand auslösen. Jeder Lauf schreibt eine
 Zusammenfassung mit allen Änderungen in die Job-Summary.
