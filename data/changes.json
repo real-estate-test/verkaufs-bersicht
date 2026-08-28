@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "date": "2026-08-28",
+      "project": "dorf-dulliken",
+      "projectName": "Dorf - Dulliken",
+      "unit": "22 C 2",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-08-28",
+      "project": "dorf-dulliken",
+      "projectName": "Dorf - Dulliken",
+      "unit": "22 C 2",
+      "type": "price",
+      "priceFrom": 700000,
+      "priceTo": null
+    },
+    {
       "date": "2026-08-26",
       "project": "seeluft",
       "projectName": "Seeluft Boniswil",
