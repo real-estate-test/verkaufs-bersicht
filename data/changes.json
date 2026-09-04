@@ -1,6 +1,51 @@
 {
   "entries": [
     {
+      "date": "2026-09-04",
+      "project": "seeluft",
+      "projectName": "Seeluft Boniswil",
+      "unit": "A7",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-09-04",
+      "project": "seeluft",
+      "projectName": "Seeluft Boniswil",
+      "unit": "C8",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
+      "date": "2026-09-04",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B1.0.4",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
+      "date": "2026-09-04",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B1.1.4",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
+      "date": "2026-09-04",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B2.0.4",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
       "date": "2026-08-28",
       "project": "dorf-dulliken",
       "projectName": "Dorf - Dulliken",
