@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "date": "2026-09-18",
+      "project": "sonnenberg",
+      "projectName": "Sonnenberg Reinach",
+      "unit": "A2-2",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
+      "date": "2026-09-18",
+      "project": "dorf-dulliken",
+      "projectName": "Dorf - Dulliken",
+      "unit": "22 C 4",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
       "date": "2026-09-04",
       "project": "seeluft",
       "projectName": "Seeluft Boniswil",
