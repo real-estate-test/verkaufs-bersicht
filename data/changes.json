@@ -1,6 +1,51 @@
 {
   "entries": [
     {
+      "date": "2026-09-25",
+      "project": "seeluft",
+      "projectName": "Seeluft Boniswil",
+      "unit": "C4",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
+      "date": "2026-09-25",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "A1.2.1",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-09-25",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B1.2.4",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-09-25",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C2.1.2",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-09-25",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C3.3.1",
+      "type": "status",
+      "from": "reserved",
+      "to": "available"
+    },
+    {
       "date": "2026-09-18",
       "project": "sonnenberg",
       "projectName": "Sonnenberg Reinach",

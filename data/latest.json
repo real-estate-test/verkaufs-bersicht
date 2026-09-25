@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T09:44:16.628Z",
+  "generatedAt": "2026-09-25T10:10:44.021Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -17,7 +17,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "A1-1",
@@ -505,7 +505,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "A1",
@@ -772,7 +772,7 @@
           "floor": "2. OG",
           "price": null,
           "priceText": "–",
-          "status": "reserved",
+          "status": "sold",
           "extra": {
             "Sitzplatz, Balkon | Garten": "45.2 m²",
             "Keller": "9.9 m²"
@@ -868,16 +868,16 @@
       "summary": {
         "total": 21,
         "available": 8,
-        "reserved": 4,
-        "sold": 9,
+        "reserved": 3,
+        "sold": 10,
         "unknown": 0,
         "availableVolume": 7060000,
         "byRooms": {
           "4.5": {
             "total": 12,
             "available": 5,
-            "reserved": 2,
-            "sold": 5,
+            "reserved": 1,
+            "sold": 6,
             "unknown": 0,
             "availableVolume": 4615000
           },
@@ -908,7 +908,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "12a",
@@ -1144,7 +1144,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -1224,7 +1224,7 @@
           "floor": "2. OG",
           "price": 945000,
           "priceText": "945'000.–",
-          "status": "available",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "14.2 m²",
             "Keller": "13.2 m²"
@@ -1851,7 +1851,7 @@
           "floor": "2. OG",
           "price": 725000,
           "priceText": "725'000.–",
-          "status": "available",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "13.8 m²",
             "Keller": "8.1 m²"
@@ -2412,7 +2412,7 @@
           "floor": "1. OG",
           "price": 755000,
           "priceText": "755'000.–",
-          "status": "available",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "20.8 m²",
             "Keller": "9.5 m²"
@@ -2649,7 +2649,7 @@
           "floor": "3. OG",
           "price": 940000,
           "priceText": "940'000.–",
-          "status": "reserved",
+          "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
             "Keller": "10.4 m²"
@@ -2676,11 +2676,11 @@
       ],
       "summary": {
         "total": 90,
-        "available": 67,
-        "reserved": 2,
+        "available": 65,
+        "reserved": 4,
         "sold": 21,
         "unknown": 0,
-        "availableVolume": 60710000,
+        "availableVolume": 59225000,
         "byRooms": {
           "4.5": {
             "total": 61,
@@ -2688,15 +2688,15 @@
             "reserved": 2,
             "sold": 8,
             "unknown": 0,
-            "availableVolume": 46320000
+            "availableVolume": 46315000
           },
           "3.5": {
             "total": 19,
-            "available": 9,
-            "reserved": 0,
+            "available": 7,
+            "reserved": 2,
             "sold": 10,
             "unknown": 0,
-            "availableVolume": 6910000
+            "availableVolume": 5430000
           },
           "2.5": {
             "total": 3,
@@ -2733,7 +2733,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "9901",
@@ -3123,7 +3123,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "A.1",
@@ -3375,7 +3375,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "22 1",
@@ -4167,7 +4167,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-18T09:44:16.628Z",
+      "fetchedAt": "2026-09-25T10:10:44.021Z",
       "units": [
         {
           "id": "A1",
