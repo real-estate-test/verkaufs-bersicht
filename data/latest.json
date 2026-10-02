@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T10:10:44.021Z",
+  "generatedAt": "2026-10-02T11:05:40.543Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -17,7 +17,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "A1-1",
@@ -160,9 +160,9 @@
           "area": 144.8,
           "areaText": "144.8 m²",
           "floor": null,
-          "price": 1230000,
-          "priceText": "1’230’000.–",
-          "status": "available",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
           "extra": {
             "Nebennutzfläche": "24.6 m²",
             "Aussennutzfläche": "64.5 m²",
@@ -456,19 +456,19 @@
       ],
       "summary": {
         "total": 23,
-        "available": 14,
-        "reserved": 0,
+        "available": 13,
+        "reserved": 1,
         "sold": 8,
         "unknown": 1,
-        "availableVolume": 15360000,
+        "availableVolume": 14130000,
         "byRooms": {
           "5.5": {
             "total": 9,
-            "available": 6,
-            "reserved": 0,
+            "available": 5,
+            "reserved": 1,
             "sold": 3,
             "unknown": 0,
-            "availableVolume": 7600000
+            "availableVolume": 6370000
           },
           "4.5": {
             "total": 13,
@@ -505,7 +505,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "A1",
@@ -908,7 +908,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "12a",
@@ -1144,7 +1144,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -2733,7 +2733,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "9901",
@@ -3123,7 +3123,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "A.1",
@@ -3375,7 +3375,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "22 1",
@@ -3392,7 +3392,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-1-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-1-web-corpora-1.pdf"
         },
         {
           "id": "22 2",
@@ -3409,7 +3409,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-2-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-2-web-corpora-1.pdf"
         },
         {
           "id": "22 3",
@@ -3426,7 +3426,7 @@
             "Aussenfläche": "22,4 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-3-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-3-web-corpora-1.pdf"
         },
         {
           "id": "22 A 1",
@@ -3443,7 +3443,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-1-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-1-web-corpora-1.pdf"
         },
         {
           "id": "22 A 2",
@@ -3460,7 +3460,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-2-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-2-web-corpora-1.pdf"
         },
         {
           "id": "22 A 3",
@@ -3477,7 +3477,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-3-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-3-web-corpora-1.pdf"
         },
         {
           "id": "22 A 4",
@@ -3494,7 +3494,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-4-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-4-web-corpora-1.pdf"
         },
         {
           "id": "22 A 5",
@@ -3511,7 +3511,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-5-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-5-web-corpora-1.pdf"
         },
         {
           "id": "22 A 6",
@@ -3528,7 +3528,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-6-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-6-web-corpora-1.pdf"
         },
         {
           "id": "22 A 7",
@@ -3545,7 +3545,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-7-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-7-web-corpora-1.pdf"
         },
         {
           "id": "22 A 8",
@@ -3562,7 +3562,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-8-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-8-web-corpora-1.pdf"
         },
         {
           "id": "22 A 9",
@@ -3579,7 +3579,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-9-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-9-web-corpora-1.pdf"
         },
         {
           "id": "22 A 10",
@@ -3596,7 +3596,7 @@
             "Aussenfläche": "93,8 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-10-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-10-web-corpora-1.pdf"
         },
         {
           "id": "22 A 11",
@@ -3613,7 +3613,7 @@
             "Aussenfläche": "97,2 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-11-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-11-web-corpora-1.pdf"
         },
         {
           "id": "Dispo 1",
@@ -3627,7 +3627,7 @@
           "priceText": "–",
           "status": "sold",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora-1.pdf"
         },
         {
           "id": "Dispo 2",
@@ -3641,7 +3641,7 @@
           "priceText": "–",
           "status": "sold",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora-2.pdf"
         },
         {
           "id": "Garage",
@@ -3655,7 +3655,7 @@
           "priceText": "32'000.-",
           "status": "available",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-1.pdf"
         },
         {
           "id": "22 B 1",
@@ -3672,7 +3672,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-1-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-1-web-corpora-1.pdf"
         },
         {
           "id": "22 B 2",
@@ -3689,7 +3689,7 @@
             "Aussenfläche": "21,6 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-2-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-2-web-corpora-1.pdf"
         },
         {
           "id": "22 B 3",
@@ -3706,7 +3706,7 @@
             "Aussenfläche": "22,2 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-3-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-3-web-corpora-1.pdf"
         },
         {
           "id": "22 B 4",
@@ -3723,7 +3723,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-4-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-4-web-corpora-1.pdf"
         },
         {
           "id": "22 B 5",
@@ -3740,7 +3740,7 @@
             "Aussenfläche": "21,6 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-5-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-5-web-corpora-1.pdf"
         },
         {
           "id": "22 B 6",
@@ -3757,7 +3757,7 @@
             "Aussenfläche": "22,2 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-6-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-6-web-corpora-1.pdf"
         },
         {
           "id": "22 B 7",
@@ -3774,7 +3774,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-7-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-7-web-corpora-1.pdf"
         },
         {
           "id": "22 B 8",
@@ -3791,7 +3791,7 @@
             "Aussenfläche": "21,6 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-8-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-8-web-corpora-1.pdf"
         },
         {
           "id": "22 B 9",
@@ -3808,7 +3808,7 @@
             "Aussenfläche": "22,2 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-9-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-9-web-corpora-1.pdf"
         },
         {
           "id": "22 B 10",
@@ -3825,7 +3825,7 @@
             "Aussenfläche": "82,5 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-10-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-10-web-corpora-1.pdf"
         },
         {
           "id": "22 B 11",
@@ -3842,7 +3842,7 @@
             "Aussenfläche": "86,9 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-11-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-11-web-corpora-1.pdf"
         },
         {
           "id": "Dispo 1",
@@ -3856,7 +3856,7 @@
           "priceText": "–",
           "status": "sold",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22b-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22b-web-corpora-1.pdf"
         },
         {
           "id": "Garage",
@@ -3870,7 +3870,7 @@
           "priceText": "32'000.-",
           "status": "available",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-2.pdf"
         },
         {
           "id": "22 C 1",
@@ -3887,7 +3887,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-1-web-corpora-03.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-1-web-corpora-03-1.pdf"
         },
         {
           "id": "22 C 2",
@@ -3904,7 +3904,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-2-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-2-web-corpora-1.pdf"
         },
         {
           "id": "22 C 3",
@@ -3921,7 +3921,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Sitzplatz gedeckt"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-3-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-3-web-corpora-1.pdf"
         },
         {
           "id": "22 C 4",
@@ -3938,7 +3938,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-4-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-4-web-corpora-1.pdf"
         },
         {
           "id": "22 C 5",
@@ -3955,7 +3955,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-5-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-5-web-corpora-1.pdf"
         },
         {
           "id": "22 C 6",
@@ -3972,7 +3972,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-6-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-6-web-corpora-1.pdf"
         },
         {
           "id": "22 C 7",
@@ -3989,7 +3989,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-7-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-7-web-corpora-1.pdf"
         },
         {
           "id": "22 C 8",
@@ -4006,7 +4006,7 @@
             "Aussenfläche": "20,7 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-8-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-8-web-corpora-1.pdf"
         },
         {
           "id": "22 C 9",
@@ -4023,7 +4023,7 @@
             "Aussenfläche": "17,5 m²",
             "Bemerkung": "Balkon"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-9-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-9-web-corpora-1.pdf"
         },
         {
           "id": "22 C 10",
@@ -4040,7 +4040,7 @@
             "Aussenfläche": "93,8 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-10-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-10-web-corpora-1.pdf"
         },
         {
           "id": "22 C 11",
@@ -4057,7 +4057,7 @@
             "Aussenfläche": "96,0 m²",
             "Bemerkung": "Terrasse"
           },
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-11-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-11-web-corpora-1.pdf"
         },
         {
           "id": "Dispo 1",
@@ -4071,7 +4071,7 @@
           "priceText": "–",
           "status": "sold",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora-1.pdf"
         },
         {
           "id": "Dispo 2",
@@ -4085,7 +4085,7 @@
           "priceText": "–",
           "status": "sold",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora-2.pdf"
         },
         {
           "id": "Garage",
@@ -4099,7 +4099,7 @@
           "priceText": "32'000.-",
           "status": "available",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-3.pdf"
         },
         {
           "id": "Garage PP breit",
@@ -4113,7 +4113,7 @@
           "priceText": "35'000.-",
           "status": "available",
           "extra": {},
-          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora.pdf"
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-4.pdf"
         }
       ],
       "summary": {
@@ -4167,7 +4167,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-09-25T10:10:44.021Z",
+      "fetchedAt": "2026-10-02T11:05:40.543Z",
       "units": [
         {
           "id": "A1",
