@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T11:52:57.318Z",
+  "generatedAt": "2026-10-16T09:46:48.968Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -17,7 +17,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "A1-1",
@@ -505,7 +505,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "A1",
@@ -908,7 +908,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "12a",
@@ -1144,7 +1144,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -1851,7 +1851,7 @@
           "floor": "2. OG",
           "price": 725000,
           "priceText": "725'000.–",
-          "status": "reserved",
+          "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
             "Keller": "8.1 m²"
@@ -2021,7 +2021,7 @@
           "floor": "1. OG",
           "price": 710000,
           "priceText": "710'000.–",
-          "status": "available",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "13.8 m²",
             "Keller": "7.8 m²"
@@ -2680,7 +2680,7 @@
         "reserved": 4,
         "sold": 21,
         "unknown": 0,
-        "availableVolume": 59225000,
+        "availableVolume": 59240000,
         "byRooms": {
           "4.5": {
             "total": 61,
@@ -2696,7 +2696,7 @@
             "reserved": 2,
             "sold": 10,
             "unknown": 0,
-            "availableVolume": 5430000
+            "availableVolume": 5445000
           },
           "2.5": {
             "total": 3,
@@ -2733,7 +2733,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "9901",
@@ -3123,7 +3123,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "A.1",
@@ -3375,7 +3375,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "22 1",
@@ -4167,7 +4167,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-09T11:52:57.318Z",
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
       "units": [
         {
           "id": "A1",

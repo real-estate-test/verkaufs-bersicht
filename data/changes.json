@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "date": "2026-10-16",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B1.2.4",
+      "type": "status",
+      "from": "reserved",
+      "to": "available"
+    },
+    {
+      "date": "2026-10-16",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B2.1.4",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
       "date": "2026-10-02",
       "project": "sonnenberg",
       "projectName": "Sonnenberg Reinach",

@@ -1,0 +1,4574 @@
+{
+  "generatedAt": "2026-10-16T09:46:48.968Z",
+  "projects": [
+    {
+      "id": "sonnenberg",
+      "name": "Sonnenberg Reinach",
+      "url": "https://sonnenberg-reinach.ch/angebot/",
+      "type": "house",
+      "groupLabel": "Haus",
+      "adresse": "Reinach AG, Schweiz",
+      "ort": "Reinach",
+      "land": "CH",
+      "koordinaten": [
+        47.253968,
+        8.182824
+      ],
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "A1-1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 148.7,
+          "areaText": "148.7 m²",
+          "floor": null,
+          "price": 1210000,
+          "priceText": "1’210’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "24.3 m²",
+            "Aussennutzfläche": "47.7 m²",
+            "Grundstück": "261.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a1-1.pdf"
+        },
+        {
+          "id": "A1-2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 147.1,
+          "areaText": "147.1 m²",
+          "floor": null,
+          "price": 1000000,
+          "priceText": "1'000’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "24.7 m²",
+            "Aussennutzfläche": "46.9 m²",
+            "Grundstück": "184.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a1-2.pdf"
+        },
+        {
+          "id": "A1-3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 147.2,
+          "areaText": "147.2 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "24.7 m²",
+            "Aussennutzfläche": "46.9 m²",
+            "Grundstück": "184.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a1-3.pdf"
+        },
+        {
+          "id": "A1-4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 146.7,
+          "areaText": "146.7 m²",
+          "floor": null,
+          "price": 1180000,
+          "priceText": "1‘180’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "24.7 m²",
+            "Aussennutzfläche": "64.7 m²",
+            "Grundstück": "255.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a1-4.pdf"
+        },
+        {
+          "id": "A2-1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 147,
+          "areaText": "147.0 m²",
+          "floor": null,
+          "price": 1190000,
+          "priceText": "1’190’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "24.3 m²",
+            "Aussennutzfläche": "47.6 m²",
+            "Grundstück": "255.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a2-1.pdf"
+        },
+        {
+          "id": "A2-2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 147.1,
+          "areaText": "147.1 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "24.7 m²",
+            "Aussennutzfläche": "46.9 m²",
+            "Grundstück": "186.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a2-2.pdf"
+        },
+        {
+          "id": "A2-3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 147.1,
+          "areaText": "147.1 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "24.6 m²",
+            "Aussennutzfläche": "46.9 m²",
+            "Grundstück": "191.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a2-3.pdf"
+        },
+        {
+          "id": "A2-4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 144.8,
+          "areaText": "144.8 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Nebennutzfläche": "24.6 m²",
+            "Aussennutzfläche": "64.5 m²",
+            "Grundstück": "477.0 m²",
+            "Kubatur": "968.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/a2-4.pdf"
+        },
+        {
+          "id": "B1-1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.1,
+          "areaText": "129.1 m²",
+          "floor": null,
+          "price": 980000,
+          "priceText": "980’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "38.8 m²",
+            "Aussennutzfläche": "22.9 m²",
+            "Grundstück": "253.0 m²",
+            "Kubatur": "909.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b1-1.pdf"
+        },
+        {
+          "id": "B1-2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.6,
+          "areaText": "129.6 m²",
+          "floor": null,
+          "price": 940000,
+          "priceText": "940’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "39.2 m²",
+            "Aussennutzfläche": "22.1 m²",
+            "Grundstück": "203.0 m²",
+            "Kubatur": "909.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b1-2.pdf"
+        },
+        {
+          "id": "B1-3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.6,
+          "areaText": "129.6 m²",
+          "floor": null,
+          "price": 940000,
+          "priceText": "940’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "39.1 m²",
+            "Aussennutzfläche": "22.1 m²",
+            "Grundstück": "207.0 m²",
+            "Kubatur": "909.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b1-3.pdf"
+        },
+        {
+          "id": "B1-4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.3,
+          "areaText": "129.3 m²",
+          "floor": null,
+          "price": 1000000,
+          "priceText": "1'000'000.-",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "39.1 m²",
+            "Aussennutzfläche": "22.9 m²",
+            "Grundstück": "277.0 m²",
+            "Kubatur": "909.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b1-4.pdf"
+        },
+        {
+          "id": "B2-1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.3,
+          "areaText": "110.3 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "37.6 m²",
+            "Aussennutzfläche": "23.0 m²",
+            "Grundstück": "279.0 m²",
+            "Kubatur": "740.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b2-1.pdf"
+        },
+        {
+          "id": "B2-2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.4,
+          "areaText": "110.4 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "37.6 m²",
+            "Aussennutzfläche": "22.1 m²",
+            "Grundstück": "211.0 m²",
+            "Kubatur": "740.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b2-2.pdf"
+        },
+        {
+          "id": "B2-3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.6,
+          "areaText": "110.6 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "37.6 m²",
+            "Aussennutzfläche": "22.1 m²",
+            "Grundstück": "211.0 m²",
+            "Kubatur": "740.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b2-3.pdf"
+        },
+        {
+          "id": "B2-4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.6,
+          "areaText": "110.6 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "37.6 m²",
+            "Aussennutzfläche": "22.1 m²",
+            "Grundstück": "210.0 m²",
+            "Kubatur": "740.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b2-4.pdf"
+        },
+        {
+          "id": "B2-5",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.6,
+          "areaText": "110.6 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Nebennutzfläche": "37.6 m²",
+            "Aussennutzfläche": "23.0 m²",
+            "Grundstück": "277.0 m²",
+            "Kubatur": "740.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b2-5.pdf"
+        },
+        {
+          "id": "B3-1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.2,
+          "areaText": "129.2 m²",
+          "floor": null,
+          "price": 1000000,
+          "priceText": "1'000’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "39.2 m²",
+            "Aussennutzfläche": "22.9 m²",
+            "Grundstück": "268.0 m²",
+            "Kubatur": "858.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b3-1.pdf"
+        },
+        {
+          "id": "B3-2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.6,
+          "areaText": "129.6 m²",
+          "floor": null,
+          "price": 950000,
+          "priceText": "950’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "39.1 m²",
+            "Aussennutzfläche": "22.2 m²",
+            "Grundstück": "190.0 m²",
+            "Kubatur": "858.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b3-2.pdf"
+        },
+        {
+          "id": "B3-3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.7,
+          "areaText": "129.7 m²",
+          "floor": null,
+          "price": 950000,
+          "priceText": "950’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "39.1 m²",
+            "Aussennutzfläche": "22.1 m²",
+            "Grundstück": "182.0 m²",
+            "Kubatur": "858.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b3-3.pdf"
+        },
+        {
+          "id": "B3-4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 129.3,
+          "areaText": "129.3 m²",
+          "floor": null,
+          "price": 1000000,
+          "priceText": "1'000’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "38.7 m²",
+            "Aussennutzfläche": "22.9 m²",
+            "Grundstück": "325.0 m²",
+            "Kubatur": "858.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/b3-4.pdf"
+        },
+        {
+          "id": "C2",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 160.4,
+          "areaText": "160.4 m²",
+          "floor": null,
+          "price": 1790000,
+          "priceText": "1’790’000.–",
+          "status": "available",
+          "extra": {
+            "Nebennutzfläche": "33.3 m²",
+            "Aussennutzfläche": "20.6 m²",
+            "Grundstück": "485.0 m²",
+            "Kubatur": "1’915.0 m³"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/c2.pdf"
+        },
+        {
+          "id": "C2 Einliegerwhg.",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 51.6,
+          "areaText": "51.6 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "unknown",
+          "extra": {
+            "Aussennutzfläche": "9.6 m²"
+          },
+          "pdf": "https://sonnenberg-reinach.ch/assets/uploads/c2.pdf"
+        }
+      ],
+      "summary": {
+        "total": 23,
+        "available": 13,
+        "reserved": 1,
+        "sold": 8,
+        "unknown": 1,
+        "availableVolume": 14130000,
+        "byRooms": {
+          "5.5": {
+            "total": 9,
+            "available": 5,
+            "reserved": 1,
+            "sold": 3,
+            "unknown": 0,
+            "availableVolume": 6370000
+          },
+          "4.5": {
+            "total": 13,
+            "available": 8,
+            "reserved": 0,
+            "sold": 5,
+            "unknown": 0,
+            "availableVolume": 7760000
+          },
+          "2.5": {
+            "total": 1,
+            "available": 0,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 1,
+            "availableVolume": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "seeluft",
+      "name": "Seeluft Boniswil",
+      "url": "https://seeluft-boniswil.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "adresse": "Boniswil, Schweiz",
+      "ort": "Boniswil",
+      "land": "CH",
+      "koordinaten": [
+        47.316157,
+        8.185251
+      ],
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "A1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 114.3,
+          "areaText": "114.3 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "52.7 m² | 239.5 m²",
+            "Keller": "8.9 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a1-1.pdf"
+        },
+        {
+          "id": "A2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 84.3,
+          "areaText": "84.3 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "37.0 m² | 53.1 m²",
+            "Keller": "7.9 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a2-1.pdf"
+        },
+        {
+          "id": "A3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 101,
+          "areaText": "101.0 m²",
+          "floor": "EG",
+          "price": 905000,
+          "priceText": "905'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "31.4 m² | 46.5 m²",
+            "Keller": "7.9 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a3-1.pdf"
+        },
+        {
+          "id": "A4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 116.1,
+          "areaText": "116.1 m²",
+          "floor": "1. OG",
+          "price": 920000,
+          "priceText": "920'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "50.5 m²",
+            "Keller": "9.8 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a4-1.pdf"
+        },
+        {
+          "id": "A5",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 90.4,
+          "areaText": "90.4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "36.2 m²",
+            "Keller": "7.9 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a5-1.pdf"
+        },
+        {
+          "id": "A6",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 115.1,
+          "areaText": "115.1 m²",
+          "floor": "1. OG",
+          "price": 915000,
+          "priceText": "915'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "38.1 m²",
+            "Keller": "9.1 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a6-1.pdf"
+        },
+        {
+          "id": "A7",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 116.1,
+          "areaText": "116.1 m²",
+          "floor": "2. OG",
+          "price": 935000,
+          "priceText": "935'000.-",
+          "status": "reserved",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "50.4 m²",
+            "Keller": "10.8 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a7-1.pdf"
+        },
+        {
+          "id": "A8",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 90.8,
+          "areaText": "90.8 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "31.0 m²",
+            "Keller": "7.9 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a8-1.pdf"
+        },
+        {
+          "id": "A9",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 115.1,
+          "areaText": "115.1 m²",
+          "floor": "2. OG",
+          "price": 930000,
+          "priceText": "930'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "43.3 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-a9-1.pdf"
+        },
+        {
+          "id": "B1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 112.9,
+          "areaText": "112.9 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "40.2 m² | 158.2 m²",
+            "Keller": "9.0 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-b1-1.pdf"
+        },
+        {
+          "id": "B2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 100.2,
+          "areaText": "100.2 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "33.6 m²",
+            "Keller": "7.8 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-b2-1.pdf"
+        },
+        {
+          "id": "B3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112.3,
+          "areaText": "112.3 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "49.4 m²",
+            "Keller": "9.0 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-b3-1.pdf"
+        },
+        {
+          "id": "C1",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 120.2,
+          "areaText": "120.2 m²",
+          "floor": "1. OG",
+          "price": 900000,
+          "priceText": "900'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "21.6 m², 29.0 m² | 29.1 m²",
+            "Keller": "11.2 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c1-1.pdf"
+        },
+        {
+          "id": "C2",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 101.7,
+          "areaText": "101.7 m²",
+          "floor": "1. OG",
+          "price": 755000,
+          "priceText": "755'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "15.8 m², 19.8 m² | 16.1 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c2-1.pdf"
+        },
+        {
+          "id": "C3",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119.8 m²",
+          "floor": "1. OG",
+          "price": 950000,
+          "priceText": "950'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "21.6 m², 24.9 m² | 22.7 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c3-1.pdf"
+        },
+        {
+          "id": "C4",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 120.2,
+          "areaText": "120.2 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "45.2 m²",
+            "Keller": "9.9 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c4-1.pdf"
+        },
+        {
+          "id": "C5",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 101.7,
+          "areaText": "101.7 m²",
+          "floor": "2. OG",
+          "price": 785000,
+          "priceText": "785'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "34.8 m²",
+            "Keller": "8.7 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c5-1.pdf"
+        },
+        {
+          "id": "C6",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 120.2,
+          "areaText": "120.2 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "49.4 m²",
+            "Keller": "8.7 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c6-1.pdf"
+        },
+        {
+          "id": "C7",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 120.2,
+          "areaText": "120.2 m²",
+          "floor": "3. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "49.4 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c7-2.pdf"
+        },
+        {
+          "id": "C8",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 101.7,
+          "areaText": "101.7 m²",
+          "floor": "3. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "34.8 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c8-1.pdf"
+        },
+        {
+          "id": "C9",
+          "group": "Haus C",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 120.2,
+          "areaText": "120.2 m²",
+          "floor": "3. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "45.2 m²",
+            "Keller": "11.2 m²"
+          },
+          "pdf": "https://seeluft-boniswil.ch/assets/uploads/seeluft-boniswil-wohnung-c9-1.pdf"
+        }
+      ],
+      "summary": {
+        "total": 21,
+        "available": 8,
+        "reserved": 3,
+        "sold": 10,
+        "unknown": 0,
+        "availableVolume": 7060000,
+        "byRooms": {
+          "4.5": {
+            "total": 12,
+            "available": 5,
+            "reserved": 1,
+            "sold": 6,
+            "unknown": 0,
+            "availableVolume": 4615000
+          },
+          "3.5": {
+            "total": 9,
+            "available": 3,
+            "reserved": 2,
+            "sold": 4,
+            "unknown": 0,
+            "availableVolume": 2445000
+          }
+        }
+      }
+    },
+    {
+      "id": "erlenstrasse",
+      "name": "Erlenstrasse Oetwil",
+      "url": "https://www.erlenstrasse-oetwil.ch/#angebot",
+      "type": "house",
+      "groupLabel": "Erlenstrasse",
+      "adresse": "Erlenstrasse, 8955 Oetwil an der Limmat, Schweiz",
+      "ort": "Oetwil an der Limmat",
+      "land": "CH",
+      "koordinaten": [
+        47.432107,
+        8.395127
+      ],
+      "grouped": false,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "12a",
+          "group": "Erlenstrasse 12",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 156.3,
+          "areaText": "156.3 m²",
+          "floor": null,
+          "price": 2250000,
+          "priceText": "2'250'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "192 m³",
+            "NNF": "44.1 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-12a.pdf"
+        },
+        {
+          "id": "12b",
+          "group": "Erlenstrasse 12",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 155.7,
+          "areaText": "155.7 m²",
+          "floor": null,
+          "price": 2350000,
+          "priceText": "2'350'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "408 m³",
+            "NNF": "19.7 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-12b.pdf"
+        },
+        {
+          "id": "14a",
+          "group": "Erlenstrasse 14",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 145.2,
+          "areaText": "145.2 m²",
+          "floor": null,
+          "price": 2200000,
+          "priceText": "2'200'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "249 m³",
+            "NNF": "25.4 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-14a.pdf"
+        },
+        {
+          "id": "14b",
+          "group": "Erlenstrasse 14",
+          "kind": "unit",
+          "rooms": null,
+          "area": null,
+          "areaText": "–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": null
+        },
+        {
+          "id": "16a",
+          "group": "Erlenstrasse 16",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 145.4,
+          "areaText": "145.4 m²",
+          "floor": null,
+          "price": 2250000,
+          "priceText": "2'250'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "204 m³",
+            "NNF": "57.8 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-16a-1.pdf"
+        },
+        {
+          "id": "16b",
+          "group": "Erlenstrasse 16",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 150.7,
+          "areaText": "150.7 m²",
+          "floor": null,
+          "price": 2450000,
+          "priceText": "2'450'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "241 m³",
+            "NNF": "88.2 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-16b.pdf"
+        },
+        {
+          "id": "18a",
+          "group": "Erlenstrasse 18",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 145.3,
+          "areaText": "145.3 m²",
+          "floor": null,
+          "price": 2250000,
+          "priceText": "2'250'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "247 m³",
+            "NNF": "48.0 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-18a.pdf"
+        },
+        {
+          "id": "18b",
+          "group": "Erlenstrasse 18",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 150.9,
+          "areaText": "150.9 m²",
+          "floor": null,
+          "price": 2450000,
+          "priceText": "2'450'000.-",
+          "status": "available",
+          "extra": {
+            "Grundstückfläche": "273 m³",
+            "NNF": "79.9 m²",
+            "ANF": "28.2 m²"
+          },
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Haus-18b.pdf"
+        },
+        {
+          "id": "20a",
+          "group": "Erlenstrasse 20",
+          "kind": "unit",
+          "rooms": null,
+          "area": null,
+          "areaText": "–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": null
+        },
+        {
+          "id": "20b",
+          "group": "Erlenstrasse 20",
+          "kind": "unit",
+          "rooms": null,
+          "area": null,
+          "areaText": "–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": null
+        },
+        {
+          "id": "Tiefgaragenplätze",
+          "group": "Parkierung",
+          "kind": "parking",
+          "rooms": null,
+          "area": null,
+          "areaText": "–",
+          "floor": null,
+          "price": 45000,
+          "priceText": "45'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://www.erlenstrasse-oetwil.ch/wp-content/uploads/sites/12/2026/08/Tiefgarage.pdf"
+        }
+      ],
+      "summary": {
+        "total": 10,
+        "available": 7,
+        "reserved": 0,
+        "sold": 3,
+        "unknown": 0,
+        "availableVolume": 16200000,
+        "byRooms": {
+          "4.5": {
+            "total": 3,
+            "available": 3,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 7150000
+          },
+          "5.5": {
+            "total": 4,
+            "available": 4,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 9050000
+          },
+          "?": {
+            "total": 3,
+            "available": 0,
+            "reserved": 0,
+            "sold": 3,
+            "unknown": 0,
+            "availableVolume": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "suhrano",
+      "name": "Suhrano Suhr",
+      "url": "https://www.suhrano.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "adresse": "Neumattweg 5, 5034 Suhr, Schweiz",
+      "ort": "Suhr",
+      "land": "CH",
+      "koordinaten": [
+        47.36879,
+        8.075477
+      ],
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "A1.0.1",
+          "group": "Haus A1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.7,
+          "areaText": "106.7 m²",
+          "floor": "EG",
+          "price": 890000,
+          "priceText": "890'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "15.1 m²",
+            "Keller": "10.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.0.1.pdf"
+        },
+        {
+          "id": "A1.0.2",
+          "group": "Haus A1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.7,
+          "areaText": "106.7 m²",
+          "floor": "EG",
+          "price": 875000,
+          "priceText": "875'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "15.1 m²",
+            "Keller": "9.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.0.2.pdf"
+        },
+        {
+          "id": "A1.1.1",
+          "group": "Haus A1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 111.6,
+          "areaText": "111.6 m²",
+          "floor": "1. OG",
+          "price": 920000,
+          "priceText": "920'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "9.7 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.1.1.pdf"
+        },
+        {
+          "id": "A1.1.2",
+          "group": "Haus A1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 111.6,
+          "areaText": "111.6 m²",
+          "floor": "1. OG",
+          "price": 905000,
+          "priceText": "905'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "14 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.1.2.pdf"
+        },
+        {
+          "id": "A1.2.1",
+          "group": "Haus A1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 111.6,
+          "areaText": "111.6 m²",
+          "floor": "2. OG",
+          "price": 945000,
+          "priceText": "945'000.–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "13.2 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.2.1.pdf"
+        },
+        {
+          "id": "A1.2.2",
+          "group": "Haus A1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 111.6,
+          "areaText": "111.6 m²",
+          "floor": "2. OG",
+          "price": 925000,
+          "priceText": "925'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "13.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.2.2.pdf"
+        },
+        {
+          "id": "A2.0.1",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103,
+          "areaText": "103 m²",
+          "floor": "EG",
+          "price": 875000,
+          "priceText": "875'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "11.9 m²",
+            "Keller": "8.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.1.pdf"
+        },
+        {
+          "id": "A2.0.2",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 81.5,
+          "areaText": "81.5 m²",
+          "floor": "EG",
+          "price": 705000,
+          "priceText": "705'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22.3 m²",
+            "Keller": "8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.2.pdf"
+        },
+        {
+          "id": "A2.0.3",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 69.7,
+          "areaText": "69.7 m²",
+          "floor": "EG",
+          "price": 600000,
+          "priceText": "600'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22.3 m²",
+            "Keller": "6.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.3.pdf"
+        },
+        {
+          "id": "A2.0.4",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103.3,
+          "areaText": "103.3 m²",
+          "floor": "EG",
+          "price": 880000,
+          "priceText": "880'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "11.9 m²",
+            "Keller": "8.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.4.pdf"
+        },
+        {
+          "id": "A2.1.1",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103,
+          "areaText": "103 m²",
+          "floor": "1. OG",
+          "price": 855000,
+          "priceText": "855'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.1.pdf"
+        },
+        {
+          "id": "A2.1.2",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 81.5,
+          "areaText": "81.5 m²",
+          "floor": "1.  OG",
+          "price": 690000,
+          "priceText": "690'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "7 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.2.pdf"
+        },
+        {
+          "id": "A2.1.3",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 69.7,
+          "areaText": "69.7 m²",
+          "floor": "1. OG",
+          "price": 595000,
+          "priceText": "595'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "6.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.3.pdf"
+        },
+        {
+          "id": "A2.1.4",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103.3,
+          "areaText": "103.3 m²",
+          "floor": "1. OG",
+          "price": 855000,
+          "priceText": "855'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "10.9 m²",
+            "Keller": "8.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.4.pdf"
+        },
+        {
+          "id": "A2.2.1",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103,
+          "areaText": "103 m²",
+          "floor": "2. OG",
+          "price": 880000,
+          "priceText": "880'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "11.2 m²",
+            "Keller": "8.2 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.1.pdf"
+        },
+        {
+          "id": "A2.2.2",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 81.5,
+          "areaText": "81.5 m²",
+          "floor": "2. OG",
+          "price": 710000,
+          "priceText": "710'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "6.7 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.2.pdf"
+        },
+        {
+          "id": "A2.2.3",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 69.7,
+          "areaText": "69.7 m²",
+          "floor": "2. OG",
+          "price": 610000,
+          "priceText": "610'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "10.9 m²",
+            "Keller": "6.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.3.pdf"
+        },
+        {
+          "id": "A2.2.4",
+          "group": "Haus A2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103.3,
+          "areaText": "103.3 m²",
+          "floor": "2. OG",
+          "price": 885000,
+          "priceText": "885'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "11.9 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.4.pdf"
+        },
+        {
+          "id": "A3.0.1",
+          "group": "Haus A3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105,
+          "areaText": "105 m²",
+          "floor": "EG",
+          "price": 915000,
+          "priceText": "915'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "40.1 m²",
+            "Keller": "9.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.0.1.pdf"
+        },
+        {
+          "id": "A3.0.2",
+          "group": "Haus A3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.6,
+          "areaText": "106.6 m²",
+          "floor": "EG",
+          "price": 930000,
+          "priceText": "930'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "33.1 m²",
+            "Keller": "10.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.0.2.pdf"
+        },
+        {
+          "id": "A3.1.1",
+          "group": "Haus A3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105,
+          "areaText": "105 m²",
+          "floor": "1. OG",
+          "price": 895000,
+          "priceText": "895'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "37.1 m²",
+            "Keller": "9.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.1.1.pdf"
+        },
+        {
+          "id": "A3.1.2",
+          "group": "Haus A3",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": "1. OG",
+          "price": 1050000,
+          "priceText": "1'050'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "37.1 m²",
+            "Keller": "10.9 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.1.2.pdf"
+        },
+        {
+          "id": "A3.2.1",
+          "group": "Haus A3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105,
+          "areaText": "105 m²",
+          "floor": "2. OG",
+          "price": 915000,
+          "priceText": "915'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "34.4 m²",
+            "Keller": "9.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.2.1.pdf"
+        },
+        {
+          "id": "A3.2.2",
+          "group": "Haus A3",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": "2. OG",
+          "price": 1080000,
+          "priceText": "1'080'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "34.4 m²",
+            "Keller": "10.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.2.2.pdf"
+        },
+        {
+          "id": "A4.0.1",
+          "group": "Haus A4",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105,
+          "areaText": "105 m²",
+          "floor": "EG",
+          "price": 915000,
+          "priceText": "915'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "39.9 m²",
+            "Keller": "9.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.0.1.pdf"
+        },
+        {
+          "id": "A4.0.2",
+          "group": "Haus A4",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.6,
+          "areaText": "106.6 m²",
+          "floor": "EG",
+          "price": 930000,
+          "priceText": "930'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "32.9 m²",
+            "Keller": "10.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.0.2.pdf"
+        },
+        {
+          "id": "A4.1.1",
+          "group": "Haus A4",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105,
+          "areaText": "105 m²",
+          "floor": "1. OG",
+          "price": 895000,
+          "priceText": "895'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "37.1 m²",
+            "Keller": "9.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.1.1.pdf"
+        },
+        {
+          "id": "A4.1.2",
+          "group": "Haus A4",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": "1. OG",
+          "price": 1050000,
+          "priceText": "1'050'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "37.1 m²",
+            "Keller": "10.9 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.1.2.pdf"
+        },
+        {
+          "id": "A4.2.1",
+          "group": "Haus A4",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105,
+          "areaText": "105 m²",
+          "floor": "2. OG",
+          "price": 915000,
+          "priceText": "915'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "34.4 m²",
+            "Keller": "9.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.2.1.pdf"
+        },
+        {
+          "id": "A4.2.2",
+          "group": "Haus A4",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": "2. OG",
+          "price": 1080000,
+          "priceText": "1'080'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "34.4 m²",
+            "Keller": "10.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.2.2.pdf"
+        },
+        {
+          "id": "B1.0.1",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 104.3,
+          "areaText": "104.3 m²",
+          "floor": "EG",
+          "price": 885000,
+          "priceText": "885'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "15.1 m²",
+            "Keller": "12.1 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.1.pdf"
+        },
+        {
+          "id": "B1.0.2",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103.6,
+          "areaText": "103.6 m²",
+          "floor": "EG",
+          "price": 870000,
+          "priceText": "870'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.3 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.2.pdf"
+        },
+        {
+          "id": "B1.0.3",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 101.9,
+          "areaText": "101.9 m²",
+          "floor": "EG",
+          "price": 855000,
+          "priceText": "855'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.3 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.3.pdf"
+        },
+        {
+          "id": "B1.0.4",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 82,
+          "areaText": "82 m²",
+          "floor": "EG",
+          "price": 690000,
+          "priceText": "690'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "14.7 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.4.pdf"
+        },
+        {
+          "id": "B1.1.1",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 109.2,
+          "areaText": "109.2 m²",
+          "floor": "1. OG",
+          "price": 920000,
+          "priceText": "920'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "12.2 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.1.pdf"
+        },
+        {
+          "id": "B1.1.2",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 108.7,
+          "areaText": "108.7 m²",
+          "floor": "1. OG",
+          "price": 905000,
+          "priceText": "905'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "8.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.2.pdf"
+        },
+        {
+          "id": "B1.1.3",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.8,
+          "areaText": "106.8 m²",
+          "floor": "1. OG",
+          "price": 890000,
+          "priceText": "890'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "8.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.3.pdf"
+        },
+        {
+          "id": "B1.1.4",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 87.2,
+          "areaText": "87.2 m²",
+          "floor": "1. OG",
+          "price": 710000,
+          "priceText": "710'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.4.pdf"
+        },
+        {
+          "id": "B1.2.1",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 109.2,
+          "areaText": "109.2 m²",
+          "floor": "2. OG",
+          "price": 940000,
+          "priceText": "940'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.1.pdf"
+        },
+        {
+          "id": "B1.2.2",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 108.7,
+          "areaText": "108.7 m²",
+          "floor": "2. OG",
+          "price": 925000,
+          "priceText": "925'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "9.2 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.2.pdf"
+        },
+        {
+          "id": "B1.2.3",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.8,
+          "areaText": "106.8 m²",
+          "floor": "2. OG",
+          "price": 910000,
+          "priceText": "910'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "8.9 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.3.pdf"
+        },
+        {
+          "id": "B1.2.4",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 87.2,
+          "areaText": "87.2 m²",
+          "floor": "2. OG",
+          "price": 725000,
+          "priceText": "725'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "8.1 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.4.pdf"
+        },
+        {
+          "id": "B1.3.1",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112.1,
+          "areaText": "112.1 m²",
+          "floor": "Attika",
+          "price": 1185000,
+          "priceText": "1'185'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "68.1 m²",
+            "Keller": "14.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.3.1.pdf"
+        },
+        {
+          "id": "B1.3.2",
+          "group": "Haus B1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112.5,
+          "areaText": "112.5 m²",
+          "floor": "Attika",
+          "price": 1165000,
+          "priceText": "1'165'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "61.8 m²",
+            "Keller": "11.8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.3.2.pdf"
+        },
+        {
+          "id": "B2.0.1",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 104.3,
+          "areaText": "104.3 m²",
+          "floor": "EG",
+          "price": 885000,
+          "priceText": "885'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "15.1 m²",
+            "Keller": "11.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.1.pdf"
+        },
+        {
+          "id": "B2.0.2",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 103.6,
+          "areaText": "103.6 m²",
+          "floor": "EG",
+          "price": 870000,
+          "priceText": "870'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.3 m²",
+            "Keller": "11.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.2.pdf"
+        },
+        {
+          "id": "B2.0.3",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 101.9,
+          "areaText": "101.9 m²",
+          "floor": "EG",
+          "price": 855000,
+          "priceText": "855'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.3 m²",
+            "Keller": "11.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.3.pdf"
+        },
+        {
+          "id": "B2.0.4",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 81.8,
+          "areaText": "81.8 m²",
+          "floor": "EG",
+          "price": 690000,
+          "priceText": "690'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "14.7 m²",
+            "Keller": "8.2 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.4.pdf"
+        },
+        {
+          "id": "B2.1.1",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 109.2,
+          "areaText": "109.2 m²",
+          "floor": "1. OG",
+          "price": 920000,
+          "priceText": "920'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "10.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.1.pdf"
+        },
+        {
+          "id": "B2.1.2",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 108.7,
+          "areaText": "108.7 m²",
+          "floor": "1. OG",
+          "price": 905000,
+          "priceText": "905'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "10.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.2.pdf"
+        },
+        {
+          "id": "B2.1.3",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.8,
+          "areaText": "106.8 m²",
+          "floor": "1. OG",
+          "price": 890000,
+          "priceText": "890'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "12.1 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.3.pdf"
+        },
+        {
+          "id": "B2.1.4",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 87.2,
+          "areaText": "87.2 m²",
+          "floor": "1. OG",
+          "price": 710000,
+          "priceText": "710'000.–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "7.8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.4.pdf"
+        },
+        {
+          "id": "B2.2.1",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 109.2,
+          "areaText": "109.2 m²",
+          "floor": "2. OG",
+          "price": 940000,
+          "priceText": "940'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "14.2 m²",
+            "Keller": "8.6 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.1.pdf"
+        },
+        {
+          "id": "B2.2.2",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 108.7,
+          "areaText": "108.7 m²",
+          "floor": "2. OG",
+          "price": 925000,
+          "priceText": "925'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "9.2 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.2.pdf"
+        },
+        {
+          "id": "B2.2.3",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.8,
+          "areaText": "106.8 m²",
+          "floor": "2. OG",
+          "price": 910000,
+          "priceText": "910'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "13.8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.3.pdf"
+        },
+        {
+          "id": "B2.2.4",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 87.2,
+          "areaText": "87.2 m²",
+          "floor": "2. OG",
+          "price": 725000,
+          "priceText": "725'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "13.8 m²",
+            "Keller": "8.8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.4.pdf"
+        },
+        {
+          "id": "B2.3.1",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112.1,
+          "areaText": "112.1 m²",
+          "floor": "Attika",
+          "price": 1185000,
+          "priceText": "1'185'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "68.1 m²",
+            "Keller": "10.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.3.1.pdf"
+        },
+        {
+          "id": "B2.3.2",
+          "group": "Haus B2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112.5,
+          "areaText": "112.5 m²",
+          "floor": "Attika",
+          "price": 1165000,
+          "priceText": "1'165'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "61.8 m²",
+            "Keller": "10.3 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.3.2.pdf"
+        },
+        {
+          "id": "C1.0.1",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "EG",
+          "price": 885000,
+          "priceText": "885'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "23.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.0.1.pdf"
+        },
+        {
+          "id": "C1.0.2",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 88.8,
+          "areaText": "88.8 m²",
+          "floor": "EG",
+          "price": 775000,
+          "priceText": "775'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "23.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.0.2.pdf"
+        },
+        {
+          "id": "C1.0.3",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 80.6,
+          "areaText": "80.6 m²",
+          "floor": "EG",
+          "price": 725000,
+          "priceText": "725'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "23.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.0.3.pdf"
+        },
+        {
+          "id": "C1.1.1",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "1. OG",
+          "price": 875000,
+          "priceText": "875'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.1.1.pdf"
+        },
+        {
+          "id": "C1.1.2",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 89.1,
+          "areaText": "89.1 m²",
+          "floor": "1. OG",
+          "price": 765000,
+          "priceText": "765'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.1.2.pdf"
+        },
+        {
+          "id": "C1.1.3",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "1. OG",
+          "price": 895000,
+          "priceText": "895'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.1.3.pdf"
+        },
+        {
+          "id": "C1.2.1",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "2. OG",
+          "price": 895000,
+          "priceText": "895'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.2.1.pdf"
+        },
+        {
+          "id": "C1.2.2",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 89.1,
+          "areaText": "89.1 m²",
+          "floor": "2. OG",
+          "price": 790000,
+          "priceText": "790'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.2.2.pdf"
+        },
+        {
+          "id": "C1.2.3",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "2. OG",
+          "price": 915000,
+          "priceText": "915'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.2.3.pdf"
+        },
+        {
+          "id": "C1.3.1",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "3. OG",
+          "price": 935000,
+          "priceText": "935'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.3.1.pdf"
+        },
+        {
+          "id": "C1.3.2",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 89.1,
+          "areaText": "89.1 m²",
+          "floor": "3. OG",
+          "price": 825000,
+          "priceText": "825'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.3.2.pdf"
+        },
+        {
+          "id": "C1.3.3",
+          "group": "Haus C1",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "3. OG",
+          "price": 935000,
+          "priceText": "935'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.3.3.pdf"
+        },
+        {
+          "id": "C2.0.1",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "EG",
+          "price": 885000,
+          "priceText": "885'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "23.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.0.1.pdf"
+        },
+        {
+          "id": "C2.0.2",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 88.8,
+          "areaText": "88.8 m²",
+          "floor": "EG",
+          "price": 775000,
+          "priceText": "775'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "23.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.0.2.pdf"
+        },
+        {
+          "id": "C2.0.3",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 80.5,
+          "areaText": "80.5 m²",
+          "floor": "EG",
+          "price": 725000,
+          "priceText": "725'000.–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "23.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.0.3.pdf"
+        },
+        {
+          "id": "C2.1.1",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "1. OG",
+          "price": 870000,
+          "priceText": "870'000.–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.1.1.pdf"
+        },
+        {
+          "id": "C2.1.2",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 88.4,
+          "areaText": "88.4 m²",
+          "floor": "1. OG",
+          "price": 755000,
+          "priceText": "755'000.–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.1.2.pdf"
+        },
+        {
+          "id": "C2.1.3",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "1. OG",
+          "price": 890000,
+          "priceText": "890'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.1.3.pdf"
+        },
+        {
+          "id": "C2.2.1",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "2. OG",
+          "price": 890000,
+          "priceText": "890'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.2.1.pdf"
+        },
+        {
+          "id": "C2.2.2",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 89.1,
+          "areaText": "89.1 m²",
+          "floor": "2. OG",
+          "price": 790000,
+          "priceText": "790'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.5 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.2.2.pdf"
+        },
+        {
+          "id": "C2.2.3",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "2. OG",
+          "price": 895000,
+          "priceText": "895'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.2.3.pdf"
+        },
+        {
+          "id": "C2.3.1",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "3. OG",
+          "price": 935000,
+          "priceText": "935'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.3.1.pdf"
+        },
+        {
+          "id": "C2.3.2",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 89.1,
+          "areaText": "89.1 m²",
+          "floor": "3. OG",
+          "price": 825000,
+          "priceText": "825'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.3.2.pdf"
+        },
+        {
+          "id": "C2.3.3",
+          "group": "Haus C2",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 102.7,
+          "areaText": "102.7 m²",
+          "floor": "3. OG",
+          "price": 935000,
+          "priceText": "935'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "20.8 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.3.3.pdf"
+        },
+        {
+          "id": "C3.0.1",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105.8,
+          "areaText": "105.8 m²",
+          "floor": "EG",
+          "price": 900000,
+          "priceText": "900'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "25.5 m²",
+            "Keller": "8.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.0.1.pdf"
+        },
+        {
+          "id": "C3.0.2",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.6,
+          "areaText": "106.6 m²",
+          "floor": "EG",
+          "price": 900000,
+          "priceText": "900'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "22.3 m²",
+            "Keller": "10.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.0.2.pdf"
+        },
+        {
+          "id": "C3.1.1",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105.8,
+          "areaText": "105.8 m²",
+          "floor": "1. OG",
+          "price": 895000,
+          "priceText": "895'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "23.8 m²",
+            "Keller": "10.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.1.1.pdf"
+        },
+        {
+          "id": "C3.1.2",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122,
+          "areaText": "122 m²",
+          "floor": "1. OG",
+          "price": 1045000,
+          "priceText": "1'045'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "23.8 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.1.2.pdf"
+        },
+        {
+          "id": "C3.2.1",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105.8,
+          "areaText": "105.8 m²",
+          "floor": "2. OG",
+          "price": 920000,
+          "priceText": "920'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "10.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.2.1.pdf"
+        },
+        {
+          "id": "C3.2.2",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": "2. OG",
+          "price": 1075000,
+          "priceText": "1'075'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "10.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.2.2.pdf"
+        },
+        {
+          "id": "C3.3.1",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 105.8,
+          "areaText": "105.8 m²",
+          "floor": "3. OG",
+          "price": 940000,
+          "priceText": "940'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "21.1 m²",
+            "Keller": "10.4 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.3.1.pdf"
+        },
+        {
+          "id": "C3.3.2",
+          "group": "Haus C3",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": "3. OG",
+          "price": 1100000,
+          "priceText": "1'100'000.–",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "24.1 m²",
+            "Keller": "13 m²"
+          },
+          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.3.2.pdf"
+        }
+      ],
+      "summary": {
+        "total": 90,
+        "available": 65,
+        "reserved": 4,
+        "sold": 21,
+        "unknown": 0,
+        "availableVolume": 59240000,
+        "byRooms": {
+          "4.5": {
+            "total": 61,
+            "available": 51,
+            "reserved": 2,
+            "sold": 8,
+            "unknown": 0,
+            "availableVolume": 46315000
+          },
+          "3.5": {
+            "total": 19,
+            "available": 7,
+            "reserved": 2,
+            "sold": 10,
+            "unknown": 0,
+            "availableVolume": 5445000
+          },
+          "2.5": {
+            "total": 3,
+            "available": 0,
+            "reserved": 0,
+            "sold": 3,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "5.5": {
+            "total": 7,
+            "available": 7,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 7480000
+          }
+        }
+      }
+    },
+    {
+      "id": "station-urban-garden",
+      "name": "Station - Urban Garden",
+      "url": "https://urbangardens-embrach.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "adresse": "Embrach, Schweiz",
+      "ort": "Embrach",
+      "land": "CH",
+      "koordinaten": [
+        47.505638,
+        8.594109
+      ],
+      "grouped": false,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "9901",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 105.6,
+          "areaText": "105.6 m²",
+          "floor": "GG",
+          "price": 1275000,
+          "priceText": "1'275'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz": "48.1 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-9901.pdf"
+        },
+        {
+          "id": "9902",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 89,
+          "areaText": "89.0 m²",
+          "floor": "GG",
+          "price": 1090000,
+          "priceText": "1'090'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz": "53.0 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-9902.pdf"
+        },
+        {
+          "id": "1",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 115.4,
+          "areaText": "115.4 m²",
+          "floor": "EG",
+          "price": 1295000,
+          "priceText": "1'295'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "20.0 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-1.pdf"
+        },
+        {
+          "id": "2",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 86.4,
+          "areaText": "86.4 m²",
+          "floor": "EG",
+          "price": 1065000,
+          "priceText": "1'065'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "37.7 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-2.pdf"
+        },
+        {
+          "id": "3",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 98.6,
+          "areaText": "98.6 m²",
+          "floor": "EG",
+          "price": 1180000,
+          "priceText": "1'180'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "53.9 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-3.pdf"
+        },
+        {
+          "id": "4",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 96.1,
+          "areaText": "96.1 m²",
+          "floor": "EG",
+          "price": 1150000,
+          "priceText": "1'150'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "27.5 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-4.pdf"
+        },
+        {
+          "id": "5",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 62.3,
+          "areaText": "62.3 m²",
+          "floor": "EG",
+          "price": 725000,
+          "priceText": "725'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "9.6 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-5.pdf"
+        },
+        {
+          "id": "101",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 115.3,
+          "areaText": "115.3 m²",
+          "floor": "1. OG",
+          "price": 1325000,
+          "priceText": "1'325'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "20.0 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-101.pdf"
+        },
+        {
+          "id": "102",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 86.7,
+          "areaText": "86.7 m²",
+          "floor": "1. OG",
+          "price": 1080000,
+          "priceText": "1'080'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "34.2 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-102.pdf"
+        },
+        {
+          "id": "103",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 98.8,
+          "areaText": "98.8 m²",
+          "floor": "1. OG",
+          "price": 1200000,
+          "priceText": "1'200'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "43.9 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-103.pdf"
+        },
+        {
+          "id": "104",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 96.1,
+          "areaText": "96.1 m²",
+          "floor": "1. OG",
+          "price": 1165000,
+          "priceText": "1'165'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "27.3 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-104.pdf"
+        },
+        {
+          "id": "105",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 108,
+          "areaText": "108.0 m²",
+          "floor": "1. OG",
+          "price": 1220000,
+          "priceText": "1'220'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "30.9 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-105.pdf"
+        },
+        {
+          "id": "201",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 115.5,
+          "areaText": "115.5 m²",
+          "floor": "2. OG",
+          "price": 1325000,
+          "priceText": "1'325'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "20.0 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-201.pdf"
+        },
+        {
+          "id": "202",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 71.2,
+          "areaText": "71.2 m²",
+          "floor": "2. OG",
+          "price": 900000,
+          "priceText": "900'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "38.4 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-202.pdf"
+        },
+        {
+          "id": "203",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 67.7,
+          "areaText": "67.7 m²",
+          "floor": "2. OG",
+          "price": 860000,
+          "priceText": "860'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "37.8 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-203.pdf"
+        },
+        {
+          "id": "204",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 93.3,
+          "areaText": "93.3 m²",
+          "floor": "2. OG",
+          "price": 1145000,
+          "priceText": "1'145'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "37.2 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-204.pdf"
+        },
+        {
+          "id": "205",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.5,
+          "areaText": "106.5 m²",
+          "floor": "2. OG",
+          "price": 1215000,
+          "priceText": "1'215'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "30.9 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-205.pdf"
+        },
+        {
+          "id": "301",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 115.5,
+          "areaText": "115.5 m²",
+          "floor": "3. OG",
+          "price": 1385000,
+          "priceText": "1'385'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "17.3 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-301.pdf"
+        },
+        {
+          "id": "302",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 109.5,
+          "areaText": "109.5 m²",
+          "floor": "3. OG",
+          "price": 1460000,
+          "priceText": "1'460'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "45.5 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-302.pdf"
+        },
+        {
+          "id": "303",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 113.8,
+          "areaText": "113.8 m²",
+          "floor": "3. OG",
+          "price": 1530000,
+          "priceText": "1'530'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "34.6 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-303.pdf"
+        },
+        {
+          "id": "304",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 106.5,
+          "areaText": "106.5 m²",
+          "floor": "3. OG",
+          "price": 1265000,
+          "priceText": "1'265'000.-",
+          "status": "available",
+          "extra": {
+            "Balkon | Terrasse": "27.5 m²"
+          },
+          "pdf": "https://urbangardens-embrach.ch/assets/uploads/urban-gardens-embrach-whg-304.pdf"
+        }
+      ],
+      "summary": {
+        "total": 21,
+        "available": 21,
+        "reserved": 0,
+        "sold": 0,
+        "unknown": 0,
+        "availableVolume": 24855000,
+        "byRooms": {
+          "3.5": {
+            "total": 9,
+            "available": 9,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 10350000
+          },
+          "4.5": {
+            "total": 9,
+            "available": 9,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 12020000
+          },
+          "2.5": {
+            "total": 3,
+            "available": 3,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 2485000
+          }
+        }
+      }
+    },
+    {
+      "id": "escalara-seengen",
+      "name": "Escalara - Seengen",
+      "url": "https://escalera-seengen.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "adresse": "Seengen, Schweiz",
+      "ort": "Seengen",
+      "land": "CH",
+      "koordinaten": [
+        47.325291,
+        8.207918
+      ],
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "A.1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 118.2,
+          "areaText": "118.2m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "50.1",
+            "Keller": "11.2"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a1.pdf"
+        },
+        {
+          "id": "A.2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 149,
+          "areaText": "149.0m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "116.4",
+            "Keller": "13.1"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a2.pdf"
+        },
+        {
+          "id": "A.3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 141.3,
+          "areaText": "141.3m²",
+          "floor": "2.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "105.5",
+            "Keller": "11.3"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-grundrisse-m1-150-a4-quer-240509-01-a3.pdf"
+        },
+        {
+          "id": "A.4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136,
+          "areaText": "136.0m²",
+          "floor": "3.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "105.5",
+            "Keller": "11.3"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a4.pdf"
+        },
+        {
+          "id": "A.5",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 124.7,
+          "areaText": "124.7m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "94.4",
+            "Keller": "12.6"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-a5.pdf"
+        },
+        {
+          "id": "B.1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 144.6,
+          "areaText": "144.6m²",
+          "floor": "EG",
+          "price": 1340000,
+          "priceText": "1'340'000",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "62.5",
+            "Keller": "13.8"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b1.pdf"
+        },
+        {
+          "id": "B.2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 148.8,
+          "areaText": "148.8m²",
+          "floor": "1.OG",
+          "price": 1385000,
+          "priceText": "1'385'000",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "102.5",
+            "Keller": "12.0"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b2.pdf"
+        },
+        {
+          "id": "B.3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 148.3,
+          "areaText": "148.3m²",
+          "floor": "2.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "103.1",
+            "Keller": "13.8"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b3.pdf"
+        },
+        {
+          "id": "B.4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 181,
+          "areaText": "181.0m²",
+          "floor": "3.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "103.1",
+            "Keller": "15.2"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b4-02.pdf"
+        },
+        {
+          "id": "B.5",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 130.7,
+          "areaText": "130.7m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "86.6",
+            "Keller": "12.0"
+          },
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-whg-b5.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 7,
+          "areaText": "7 GP",
+          "floor": "EG",
+          "price": 40000,
+          "priceText": "40'000",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-tiefgarage-230517.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://escalera-seengen.ch/assets/uploads/escalera-seengen-tiefgarage-230517.pdf"
+        }
+      ],
+      "summary": {
+        "total": 10,
+        "available": 2,
+        "reserved": 0,
+        "sold": 8,
+        "unknown": 0,
+        "availableVolume": 2725000,
+        "byRooms": {
+          "3.5": {
+            "total": 5,
+            "available": 2,
+            "reserved": 0,
+            "sold": 3,
+            "unknown": 0,
+            "availableVolume": 2725000
+          },
+          "4.5": {
+            "total": 4,
+            "available": 0,
+            "reserved": 0,
+            "sold": 4,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "5.5": {
+            "total": 1,
+            "available": 0,
+            "reserved": 0,
+            "sold": 1,
+            "unknown": 0,
+            "availableVolume": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "dorf-dulliken",
+      "name": "Dorf - Dulliken",
+      "url": "https://patio-dulliken.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "adresse": "Dulliken, Schweiz",
+      "ort": "Dulliken",
+      "land": "CH",
+      "koordinaten": [
+        47.353718,
+        7.942468
+      ],
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "22 1",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 122.3,
+          "areaText": "122.3 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-1-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 2",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 122.3,
+          "areaText": "122.3 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-2-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 3",
+          "group": "Haus",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 94.6,
+          "areaText": "94.6 m²",
+          "floor": "AT",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,4 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-3-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 1",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.7,
+          "areaText": "131,7 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-1-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 2",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.3,
+          "areaText": "108,3 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-2-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 3",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119,8 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-3-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 4",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.7,
+          "areaText": "131,7 m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-4-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 5",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.3,
+          "areaText": "108,3 m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-5-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 6",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119,8 m²",
+          "floor": "1.OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-6-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 7",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.7,
+          "areaText": "131,7 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-7-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 8",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.3,
+          "areaText": "108,3 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-8-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 9",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 119.8,
+          "areaText": "119,8 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-9-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 10",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 124.6,
+          "areaText": "124,6 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "93,8 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-10-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 A 11",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 113.5,
+          "areaText": "113,5 m²",
+          "floor": "Attika",
+          "price": 940000,
+          "priceText": "940'000.-",
+          "status": "available",
+          "extra": {
+            "Aussenfläche": "97,2 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-a-11-web-corpora-1.pdf"
+        },
+        {
+          "id": "Dispo 1",
+          "group": "Haus DISPO",
+          "kind": "parking",
+          "rooms": null,
+          "area": 24.4,
+          "areaText": "24,4 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora-1.pdf"
+        },
+        {
+          "id": "Dispo 2",
+          "group": "Haus DISPO",
+          "kind": "parking",
+          "rooms": null,
+          "area": 23.7,
+          "areaText": "23,7 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22a-web-corpora-2.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 1",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136.4,
+          "areaText": "136,4 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-1-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 2",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 87.5,
+          "areaText": "87,5 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21,6 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-2-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 3",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 121.1,
+          "areaText": "121,1 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,2 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-3-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 4",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136.4,
+          "areaText": "136,4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-4-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 5",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 87.5,
+          "areaText": "87,5 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21,6 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-5-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 6",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 121.1,
+          "areaText": "121,1 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,2 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-6-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 7",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 136.4,
+          "areaText": "136,4 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-7-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 8",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 87.5,
+          "areaText": "87,5 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "21,6 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-8-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 9",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 121.1,
+          "areaText": "121,1 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "22,2 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-9-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 10",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.6,
+          "areaText": "108,6 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "82,5 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-10-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 B 11",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 110.6,
+          "areaText": "110,6 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "86,9 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-b-11-web-corpora-1.pdf"
+        },
+        {
+          "id": "Dispo 1",
+          "group": "Haus DISPO",
+          "kind": "parking",
+          "rooms": null,
+          "area": 23.6,
+          "areaText": "23,6 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22b-web-corpora-1.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-2.pdf"
+        },
+        {
+          "id": "22 C 1",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.9,
+          "areaText": "131,9 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-1-web-corpora-03-1.pdf"
+        },
+        {
+          "id": "22 C 2",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 110.4,
+          "areaText": "110,4 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-2-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 3",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 126.4,
+          "areaText": "126,4 m²",
+          "floor": "EG",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Sitzplatz gedeckt"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-3-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 4",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.9,
+          "areaText": "131,9 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-4-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 5",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.4,
+          "areaText": "108,4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-5-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 6",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 126.4,
+          "areaText": "126,4 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-6-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 7",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 131.9,
+          "areaText": "131,9 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-7-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 8",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 108.4,
+          "areaText": "108,4 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "20,7 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-8-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 9",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 126.4,
+          "areaText": "126,4 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "17,5 m²",
+            "Bemerkung": "Balkon"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-9-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 10",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 124.5,
+          "areaText": "124,5 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "93,8 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-10-web-corpora-1.pdf"
+        },
+        {
+          "id": "22 C 11",
+          "group": "Haus 22",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 111.8,
+          "areaText": "111,8 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Aussenfläche": "96,0 m²",
+            "Bemerkung": "Terrasse"
+          },
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-whg-22-c-11-web-corpora-1.pdf"
+        },
+        {
+          "id": "Dispo 1",
+          "group": "Haus DISPO",
+          "kind": "parking",
+          "rooms": null,
+          "area": 34.3,
+          "areaText": "34,3 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora-1.pdf"
+        },
+        {
+          "id": "Dispo 2",
+          "group": "Haus DISPO",
+          "kind": "parking",
+          "rooms": null,
+          "area": 36.7,
+          "areaText": "36,7 m²",
+          "floor": "UG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-keller-haus-22c-web-corpora-2.pdf"
+        },
+        {
+          "id": "Garage",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 56,
+          "areaText": "56 GP",
+          "floor": "UG",
+          "price": 32000,
+          "priceText": "32'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-3.pdf"
+        },
+        {
+          "id": "Garage PP breit",
+          "group": "Haus GARAGE",
+          "kind": "parking",
+          "rooms": null,
+          "area": 4,
+          "areaText": "4 GP",
+          "floor": "UG",
+          "price": 35000,
+          "priceText": "35'000.-",
+          "status": "available",
+          "extra": {},
+          "pdf": "https://patio-dulliken.ch/assets/uploads/patio-dulliken-tiefgarage-web-corpora-4.pdf"
+        }
+      ],
+      "summary": {
+        "total": 36,
+        "available": 1,
+        "reserved": 3,
+        "sold": 32,
+        "unknown": 0,
+        "availableVolume": 940000,
+        "byRooms": {
+          "4.5": {
+            "total": 22,
+            "available": 0,
+            "reserved": 1,
+            "sold": 21,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "3.5": {
+            "total": 11,
+            "available": 1,
+            "reserved": 2,
+            "sold": 8,
+            "unknown": 0,
+            "availableVolume": 940000
+          },
+          "2.5": {
+            "total": 3,
+            "available": 0,
+            "reserved": 0,
+            "sold": 3,
+            "unknown": 0,
+            "availableVolume": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "horizont-kuettigen",
+      "name": "Horizont - Küttigen",
+      "url": "https://horizont-kuettigen.ch/angebot/",
+      "type": "apartment",
+      "groupLabel": "Haus",
+      "adresse": "Küttigen, Schweiz",
+      "ort": "Küttigen",
+      "land": "CH",
+      "koordinaten": [
+        47.419454,
+        8.043257
+      ],
+      "grouped": true,
+      "ok": true,
+      "error": null,
+      "fetchedAt": "2026-10-16T09:46:48.968Z",
+      "units": [
+        {
+          "id": "A1",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 79.2,
+          "areaText": "79.2 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "7.7 m²",
+            "Keller": "8.0 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a1.pdf"
+        },
+        {
+          "id": "A2",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 84.2,
+          "areaText": "84.2 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "7.2 m²",
+            "Keller": "9.4 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a2-1.pdf"
+        },
+        {
+          "id": "A3",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 112,
+          "areaText": "112.0 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "11.8 m²",
+            "Keller": "10.2 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a3-2.pdf"
+        },
+        {
+          "id": "A4",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 105,
+          "areaText": "105.0 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "15.3 m²",
+            "Keller": "8.9 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a4-2.pdf"
+        },
+        {
+          "id": "A5",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 107.5,
+          "areaText": "107.5 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "16.6 m²",
+            "Keller": "8.9 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a5-2.pdf"
+        },
+        {
+          "id": "A6",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 79.1,
+          "areaText": "79.1 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.2 m²",
+            "Keller": "8.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a6.pdf"
+        },
+        {
+          "id": "A7",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 101,
+          "areaText": "101.0 m²",
+          "floor": "1. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.0 m²",
+            "Keller": "8.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a7.pdf"
+        },
+        {
+          "id": "A8",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 79.2,
+          "areaText": "79.2 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.2 m²",
+            "Keller": "7.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a8.pdf"
+        },
+        {
+          "id": "A9",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 101,
+          "areaText": "101.0 m²",
+          "floor": "2. OG",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Balkon": "8.3 m²",
+            "Keller": "7.1 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a9.pdf"
+        },
+        {
+          "id": "A10",
+          "group": "Haus A",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 105,
+          "areaText": "105.0 m²",
+          "floor": "Attika",
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
+          "extra": {
+            "Balkon": "100.4 m²",
+            "Keller": "8.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-a10.pdf"
+        },
+        {
+          "id": "B1",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 117,
+          "areaText": "117.0 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "18.8 m² | 36.1 m²",
+            "Keller": "7.1 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b1.pdf"
+        },
+        {
+          "id": "B2",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 75.7,
+          "areaText": "75.7 m²",
+          "floor": "Erdgeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "8.0 m² | 74.7 m²",
+            "Keller": "5.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b2.pdf"
+        },
+        {
+          "id": "B3",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 51.6,
+          "areaText": "51.6 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "7.6 m²",
+            "Keller": "5.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b3.pdf"
+        },
+        {
+          "id": "B4",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 90.3,
+          "areaText": "90.3 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "11.6 m²",
+            "Keller": "7.7 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b4.pdf"
+        },
+        {
+          "id": "B5",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 53.2,
+          "areaText": "53.2 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "10.9 m²",
+            "Keller": "5.8 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b5.pdf"
+        },
+        {
+          "id": "B6",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.7,
+          "areaText": "110.7 m²",
+          "floor": "1. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "11.0 m²",
+            "Keller": "6.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b6.pdf"
+        },
+        {
+          "id": "B7",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 55.6,
+          "areaText": "55.6 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "8.9 m²",
+            "Keller": "6.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b7.pdf"
+        },
+        {
+          "id": "B8",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 3.5,
+          "area": 90.3,
+          "areaText": "90.3 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "11.6 m²",
+            "Keller": "6.0 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b8.pdf"
+        },
+        {
+          "id": "B9",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 2.5,
+          "area": 53.2,
+          "areaText": "53.2 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "10.9 m²",
+            "Keller": "7.6 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b9.pdf"
+        },
+        {
+          "id": "B10",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 4.5,
+          "area": 110.7,
+          "areaText": "110.7 m²",
+          "floor": "2. Obergeschoss",
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "12.6 m²",
+            "Keller": "7.3 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b10.pdf"
+        },
+        {
+          "id": "B11",
+          "group": "Haus B",
+          "kind": "unit",
+          "rooms": 5.5,
+          "area": 182.6,
+          "areaText": "182.6 m²",
+          "floor": "Attika",
+          "price": 1960000,
+          "priceText": "1'960'000.-",
+          "status": "available",
+          "extra": {
+            "Sitzplatz, Balkon | Garten": "200.4 m²",
+            "Keller": "6.9 m²"
+          },
+          "pdf": "https://horizont-kuettigen.ch/assets/uploads/horizont-kuettigen-whg-b11-v3.pdf"
+        }
+      ],
+      "summary": {
+        "total": 21,
+        "available": 1,
+        "reserved": 1,
+        "sold": 19,
+        "unknown": 0,
+        "availableVolume": 1960000,
+        "byRooms": {
+          "3.5": {
+            "total": 10,
+            "available": 0,
+            "reserved": 1,
+            "sold": 9,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "4.5": {
+            "total": 6,
+            "available": 0,
+            "reserved": 0,
+            "sold": 6,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "2.5": {
+            "total": 4,
+            "available": 0,
+            "reserved": 0,
+            "sold": 4,
+            "unknown": 0,
+            "availableVolume": 0
+          },
+          "5.5": {
+            "total": 1,
+            "available": 1,
+            "reserved": 0,
+            "sold": 0,
+            "unknown": 0,
+            "availableVolume": 1960000
+          }
+        }
+      }
+    }
+  ]
+}
