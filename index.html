@@ -167,6 +167,11 @@
   .proj-tip .t-bar span{height:5px;border-radius:2px}
   .proj-tip .t-foot{color:#b9c4bf;font-size:11.5px;margin-top:8px}
 
+  /* Hinweis auf das interne Reporting (nur in der öffentlichen Fassung) */
+  .intern-hint{margin-top:44px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+  .intern-hint h3{font-size:15px}
+  .intern-hint .card-sub{max-width:52ch;margin-top:4px}
+
   /* Verlauf */
   .history{margin-top:44px}
   .history-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;
@@ -311,6 +316,17 @@
   </section>
 
   <main id="content"></main>
+
+  <section class="card intern-hint" id="internHint" style="display:none">
+    <div>
+      <h3>Verkaufsverlauf</h3>
+      <div class="card-sub">
+        Verlauf und Änderungsprotokoll sind nicht öffentlich. Sie liegen im internen
+        Reporting und sind nach Anmeldung einsehbar.
+      </div>
+    </div>
+    <a class="btn" id="internLink" href="intern/">Internes Reporting öffnen ↗</a>
+  </section>
 
   <section class="history">
     <div class="history-head">
@@ -460,6 +476,7 @@ let history = { runs: [] };
 let changes = { entries: [] };
 let filters = { project:"all", status:"all", rooms:"all", search:"", highlight:false, details:false };
 let chartAsTable = false;
+let historyAvailable = false;   // true, sobald Verlaufsdaten erreichbar sind
 
 /* ----------------------------------------------------------------------------
    Normalisierung (nur noch für selbst hinzugefügte Projekte nötig)
@@ -789,6 +806,9 @@ async function loadManaged(){
   const [latest,hist,chg]=await Promise.allSettled([
     fetchJSON("latest.json"), fetchJSON("history.json"), fetchJSON("changes.json")
   ]);
+  // Verlaufsdaten liegen nur im geschützten Bereich. Sind sie nicht erreichbar,
+  // blendet sich der Verlaufsbereich aus – statt leer dazustehen.
+  historyAvailable = hist.status==="fulfilled" || chg.status==="fulfilled";
   if(hist.status==="fulfilled") history=hist.value;
   if(chg.status==="fulfilled")  changes=chg.value;
 
@@ -1402,6 +1422,17 @@ function historySeries(){
 }
 
 function renderHistory(){
+  // Ohne Verlaufsdaten: Bereich ausblenden und auf das interne Reporting verweisen
+  const section=document.querySelector("section.history");
+  const hint=document.getElementById("internHint");
+  if(!historyAvailable){
+    section.style.display="none";
+    hint.style.display="";
+    return;
+  }
+  section.style.display="";
+  hint.style.display="none";
+
   const runs=historySeries();
   const scope=filters.project==="all" ? "alle Projekte"
     : (projects.find(p=>p.id===filters.project)?.name || "");

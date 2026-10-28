@@ -11,8 +11,8 @@ Repository abgelegt. Das macht die Anzeige unabhängig von öffentlichen CORS-Pr
 und liefert nebenbei die Datengrundlage für den Verlauf.
 
 ```
-Projektseiten ──► scripts/scrape.mjs ──► data/*.json ──► index.html
-   (Actions, freitags)                                   (GitHub Pages)
+Projektseiten ──► scripts/scrape.mjs ──► data/*.json ──► build-site.mjs ──► dist/
+   (Actions, freitags)                                                      dist/intern/
 ```
 
 ### Erfasste Projekte
@@ -107,6 +107,50 @@ abgefragt – je genauer, desto exakter der Marker.
 Sitzt ein Marker falsch, genügt eine genauere `adresse` in `data/projects.json`
 und das Löschen des zugehörigen `koordinaten`-Eintrags; der nächste Lauf
 schlägt neu nach.
+
+## Öffentlich und intern
+
+Verlauf und Änderungsprotokoll zeigen Verkaufsgeschwindigkeit und Preisnachlässe
+je Einheit über das ganze Portfolio. Das ist Wettbewerbsinformation und gehört
+nicht ins öffentliche Netz – die einzelnen Angebote stammen ohnehin von
+öffentlichen Vermarktungsseiten und sind unkritisch.
+
+`scripts/build-site.mjs` baut deshalb aus **einer** `index.html` zwei Ausgaben:
+
+| Pfad | Enthält | Zugriff |
+|---|---|---|
+| `dist/` | Bestand, Karte, Tabellen (`latest.json`, `projects.json`) | öffentlich |
+| `dist/intern/` | zusätzlich `history.json` und `changes.json` | nur nach Anmeldung |
+
+Der Verlaufsbereich blendet sich selbst aus, wenn er seine Daten nicht erreicht –
+auf der öffentlichen Fassung erscheint stattdessen ein Hinweis mit Link. Es gibt
+also keine zweite Seite zu pflegen. Snapshots werden gar nicht ausgeliefert, sie
+bleiben im Repository.
+
+**Den Schutz leistet nicht dieser Build**, sondern die Zugriffsregel auf
+`/intern/*`. Ohne sie ist der interne Bereich schlicht eine weitere öffentliche
+Adresse. Das Build-Skript stellt nur sicher, dass die vertraulichen Dateien
+ausschliesslich unterhalb von `/intern/` landen, und bricht ab, falls das
+verletzt würde.
+
+### Einrichtung
+
+In dieser Reihenfolge, sonst bleibt die Historie zwischenzeitlich abrufbar:
+
+1. **Repository auf privat stellen** – GitHub → Settings → General → Danger Zone.
+   Solange es öffentlich ist, sind `data/history.json` und alle Snapshots über
+   github.com lesbar, egal was die Seite anzeigt.
+2. **GitHub Pages abschalten** – Settings → Pages → Source auf *None*. Sonst
+   liefert die alte Adresse den bisherigen Stand weiter aus.
+3. **Cloudflare Pages** – neues Projekt, mit diesem Repository verbinden.
+   Build-Befehl `node scripts/build-site.mjs`, Ausgabeverzeichnis `dist`.
+4. **Cloudflare Access** – Zero Trust → Access → Applications → *Self-hosted*.
+   Domain die `pages.dev`-Adresse, Pfad `intern`. Policy: *Allow*, Regel
+   *Emails* mit der eigenen Adresse. Anmeldung per E-Mail-Einmalcode, es braucht
+   kein zusätzliches Konto.
+
+Danach ist `/` öffentlich erreichbar und `/intern/` nur nach Anmeldung – auch
+die darunterliegenden JSON-Dateien, weil die Regel für den gesamten Pfad gilt.
 
 ## Nutzungsmessung
 
