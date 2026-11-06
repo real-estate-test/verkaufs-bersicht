@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T11:22:46.842Z",
+  "generatedAt": "2026-11-06T12:55:23.233Z",
   "projects": [
     {
       "id": "sonnenberg",
@@ -17,7 +17,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "A1-1",
@@ -505,7 +505,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "A1",
@@ -908,7 +908,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "12a",
@@ -1144,7 +1144,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "A1.0.1",
@@ -1153,15 +1153,16 @@
           "rooms": 4.5,
           "area": 106.7,
           "areaText": "106.7 m²",
-          "floor": "EG",
-          "price": 890000,
-          "priceText": "890'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "15.1 m²",
-            "Keller": "10.4 m²"
+            "Keller": "10.4 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "A1.0.2",
@@ -1170,15 +1171,16 @@
           "rooms": 4.5,
           "area": 106.7,
           "areaText": "106.7 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 875000,
           "priceText": "875'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "15.1 m²",
-            "Keller": "9.6 m²"
+            "Keller": "9.6 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "A1.1.1",
@@ -1187,15 +1189,16 @@
           "rooms": 4.5,
           "area": 111.6,
           "areaText": "111.6 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 920000,
           "priceText": "920'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "9.7 m²"
+            "Keller": "9.7 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "A1.1.2",
@@ -1204,15 +1207,16 @@
           "rooms": 4.5,
           "area": 111.6,
           "areaText": "111.6 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 905000,
           "priceText": "905'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "14 m²"
+            "Keller": "14 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "A1.2.1",
@@ -1221,15 +1225,16 @@
           "rooms": 4.5,
           "area": 111.6,
           "areaText": "111.6 m²",
-          "floor": "2. OG",
-          "price": 945000,
-          "priceText": "945'000.–",
-          "status": "reserved",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "sold",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "13.2 m²"
+            "Keller": "13.2 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "A1.2.2",
@@ -1238,15 +1243,16 @@
           "rooms": 4.5,
           "area": 111.6,
           "areaText": "111.6 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 925000,
           "priceText": "925'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "13.3 m²"
+            "Keller": "13.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A1.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "A2.0.1",
@@ -1255,15 +1261,16 @@
           "rooms": 4.5,
           "area": 103,
           "areaText": "103 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 875000,
           "priceText": "875'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "11.9 m²",
-            "Keller": "8.4 m²"
+            "Keller": "8.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "A2.0.2",
@@ -1272,15 +1279,16 @@
           "rooms": 3.5,
           "area": 81.5,
           "areaText": "81.5 m²",
-          "floor": "EG",
-          "price": 705000,
-          "priceText": "705'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "22.3 m²",
-            "Keller": "8 m²"
+            "Keller": "8 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "A2.0.3",
@@ -1289,15 +1297,16 @@
           "rooms": 2.5,
           "area": 69.7,
           "areaText": "69.7 m²",
-          "floor": "EG",
-          "price": 600000,
-          "priceText": "600'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "22.3 m²",
-            "Keller": "6.6 m²"
+            "Keller": "6.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.3.pdf"
+          "pdf": null
         },
         {
           "id": "A2.0.4",
@@ -1306,15 +1315,16 @@
           "rooms": 4.5,
           "area": 103.3,
           "areaText": "103.3 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 880000,
           "priceText": "880'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "11.9 m²",
-            "Keller": "8.4 m²"
+            "Keller": "8.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.0.4.pdf"
+          "pdf": null
         },
         {
           "id": "A2.1.1",
@@ -1323,14 +1333,16 @@
           "rooms": 4.5,
           "area": 103,
           "areaText": "103 m²",
-          "floor": "1. OG",
-          "price": 855000,
-          "priceText": "855'000.–",
-          "status": "sold",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
           "extra": {
-            "Aussenfläche": "20 m²"
+            "Aussenfläche": "10.9 m²",
+            "Keller": "8.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "A2.1.2",
@@ -1339,15 +1351,16 @@
           "rooms": 3.5,
           "area": 81.5,
           "areaText": "81.5 m²",
-          "floor": "1.  OG",
-          "price": 690000,
-          "priceText": "690'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "7 m²"
+            "Keller": "7 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "A2.1.3",
@@ -1356,15 +1369,16 @@
           "rooms": 2.5,
           "area": 69.7,
           "areaText": "69.7 m²",
-          "floor": "1. OG",
-          "price": 595000,
-          "priceText": "595'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "6.6 m²"
+            "Keller": "6.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.3.pdf"
+          "pdf": null
         },
         {
           "id": "A2.1.4",
@@ -1373,15 +1387,16 @@
           "rooms": 4.5,
           "area": 103.3,
           "areaText": "103.3 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 855000,
           "priceText": "855'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "10.9 m²",
-            "Keller": "8.5 m²"
+            "Keller": "8.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.1.4.pdf"
+          "pdf": null
         },
         {
           "id": "A2.2.1",
@@ -1390,15 +1405,16 @@
           "rooms": 4.5,
           "area": 103,
           "areaText": "103 m²",
-          "floor": "2. OG",
-          "price": 880000,
-          "priceText": "880'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "11.2 m²",
-            "Keller": "8.2 m²"
+            "Keller": "8.2 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "A2.2.2",
@@ -1407,15 +1423,16 @@
           "rooms": 3.5,
           "area": 81.5,
           "areaText": "81.5 m²",
-          "floor": "2. OG",
-          "price": 710000,
-          "priceText": "710'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "6.7 m²"
+            "Keller": "6.7 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "A2.2.3",
@@ -1424,15 +1441,16 @@
           "rooms": 2.5,
           "area": 69.7,
           "areaText": "69.7 m²",
-          "floor": "2. OG",
-          "price": 610000,
-          "priceText": "610'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "10.9 m²",
-            "Keller": "6.6 m²"
+            "Keller": "6.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.3.pdf"
+          "pdf": null
         },
         {
           "id": "A2.2.4",
@@ -1441,15 +1459,16 @@
           "rooms": 4.5,
           "area": 103.3,
           "areaText": "103.3 m²",
-          "floor": "2. OG",
-          "price": 885000,
-          "priceText": "885'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "11.9 m²"
+            "Keller": "11.9 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A2.2.4.pdf"
+          "pdf": null
         },
         {
           "id": "A3.0.1",
@@ -1458,15 +1477,16 @@
           "rooms": 4.5,
           "area": 105,
           "areaText": "105 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 915000,
           "priceText": "915'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "40.1 m²",
-            "Keller": "9.6 m²"
+            "Keller": "9.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "A3.0.2",
@@ -1475,15 +1495,16 @@
           "rooms": 4.5,
           "area": 106.6,
           "areaText": "106.6 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 930000,
           "priceText": "930'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "33.1 m²",
-            "Keller": "10.6 m²"
+            "Keller": "10.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "A3.1.1",
@@ -1492,15 +1513,16 @@
           "rooms": 4.5,
           "area": 105,
           "areaText": "105 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 895000,
           "priceText": "895'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "37.1 m²",
-            "Keller": "9.3 m²"
+            "Keller": "9.3 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "A3.1.2",
@@ -1509,15 +1531,16 @@
           "rooms": 5.5,
           "area": 122.9,
           "areaText": "122.9 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 1050000,
           "priceText": "1'050'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "37.1 m²",
-            "Keller": "10.9 m²"
+            "Keller": "10.9 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "A3.2.1",
@@ -1526,15 +1549,16 @@
           "rooms": 4.5,
           "area": 105,
           "areaText": "105 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 915000,
           "priceText": "915'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "34.4 m²",
-            "Keller": "9.3 m²"
+            "Keller": "9.3 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "A3.2.2",
@@ -1543,15 +1567,16 @@
           "rooms": 5.5,
           "area": 122.9,
           "areaText": "122.9 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 1080000,
           "priceText": "1'080'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "34.4 m²",
-            "Keller": "10.6 m²"
+            "Keller": "10.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A3.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "A4.0.1",
@@ -1560,15 +1585,16 @@
           "rooms": 4.5,
           "area": 105,
           "areaText": "105 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 915000,
           "priceText": "915'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "39.9 m²",
-            "Keller": "9.6 m²"
+            "Keller": "9.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "A4.0.2",
@@ -1577,15 +1603,16 @@
           "rooms": 4.5,
           "area": 106.6,
           "areaText": "106.6 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 930000,
           "priceText": "930'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "32.9 m²",
-            "Keller": "10.6 m²"
+            "Keller": "10.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "A4.1.1",
@@ -1594,15 +1621,16 @@
           "rooms": 4.5,
           "area": 105,
           "areaText": "105 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 895000,
           "priceText": "895'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "37.1 m²",
-            "Keller": "9.3 m²"
+            "Keller": "9.3 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "A4.1.2",
@@ -1611,15 +1639,16 @@
           "rooms": 5.5,
           "area": 122.9,
           "areaText": "122.9 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 1050000,
           "priceText": "1'050'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "37.1 m²",
-            "Keller": "10.9 m²"
+            "Keller": "10.9 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "A4.2.1",
@@ -1628,15 +1657,16 @@
           "rooms": 4.5,
           "area": 105,
           "areaText": "105 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 915000,
           "priceText": "915'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "34.4 m²",
-            "Keller": "9.3 m²"
+            "Keller": "9.3 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "A4.2.2",
@@ -1645,15 +1675,16 @@
           "rooms": 5.5,
           "area": 122.9,
           "areaText": "122.9 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 1080000,
           "priceText": "1'080'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "34.4 m²",
-            "Keller": "10.6 m²"
+            "Keller": "10.6 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/A4.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "B1.0.1",
@@ -1662,15 +1693,16 @@
           "rooms": 4.5,
           "area": 104.3,
           "areaText": "104.3 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 885000,
           "priceText": "885'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "15.1 m²",
-            "Keller": "12.1 m²"
+            "Keller": "12.1 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "B1.0.2",
@@ -1679,15 +1711,16 @@
           "rooms": 4.5,
           "area": 103.6,
           "areaText": "103.6 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 870000,
           "priceText": "870'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.3 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "B1.0.3",
@@ -1696,31 +1729,34 @@
           "rooms": 4.5,
           "area": 101.9,
           "areaText": "101.9 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 855000,
           "priceText": "855'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.3 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.3.pdf"
+          "pdf": null
         },
         {
           "id": "B1.0.4",
           "group": "Haus B1",
           "kind": "unit",
           "rooms": 3.5,
-          "area": 82,
-          "areaText": "82 m²",
-          "floor": "EG",
-          "price": 690000,
-          "priceText": "690'000.–",
+          "area": 81.8,
+          "areaText": "81.8 m²",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
-            "Aussenfläche": "14.7 m²"
+            "Aussenfläche": "14.7 m²",
+            "Keller": "8.2 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.0.4.pdf"
+          "pdf": null
         },
         {
           "id": "B1.1.1",
@@ -1729,15 +1765,16 @@
           "rooms": 4.5,
           "area": 109.2,
           "areaText": "109.2 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 920000,
           "priceText": "920'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "12.2 m²"
+            "Keller": "12.2 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "B1.1.2",
@@ -1746,15 +1783,16 @@
           "rooms": 4.5,
           "area": 108.7,
           "areaText": "108.7 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 905000,
           "priceText": "905'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "8.3 m²"
+            "Keller": "8.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "B1.1.3",
@@ -1763,15 +1801,16 @@
           "rooms": 4.5,
           "area": 106.8,
           "areaText": "106.8 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 890000,
           "priceText": "890'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "8.3 m²"
+            "Keller": "8.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.3.pdf"
+          "pdf": null
         },
         {
           "id": "B1.1.4",
@@ -1780,15 +1819,16 @@
           "rooms": 3.5,
           "area": 87.2,
           "areaText": "87.2 m²",
-          "floor": "1. OG",
-          "price": 710000,
-          "priceText": "710'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "8 m²"
+            "Keller": "8 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.1.4.pdf"
+          "pdf": null
         },
         {
           "id": "B1.2.1",
@@ -1797,15 +1837,16 @@
           "rooms": 4.5,
           "area": 109.2,
           "areaText": "109.2 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 940000,
           "priceText": "940'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "B1.2.2",
@@ -1814,15 +1855,16 @@
           "rooms": 4.5,
           "area": 108.7,
           "areaText": "108.7 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 925000,
           "priceText": "925'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "9.2 m²"
+            "Keller": "9.2 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "B1.2.3",
@@ -1831,15 +1873,16 @@
           "rooms": 4.5,
           "area": 106.8,
           "areaText": "106.8 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 910000,
           "priceText": "910'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "8.9 m²"
+            "Keller": "8.9 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.3.pdf"
+          "pdf": null
         },
         {
           "id": "B1.2.4",
@@ -1848,15 +1891,16 @@
           "rooms": 3.5,
           "area": 87.2,
           "areaText": "87.2 m²",
-          "floor": "2. OG",
-          "price": 725000,
-          "priceText": "725'000.–",
-          "status": "available",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "8.1 m²"
+            "Keller": "8.1 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.2.4.pdf"
+          "pdf": null
         },
         {
           "id": "B1.3.1",
@@ -1865,15 +1909,15 @@
           "rooms": 4.5,
           "area": 112.1,
           "areaText": "112.1 m²",
-          "floor": "Attika",
-          "price": 1185000,
-          "priceText": "1'185'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
-            "Aussenfläche": "68.1 m²",
-            "Keller": "14.3 m²"
+            "Keller": "14.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.3.1.pdf"
+          "pdf": null
         },
         {
           "id": "B1.3.2",
@@ -1882,15 +1926,15 @@
           "rooms": 4.5,
           "area": 112.5,
           "areaText": "112.5 m²",
-          "floor": "Attika",
+          "floor": null,
           "price": 1165000,
           "priceText": "1'165'000.–",
           "status": "available",
           "extra": {
-            "Aussenfläche": "61.8 m²",
-            "Keller": "11.8 m²"
+            "Keller": "11.8 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B1.3.2.pdf"
+          "pdf": null
         },
         {
           "id": "B2.0.1",
@@ -1899,15 +1943,16 @@
           "rooms": 4.5,
           "area": 104.3,
           "areaText": "104.3 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 885000,
           "priceText": "885'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "15.1 m²",
-            "Keller": "11.5 m²"
+            "Keller": "11.5 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "B2.0.2",
@@ -1916,15 +1961,16 @@
           "rooms": 4.5,
           "area": 103.6,
           "areaText": "103.6 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 870000,
           "priceText": "870'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.3 m²",
-            "Keller": "11.4 m²"
+            "Keller": "11.4 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "B2.0.3",
@@ -1933,15 +1979,16 @@
           "rooms": 4.5,
           "area": 101.9,
           "areaText": "101.9 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 855000,
           "priceText": "855'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.3 m²",
-            "Keller": "11.4 m²"
+            "Keller": "11.4 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.3.pdf"
+          "pdf": null
         },
         {
           "id": "B2.0.4",
@@ -1950,15 +1997,16 @@
           "rooms": 3.5,
           "area": 81.8,
           "areaText": "81.8 m²",
-          "floor": "EG",
-          "price": 690000,
-          "priceText": "690'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "14.7 m²",
-            "Keller": "8.2 m²"
+            "Keller": "8.2 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.0.4.pdf"
+          "pdf": null
         },
         {
           "id": "B2.1.1",
@@ -1967,15 +2015,16 @@
           "rooms": 4.5,
           "area": 109.2,
           "areaText": "109.2 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 920000,
           "priceText": "920'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "10.3 m²"
+            "Keller": "10.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "B2.1.2",
@@ -1984,15 +2033,16 @@
           "rooms": 4.5,
           "area": 108.7,
           "areaText": "108.7 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 905000,
           "priceText": "905'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "10.3 m²"
+            "Keller": "10.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "B2.1.3",
@@ -2001,15 +2051,16 @@
           "rooms": 4.5,
           "area": 106.8,
           "areaText": "106.8 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 890000,
           "priceText": "890'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "12.1 m²"
+            "Keller": "12.1 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.3.pdf"
+          "pdf": null
         },
         {
           "id": "B2.1.4",
@@ -2018,15 +2069,16 @@
           "rooms": 3.5,
           "area": 87.2,
           "areaText": "87.2 m²",
-          "floor": "1. OG",
-          "price": 710000,
-          "priceText": "710'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "reserved",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "7.8 m²"
+            "Keller": "7.8 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.1.4.pdf"
+          "pdf": null
         },
         {
           "id": "B2.2.1",
@@ -2035,15 +2087,16 @@
           "rooms": 4.5,
           "area": 109.2,
           "areaText": "109.2 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 940000,
           "priceText": "940'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "14.2 m²",
-            "Keller": "8.6 m²"
+            "Keller": "8.6 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "B2.2.2",
@@ -2052,15 +2105,16 @@
           "rooms": 4.5,
           "area": 108.7,
           "areaText": "108.7 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 925000,
           "priceText": "925'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "9.2 m²"
+            "Keller": "9.2 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "B2.2.3",
@@ -2069,15 +2123,16 @@
           "rooms": 4.5,
           "area": 106.8,
           "areaText": "106.8 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 910000,
           "priceText": "910'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "13.8 m²"
+            "Keller": "13.8 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.3.pdf"
+          "pdf": null
         },
         {
           "id": "B2.2.4",
@@ -2086,15 +2141,16 @@
           "rooms": 3.5,
           "area": 87.2,
           "areaText": "87.2 m²",
-          "floor": "2. OG",
-          "price": 725000,
-          "priceText": "725'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "13.8 m²",
-            "Keller": "8.8 m²"
+            "Keller": "8.8 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.2.4.pdf"
+          "pdf": null
         },
         {
           "id": "B2.3.1",
@@ -2103,15 +2159,15 @@
           "rooms": 4.5,
           "area": 112.1,
           "areaText": "112.1 m²",
-          "floor": "Attika",
-          "price": 1185000,
-          "priceText": "1'185'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
-            "Aussenfläche": "68.1 m²",
-            "Keller": "10.3 m²"
+            "Keller": "10.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.3.1.pdf"
+          "pdf": null
         },
         {
           "id": "B2.3.2",
@@ -2120,15 +2176,15 @@
           "rooms": 4.5,
           "area": 112.5,
           "areaText": "112.5 m²",
-          "floor": "Attika",
-          "price": 1165000,
-          "priceText": "1'165'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
-            "Aussenfläche": "61.8 m²",
-            "Keller": "10.3 m²"
+            "Keller": "10.3 m²",
+            "Verfügbar ab": "01.01.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/B2.3.2.pdf"
+          "pdf": null
         },
         {
           "id": "C1.0.1",
@@ -2137,15 +2193,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 885000,
           "priceText": "885'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "23.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "C1.0.2",
@@ -2154,15 +2211,16 @@
           "rooms": 3.5,
           "area": 88.8,
           "areaText": "88.8 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 775000,
           "priceText": "775'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "23.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "C1.0.3",
@@ -2171,15 +2229,16 @@
           "rooms": 3.5,
           "area": 80.6,
           "areaText": "80.6 m²",
-          "floor": "EG",
-          "price": 725000,
-          "priceText": "725'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "23.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.0.3.pdf"
+          "pdf": null
         },
         {
           "id": "C1.1.1",
@@ -2188,15 +2247,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 875000,
           "priceText": "875'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "C1.1.2",
@@ -2205,15 +2265,16 @@
           "rooms": 3.5,
           "area": 89.1,
           "areaText": "89.1 m²",
-          "floor": "1. OG",
-          "price": 765000,
-          "priceText": "765'000.–",
-          "status": "available",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "C1.1.3",
@@ -2222,15 +2283,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 895000,
           "priceText": "895'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.1.3.pdf"
+          "pdf": null
         },
         {
           "id": "C1.2.1",
@@ -2239,15 +2301,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 895000,
           "priceText": "895'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "C1.2.2",
@@ -2256,15 +2319,16 @@
           "rooms": 3.5,
           "area": 89.1,
           "areaText": "89.1 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 790000,
           "priceText": "790'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "C1.2.3",
@@ -2273,15 +2337,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "2. OG",
-          "price": 915000,
-          "priceText": "915'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.2.3.pdf"
+          "pdf": null
         },
         {
           "id": "C1.3.1",
@@ -2290,15 +2355,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "3. OG",
+          "floor": null,
           "price": 935000,
           "priceText": "935'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.3.1.pdf"
+          "pdf": null
         },
         {
           "id": "C1.3.2",
@@ -2307,15 +2373,16 @@
           "rooms": 3.5,
           "area": 89.1,
           "areaText": "89.1 m²",
-          "floor": "3. OG",
-          "price": 825000,
-          "priceText": "825'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.3.2.pdf"
+          "pdf": null
         },
         {
           "id": "C1.3.3",
@@ -2324,15 +2391,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "3. OG",
-          "price": 935000,
-          "priceText": "935'000.–",
-          "status": "available",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C1.3.3.pdf"
+          "pdf": null
         },
         {
           "id": "C2.0.1",
@@ -2341,15 +2409,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 885000,
           "priceText": "885'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "23.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "C2.0.2",
@@ -2358,15 +2427,16 @@
           "rooms": 3.5,
           "area": 88.8,
           "areaText": "88.8 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 775000,
           "priceText": "775'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "23.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "C2.0.3",
@@ -2375,15 +2445,16 @@
           "rooms": 3.5,
           "area": 80.5,
           "areaText": "80.5 m²",
-          "floor": "EG",
-          "price": 725000,
-          "priceText": "725'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "sold",
           "extra": {
             "Aussenfläche": "23.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.0.3.pdf"
+          "pdf": null
         },
         {
           "id": "C2.1.1",
@@ -2392,15 +2463,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "1. OG",
-          "price": 870000,
-          "priceText": "870'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "reserved",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "C2.1.2",
@@ -2409,15 +2481,16 @@
           "rooms": 3.5,
           "area": 88.4,
           "areaText": "88.4 m²",
-          "floor": "1. OG",
-          "price": 755000,
-          "priceText": "755'000.–",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
           "status": "reserved",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "C2.1.3",
@@ -2426,15 +2499,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 890000,
           "priceText": "890'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.1.3.pdf"
+          "pdf": null
         },
         {
           "id": "C2.2.1",
@@ -2443,15 +2517,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 890000,
           "priceText": "890'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "C2.2.2",
@@ -2460,15 +2535,16 @@
           "rooms": 3.5,
           "area": 89.1,
           "areaText": "89.1 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 790000,
           "priceText": "790'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.5 m²"
+            "Keller": "9.5 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "C2.2.3",
@@ -2477,15 +2553,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 895000,
           "priceText": "895'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.2.3.pdf"
+          "pdf": null
         },
         {
           "id": "C2.3.1",
@@ -2494,15 +2571,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "3. OG",
+          "floor": null,
           "price": 935000,
           "priceText": "935'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.3.1.pdf"
+          "pdf": null
         },
         {
           "id": "C2.3.2",
@@ -2511,15 +2589,16 @@
           "rooms": 3.5,
           "area": 89.1,
           "areaText": "89.1 m²",
-          "floor": "3. OG",
+          "floor": null,
           "price": 825000,
           "priceText": "825'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.3.2.pdf"
+          "pdf": null
         },
         {
           "id": "C2.3.3",
@@ -2528,15 +2607,16 @@
           "rooms": 4.5,
           "area": 102.7,
           "areaText": "102.7 m²",
-          "floor": "3. OG",
+          "floor": null,
           "price": 935000,
           "priceText": "935'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "20.8 m²",
-            "Keller": "9.4 m²"
+            "Keller": "9.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C2.3.3.pdf"
+          "pdf": null
         },
         {
           "id": "C3.0.1",
@@ -2545,15 +2625,16 @@
           "rooms": 4.5,
           "area": 105.8,
           "areaText": "105.8 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 900000,
           "priceText": "900'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "25.5 m²",
-            "Keller": "8.4 m²"
+            "Keller": "8.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.0.1.pdf"
+          "pdf": null
         },
         {
           "id": "C3.0.2",
@@ -2562,15 +2643,16 @@
           "rooms": 4.5,
           "area": 106.6,
           "areaText": "106.6 m²",
-          "floor": "EG",
+          "floor": null,
           "price": 900000,
           "priceText": "900'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "22.3 m²",
-            "Keller": "10.4 m²"
+            "Keller": "10.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.0.2.pdf"
+          "pdf": null
         },
         {
           "id": "C3.1.1",
@@ -2579,31 +2661,34 @@
           "rooms": 4.5,
           "area": 105.8,
           "areaText": "105.8 m²",
-          "floor": "1. OG",
+          "floor": null,
           "price": 895000,
           "priceText": "895'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "23.8 m²",
-            "Keller": "10.4 m²"
+            "Keller": "10.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.1.1.pdf"
+          "pdf": null
         },
         {
           "id": "C3.1.2",
           "group": "Haus C3",
           "kind": "unit",
           "rooms": 5.5,
-          "area": 122,
-          "areaText": "122 m²",
-          "floor": "1. OG",
+          "area": 122.9,
+          "areaText": "122.9 m²",
+          "floor": null,
           "price": 1045000,
           "priceText": "1'045'000.–",
           "status": "available",
           "extra": {
-            "Aussenfläche": "23.8 m²"
+            "Aussenfläche": "23.8 m²",
+            "Keller": "11 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.1.2.pdf"
+          "pdf": null
         },
         {
           "id": "C3.2.1",
@@ -2612,15 +2697,16 @@
           "rooms": 4.5,
           "area": 105.8,
           "areaText": "105.8 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 920000,
           "priceText": "920'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "10.4 m²"
+            "Keller": "10.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.2.1.pdf"
+          "pdf": null
         },
         {
           "id": "C3.2.2",
@@ -2629,15 +2715,16 @@
           "rooms": 5.5,
           "area": 122.9,
           "areaText": "122.9 m²",
-          "floor": "2. OG",
+          "floor": null,
           "price": 1075000,
           "priceText": "1'075'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "10.4 m²"
+            "Keller": "10.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.2.2.pdf"
+          "pdf": null
         },
         {
           "id": "C3.3.1",
@@ -2646,15 +2733,16 @@
           "rooms": 4.5,
           "area": 105.8,
           "areaText": "105.8 m²",
-          "floor": "3. OG",
-          "price": 940000,
-          "priceText": "940'000.–",
-          "status": "available",
+          "floor": null,
+          "price": null,
+          "priceText": "–",
+          "status": "reserved",
           "extra": {
             "Aussenfläche": "21.1 m²",
-            "Keller": "10.4 m²"
+            "Keller": "10.4 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.3.1.pdf"
+          "pdf": null
         },
         {
           "id": "C3.3.2",
@@ -2663,40 +2751,41 @@
           "rooms": 5.5,
           "area": 122.9,
           "areaText": "122.9 m²",
-          "floor": "3. OG",
+          "floor": null,
           "price": 1100000,
           "priceText": "1'100'000.–",
           "status": "available",
           "extra": {
             "Aussenfläche": "24.1 m²",
-            "Keller": "13 m²"
+            "Keller": "13 m²",
+            "Verfügbar ab": "01.07.2027"
           },
-          "pdf": "https://suhrano.api.melon.sale/media/uploads/layout_plan/suhrano.api.melon.sale/C3.3.2.pdf"
+          "pdf": null
         }
       ],
       "summary": {
         "total": 90,
-        "available": 65,
-        "reserved": 4,
+        "available": 61,
+        "reserved": 8,
         "sold": 21,
         "unknown": 0,
-        "availableVolume": 59240000,
+        "availableVolume": 55875000,
         "byRooms": {
           "4.5": {
             "total": 61,
-            "available": 51,
-            "reserved": 2,
+            "available": 49,
+            "reserved": 4,
             "sold": 8,
             "unknown": 0,
-            "availableVolume": 46315000
+            "availableVolume": 44440000
           },
           "3.5": {
             "total": 19,
-            "available": 7,
-            "reserved": 2,
+            "available": 5,
+            "reserved": 4,
             "sold": 10,
             "unknown": 0,
-            "availableVolume": 5445000
+            "availableVolume": 3955000
           },
           "2.5": {
             "total": 3,
@@ -2733,7 +2822,7 @@
       "grouped": false,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "9901",
@@ -3123,7 +3212,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "A.1",
@@ -3375,7 +3464,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "22 1",
@@ -4167,7 +4256,7 @@
       "grouped": true,
       "ok": true,
       "error": null,
-      "fetchedAt": "2026-10-30T11:22:46.842Z",
+      "fetchedAt": "2026-11-06T12:55:23.233Z",
       "units": [
         {
           "id": "A1",

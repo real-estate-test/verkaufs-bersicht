@@ -1,6 +1,123 @@
 {
   "entries": [
     {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "A1.2.1",
+      "type": "status",
+      "from": "reserved",
+      "to": "sold"
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "A2.1.1",
+      "type": "status",
+      "from": "sold",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B1.2.4",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B1.2.4",
+      "type": "price",
+      "priceFrom": 725000,
+      "priceTo": null
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "B2.1.4",
+      "type": "price",
+      "priceFrom": 710000,
+      "priceTo": null
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C1.1.2",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C1.1.2",
+      "type": "price",
+      "priceFrom": 765000,
+      "priceTo": null
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C1.3.3",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C1.3.3",
+      "type": "price",
+      "priceFrom": 935000,
+      "priceTo": null
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C2.1.1",
+      "type": "price",
+      "priceFrom": 870000,
+      "priceTo": null
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C2.1.2",
+      "type": "price",
+      "priceFrom": 755000,
+      "priceTo": null
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C3.3.1",
+      "type": "status",
+      "from": "available",
+      "to": "reserved"
+    },
+    {
+      "date": "2026-11-06",
+      "project": "suhrano",
+      "projectName": "Suhrano Suhr",
+      "unit": "C3.3.1",
+      "type": "price",
+      "priceFrom": 940000,
+      "priceTo": null
+    },
+    {
       "date": "2026-10-16",
       "project": "suhrano",
       "projectName": "Suhrano Suhr",
